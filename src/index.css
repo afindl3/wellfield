@@ -1,0 +1,147 @@
+/* HTML Structural Elements */
+html {
+  --primary-black: #1C2024;
+  --primary-orange: #FF5F4B;
+  --primary-light-grey: #F0F0F0;
+  --primary-dark-grey: #9EA7A6;
+  --primary-white: #FFFFFF;
+  --sage: #DEE9E5;
+  --cream: #F0EAE5;
+  --slate: #E4E9EB;
+  --rose: #FAF0F1;
+  --gradient-grey-orange: linear-gradient(85.41deg, #B4C2C0 15.51%, var(--primary-orange) 83.46%);
+  --tenon: 'tenon', sans-serif;
+  --tenon-light: 300;
+  --tenon-regular: 400;
+  --tenon-bold: 700;
+
+}
+
+h1, h2, h3, h4, h5, p, label, input, select, textarea, span, a, ul, li {
+  font-family: 'tenon', sans-serif !important;
+  color: var(--primary-black);
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Colours */
+.black {
+  color: var(--primary-black);
+}
+.orange {
+  color: var(--primary-orange);
+}
+.light-grey {
+  color: var(--primary-light-grey);
+}
+.dark-grey {
+  color: var(--primary-dark-grey);
+}
+.white {
+  color: var(--primary-white);
+}
+.sage {
+  color: var(--sage);
+}
+.cream {
+  color: var(--cream);
+}
+.rose {
+  color: var(--rose);
+}
+
+/* Headers */
+.heading1 {
+  font-size: 72px;
+  line-height: 80px;
+  letter-spacing: -0.02em;
+}
+.heading2 {
+  font-size: 60px;
+  line-height: 68px;
+  letter-spacing: -0.02em;
+}
+.heading3 {
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: -0.02em;
+}
+.heading4 {
+  font-size: 28px;
+  line-height: 36px;
+}
+.heading5 {
+  font-size: 22px;
+  line-height: 28px;
+}
+.heading6 {
+  font-size: 16px;
+  line-height: 20px;
+}
+.p1 {
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.01em;
+}
+.p2 {
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: -0.01em;
+}
+.p3 {
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -0.01em;
+}
+
+
+@media (max-width: 991.98px) {
+  .heading1 {
+    font-size: 60px;
+    line-height: 68px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .heading1 {
+    font-size: 40px;
+    line-height: 48px;
+  }
+  .heading2 {
+    font-size: 32px;
+    line-height: 38px;
+  }
+  .heading3 {
+    font-size: 32px;
+    line-height: 38px;
+  }
+  .heading4 {
+    font-size: 22px;
+    line-height: 28px;
+  }
+  .p1 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .p2 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .p3 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+/* Other Elements */
+.link {
+  color: var(--primary-white);
+  display: block;
+  
+}
+.link:hover {
+  color: var(--primary-white);
+  text-decoration: none;
+}

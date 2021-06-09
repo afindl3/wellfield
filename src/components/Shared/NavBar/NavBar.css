@@ -1,0 +1,29 @@
+/* Common (Mobile + Desktop) */
+.navBar__button {
+  margin-left: 20px;
+  background: #F9F9F9;
+  border: 1px solid var(--primary-orange);
+  color: var(--primary-orange);
+}
+@media (max-width: 767.98px) {
+  .navBar__button {
+    background: var(--primary-white);
+    border: 2px solid var(--primary-orange);
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+.navBar__dropdown-title {
+  display: block;
+  color: var(--primary-black);
+  font-size: 18px;
+  line-height: 22px; 
+}
+
+.navBar__dropdown-description {
+  display: block;
+  color: #979797;
+  font-size: 14px;
+  line-height: 20px;
+}

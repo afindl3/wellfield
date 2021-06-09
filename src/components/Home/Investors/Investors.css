@@ -1,0 +1,58 @@
+.investors__bg {
+  background: url('/src/images/backgrounds/investors-desktop.svg');
+  background-size: cover;
+  padding: 120px 0;
+}
+@media (max-width: 991.98px) {
+  .investors__bg {
+    background: url('/src/images/backgrounds/investors-tablet.svg');
+    padding: 80px 0;
+  }
+}
+@media (max-width: 767.98px) {
+  .investors__bg {
+    background: url('/src/images/backgrounds/investors-mobile.svg');
+    padding: 60px 0;
+  }
+}
+
+
+.investors__heading {
+  margin: 53px 0 80px 0;
+}
+@media (max-width: 767.98px) {
+  .investors__heading {
+    margin: 45px 0 60px 0;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .investors__card--3 {
+    margin-top: 60px;
+  }
+  .investors__card--4 {
+    margin-top: 60px;
+  }
+}
+@media (max-width: 767.98px) {
+  .investors__card--2 {
+    margin-top: 48px;
+  }
+  .investors__card--3 {
+    margin-top: 48px;
+  }
+  .investors__card--4 {
+    margin-top: 48px;
+  }
+}
+
+.investors__card-name {
+  display: block;
+  margin-top: 24px;
+}
+
+.investors__card-title {
+  display: block;
+  color: var(--primary-dark-grey);
+  margin: 4px 0 12px;
+}

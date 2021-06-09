@@ -1,0 +1,59 @@
+.mailing__bg {
+  position: relative;
+  overflow-x: hidden;
+  background: url('/src/images/backgrounds/mailing-desktop.svg');
+  background-size: cover;
+  padding: 132px 0 160px 0;
+}
+@media (max-width: 991.98px) {
+  .mailing__bg {
+    background: url('/src/images/backgrounds/mailing-tablet.svg');
+  }
+}
+@media (max-width: 767.98px) {
+  .mailing__bg {
+    background: url('/src/images/backgrounds/mailing-mobile.svg');
+    padding: 100px 0 96px 0;
+  }
+}
+
+.mailing__heading {
+  color: var(--primary-white);
+  margin: 41px 0 40px;
+}
+
+.mailing__form {
+  display: flex;
+  max-width: 600px;
+  margin: 0 auto;
+}
+@media (max-width: 767.98px) {
+  .mailing__form {
+    display: block;
+  }
+}
+
+.mailing__button {
+  color: var(--primary-white);
+  background: var(--primary-orange);
+  margin-left: 10px;
+  border: 2px solid var(--orange);
+}
+@media (max-width: 767.98px) {
+  .mailing__button {
+    margin-top: 12px;
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+.mailing__image-wrapper {
+  position: absolute;
+  bottom: 0;
+  right: 30px;
+}
+@media (max-width: 1440.98px) {
+  .mailing__image-wrapper {
+    right: -170px;
+  }
+}

@@ -1,0 +1,21 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M40 32V12" stroke="#1C2024"/>
+<path d="M24.3934 24.3934L35 35" stroke="#1C2024" stroke-linecap="square"/>
+<path d="M24.3934 54.6066L35 44" stroke="#1C2024" stroke-linecap="square"/>
+<path d="M55.6066 24.3934L45 35" stroke="#1C2024" stroke-linecap="square"/>
+<path d="M55.6066 54.6066L45 44" stroke="#1C2024" stroke-linecap="square"/>
+<path d="M48 40L68 40" stroke="#1C2024"/>
+<path d="M40 68V48" stroke="#1C2024"/>
+<path d="M12 40L32 40" stroke="#1C2024"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M28 12L40 0L52 12H28ZM48 40C48 44.4183 44.4183 48 40 48C35.5817 48 32 44.4183 32 40C32 35.5817 35.5817 32 40 32C44.4183 32 48 35.5817 48 40ZM80 40L68 28V52L80 40ZM52 68L40 80L28 68H52ZM0 40L12 52L12 28L0 40Z" fill="url(#paint0_linear)"/>
+<path d="M60 20H52L60 28V20Z" stroke="#1C2024"/>
+<path d="M20 59L28 59L20 51L20 59Z" stroke="#1C2024"/>
+<path d="M60 59L60 51L52 59L60 59Z" stroke="#1C2024"/>
+<path d="M20 20L20 28L28 20L20 20Z" stroke="#1C2024"/>
+<defs>
+<linearGradient id="paint0_linear" x1="11.6364" y1="58" x2="69.9899" y2="53.3152" gradientUnits="userSpaceOnUse">
+<stop stop-color="#B4C2C0"/>
+<stop offset="1" stop-color="#FF5F4B"/>
+</linearGradient>
+</defs>
+</svg>

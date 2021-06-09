@@ -1,0 +1,32 @@
+.header__bg {
+  padding: 121px 0 60px 0;
+  background: linear-gradient(180deg, #F9F9F9 0%, #FFFFFF 100%);
+}
+@media (max-width: 991.98px) {
+  .header__bg {
+    padding: 101px 0 60px 0;
+  }
+}
+@media (max-width: 767.98px) {
+  .header__bg {
+    padding: 81px 0 381px 0;
+  }
+}
+
+.header__heading {
+  margin-bottom: 101px;
+  max-width: 707px;
+}
+@media (max-width: 991.98px) {
+  .header__heading {
+    max-width: 505px;
+  }
+}
+@media (max-width: 767.98px) {
+  .header__heading {
+    margin-bottom: 69px;
+  }
+}
+
+
+  

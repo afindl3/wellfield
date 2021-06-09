@@ -1,0 +1,26 @@
+/* Mobile */
+@media (max-width: 767.98px) {
+  .navbar {
+    background: #F9F9F9;;
+    padding: 21px 0 0 0 !important;
+  }
+
+  .navbar-light .navbar-brand {
+    padding: 0 !important;
+  }
+
+  .navbar--open {
+    background: var(--primary-white);
+  }
+
+  /* Hamburger / 'X' icons */
+  .navbar-light .navbar-toggler {
+    padding: 0 !important;
+    margin-right: 30px;
+    border: none;
+  }
+
+  .navbar a.nav-link  {
+    padding: 12px 30px !important;
+  }
+}

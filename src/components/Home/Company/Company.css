@@ -1,0 +1,85 @@
+.company__bg {
+  background: url('/src/images/backgrounds/company-desktop.svg');
+  background-size: cover;
+  padding: 120px 0;
+}
+@media (max-width: 991.98px) {
+  .company__bg {
+    background: url('/src/images/backgrounds/company-tablet.svg');
+    padding: 80px 0;
+  }
+}
+@media (max-width: 767.98px) {
+  .company__bg {
+    background: url('/src/images/backgrounds/company-mobile.svg');
+    padding: 60px 0 80px 0;
+  }
+}
+
+.company__eyebrow {
+  display: block;
+  margin-bottom: 53px;
+}
+@media (max-width: 767.98px) {
+  .company__eyebrow {
+    margin-bottom: 45px;
+  }
+}
+
+
+.company__heading {
+  max-width: 600px;
+  margin-bottom: 40px;
+}
+
+
+@media (max-width: 991.98px) {
+  .company__link {
+    margin-bottom: 81px;
+  }
+}
+@media (max-width: 767.98px) {
+  .company__link {
+    margin-bottom: 71px;
+  }
+}
+
+.company__card {
+  padding: 32px 40px 40px;
+  border-radius: 24px;
+  min-height: 300px;
+  height: 100%;
+  position: relative;
+}
+.company__card--left {
+  background: var(--primary-light-grey);
+}
+.company__card--right {
+  background: var(--slate);
+}
+@media (max-width: 767.98px) {
+  .company__card--right {
+    margin-top: 20px;
+  }
+}
+
+.company__card-number {
+  font-size: 120px;
+  line-height: 124px;
+  display: block;
+}
+
+.company__button-wrapper {
+  background: var(--gradient-grey-orange);
+  width: fit-content;
+  border-radius: 36px;
+  padding: 1px;
+  position: absolute;
+  bottom: 40px;
+}
+.company__button--left {
+  background: var(--primary-light-grey);
+}
+.company__button--right {
+  background: var(--slate);
+}
