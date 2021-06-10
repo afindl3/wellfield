@@ -18,38 +18,36 @@ const Card = (props) => (
 
 function Company() {
   return (
-    <>
-      <div className="company__bg">
-        <Container>
-          <Row><Col xs={12} md={6}><span className="company__eyebrow heading5 orange">The Company</span></Col></Row>
+    <div className="company__bg">
+      <Container>
+        <Row><Col xs={12} md={6}><span className="company__eyebrow heading5 orange">The Company</span></Col></Row>
 
-          <Row>
-            <Col xs={12} lg={6}>
-              <h2 className="company__heading heading2">We have decades of banking, finance, and consumer-product experience.</h2>
-              <Link to='/' className="link company__link">
-                <span className="heading5">
-                  Learn More <img src={rightBlack} style={{ marginLeft: 8 }} alt="Chevron right" />
-                </span>
-              </Link>
-            </Col>
-            <Col xs={12} md={6} lg={3}>
-              <Card
-                number='5'
-                cta='PhDs'
-                type='left'
-              />
-            </Col>
-            <Col xs={12} md={6} lg={3}>
-              <Card
-                number='15'
-                cta='Engineers'
-                type='right'
-              />
-            </Col>
-          </Row>
-        </Container>
-      </div>
-    </>
+        <Row>
+          <Col xs={12} lg={6}>
+            <h2 className="company__heading heading2">We have decades of banking, finance, and consumer-product experience.</h2>
+            <Link to='/' className="link company__link">
+              <span className="heading5">
+                Learn More <img src={rightBlack} style={{ marginLeft: 8 }} alt="Chevron right" />
+              </span>
+            </Link>
+          </Col>
+          <Col xs={12} md={6} lg={3}>
+            <Card
+              number='5'
+              cta='PhDs'
+              type='left'
+            />
+          </Col>
+          <Col xs={12} md={6} lg={3}>
+            <Card
+              number='15'
+              cta='Engineers'
+              type='right'
+            />
+          </Col>
+        </Row>
+      </Container>
+    </div>
   );
 }
 

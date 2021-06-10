@@ -1,0 +1,48 @@
+.seamless-header__bg {
+  background: url('/src/images/backgrounds/seamless/header-desktop.svg');
+  background-size: cover;
+  padding: 120px 0 89px 0;
+}
+@media (max-width: 991.98px) {
+  .seamless-header__bg {
+    padding: 81px 0 80px 0;
+  }
+}
+@media (max-width: 767.98px) {
+  .seamless-header__bg {
+    padding: 81px 0 60px 0;
+  }
+}
+
+.seamless-header__heading1 {
+  background: var(--gradient-grey-orange);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  max-width: 290px;
+  margin-bottom: 30px
+}
+@media (max-width: 991.98px) {
+  .seamless-header__heading1 {
+    max-width: 162px;
+  }
+}
+
+.seamless-header__button-wrapper {
+  background: var(--gradient-grey-orange);
+  width: fit-content;
+  border-radius: 36px;
+  padding: 1px;
+  margin-bottom: 198px;
+}
+.seamless-header__button {
+  color: var(--primary-white);
+  background: var(--primary-black);
+}
+
+.seamless-header__heading2 {
+  color: var(--primary-white);
+}
+
+
+  

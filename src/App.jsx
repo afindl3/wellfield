@@ -4,6 +4,7 @@ import Contact from './components/Contact/Contact';
 import Footer from './components/Shared/Footer/Footer';
 import Home from './components/Home/Home';
 import NavBar from './components/Shared/NavBar/NavBar';
+import Seamless from './components/Seamless/Seamless';
 import ScrollToTop from './components/Shared/ScrollToTop';
 import Terms from './components/Terms/Terms';
 import Privacy from './components/Privacy/Privacy';
@@ -36,6 +37,8 @@ function App() {
 
           <Switch>
             <Route exact component={Home} path='/' />
+            <Route exact component={Seamless} path='/seamless' />
+            {/* <Route exact component={Moneyclip} path='/moneyclip' /> */}
             <Route exact component={About} path='/about' />
             <Route exact component={Contact} path='/contact' />
             <Route exact component={Terms} path='/terms' />

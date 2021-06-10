@@ -61,7 +61,7 @@ textarea {
 }
 @media (max-width: 1440.98px) {
   .container {
-    max-width: 1140px !important;
+    max-width: 1230px !important;
   }
 }
 @media (max-width: 1199.98px) {
@@ -77,8 +77,8 @@ textarea {
 @media (max-width: 767.98px) { 
   .container {
     max-width: 767.98px !important;
-    padding-left: 30px !important;
-    padding-right: 30px !important;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
   }

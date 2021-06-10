@@ -1,0 +1,14 @@
+.defi__bg {
+  padding: 40px 0 121px 0;
+}
+
+.defi__eyebrow {
+  background: var(--gradient-grey-orange);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  max-width: 149px;
+  margin-top: 80px;
+  margin-bottom: 61px;
+  display: block;
+}

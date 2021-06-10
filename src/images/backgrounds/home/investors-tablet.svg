@@ -1,14 +1,14 @@
-<svg width="768" height="1008" viewBox="0 0 768 1008" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="768" height="1085" viewBox="0 0 768 1085" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0)">
-<rect width="768" height="1008" fill="#FCFBFA"/>
+<rect width="768" height="1085" fill="white"/>
 <g filter="url(#filter0_f)">
 <circle cx="498" cy="730" r="410" fill="#F0F0F0"/>
 </g>
-<rect x="20" width="1" height="1008" fill="#EAE9E8"/>
-<rect x="384" width="1" height="1008" fill="#EAE9E8"/>
-<rect x="748" width="1" height="1008" fill="#EAE9E8"/>
-<rect x="566" width="1" height="1008" fill="#EAE9E8"/>
-<rect x="202" width="1" height="1008" fill="#EAE9E8"/>
+<rect x="20" width="1" height="1085" fill="#EAE9E8"/>
+<rect x="384" width="1" height="1085" fill="#EAE9E8"/>
+<rect x="748" width="1" height="1085" fill="#EAE9E8"/>
+<rect x="566" width="1" height="1085" fill="#EAE9E8"/>
+<rect x="202" width="1" height="1085" fill="#EAE9E8"/>
 </g>
 <defs>
 <filter id="filter0_f" x="-312" y="-80" width="1620" height="1620" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
@@ -17,7 +17,7 @@
 <feGaussianBlur stdDeviation="200" result="effect1_foregroundBlur"/>
 </filter>
 <clipPath id="clip0">
-<rect width="768" height="1008" fill="white"/>
+<rect width="768" height="1085" fill="white"/>
 </clipPath>
 </defs>
 </svg>

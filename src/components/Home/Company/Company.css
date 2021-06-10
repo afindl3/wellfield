@@ -1,17 +1,19 @@
 .company__bg {
-  background: url('/src/images/backgrounds/company-desktop.svg');
+  background: url('/src/images/backgrounds/home/company-desktop.svg');
   background-size: cover;
   padding: 120px 0;
 }
 @media (max-width: 991.98px) {
   .company__bg {
-    background: url('/src/images/backgrounds/company-tablet.svg');
+    background: url('/src/images/backgrounds/home/company-tablet.svg');
+    background-size: cover;
     padding: 80px 0;
   }
 }
 @media (max-width: 767.98px) {
   .company__bg {
-    background: url('/src/images/backgrounds/company-mobile.svg');
+    background: url('/src/images/backgrounds/home/company-mobile.svg');
+    background-size: cover;
     padding: 60px 0 80px 0;
   }
 }
@@ -78,8 +80,10 @@
   bottom: 40px;
 }
 .company__button--left {
+  border: 2px solid var(--primary-light-grey);
   background: var(--primary-light-grey);
 }
 .company__button--right {
+  border: 2px solid var(--slate);
   background: var(--slate);
 }

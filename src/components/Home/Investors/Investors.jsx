@@ -12,7 +12,7 @@ const Card = (props) => (
     </div>
     <span className="investors__card-name heading5">{props.name}</span>
     <span className="investors__card-title heading6">{props.title}</span>
-    <span className="p2">{props.bio}</span>
+    <p className="p2 mb-0">{props.bio}</p>
   </div>
 );
 

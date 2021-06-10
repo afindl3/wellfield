@@ -1,18 +1,21 @@
 .mailing__bg {
   position: relative;
   overflow-x: hidden;
-  background: url('/src/images/backgrounds/mailing-desktop.svg');
+  background: url('/src/images/backgrounds/home/mailing-desktop.svg');
+  background-repeat: no-repeat;
   background-size: cover;
   padding: 132px 0 160px 0;
 }
 @media (max-width: 991.98px) {
   .mailing__bg {
-    background: url('/src/images/backgrounds/mailing-tablet.svg');
+    background: url('/src/images/backgrounds/home/mailing-tablet.svg');
+    background-size: cover;
   }
 }
 @media (max-width: 767.98px) {
   .mailing__bg {
-    background: url('/src/images/backgrounds/mailing-mobile.svg');
+    background: url('/src/images/backgrounds/home/mailing-mobile.svg');
+    background-size: cover;
     padding: 100px 0 96px 0;
   }
 }

@@ -82,9 +82,9 @@ function MailingList() {
         </Row>
       </Container>
 
-      <div className="mailing__image-wrapper d-none d-lg-block">
+      {/* <div className="mailing__image-wrapper d-none d-lg-block">
         <img src={gear} alt="Gear" />
-      </div>
+      </div> */}
     </div>
   );
 }
