@@ -1,14 +1,54 @@
-.defi__bg {
-  padding: 40px 0 121px 0;
+.sl-defi__bg {
+  background: url('/src/images/backgrounds/seamless/defi-desktop.svg');
+  background-size: cover;
+  padding: 40px 0 120px 0;
+}
+@media (max-width: 991.98px) {
+  .sl-defi__bg {
+    background: url('/src/images/backgrounds/seamless/defi-tablet.svg');
+    background-size: cover;
+    padding: 100px 0 80px 0;
+  }
+}
+@media (max-width: 767.98px) {
+  .sl-defi__bg {
+    background: url('/src/images/backgrounds/seamless/defi-mobile.svg');
+    background-size: cover;
+    padding: 80px 0 60px 0;
+  }
 }
 
-.defi__eyebrow {
+.sl-defi__eyebrow {
   background: var(--gradient-grey-orange);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   max-width: 149px;
+  display: block;
   margin-top: 80px;
   margin-bottom: 61px;
-  display: block;
+}
+@media (max-width: 991.98px) {
+  .sl-defi__eyebrow {
+    margin-top: 0;
+  }
+}
+@media (max-width: 767.98px) {
+  .sl-defi__eyebrow {
+    margin-bottom: 45px;
+  }
+}
+
+.sl-defi__heading {
+  color: var(--primary-white);
+}
+@media (max-width: 991.98px) {
+  .sl-defi__heading {
+    margin-bottom: 80px;
+  }
+}
+@media (max-width: 767.98px) {
+  .sl-defi__heading {
+    margin-bottom: 60px;
+  }
 }

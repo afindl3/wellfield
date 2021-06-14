@@ -5,6 +5,7 @@ import Header from './Header/Header';
 import Investors from './Investors/Investors';
 import Products from './Products/Products';
 import Values from './Values/Values';
+import MailingList from '../Shared/MailingList/MailingList';
 
 import { Helmet } from 'react-helmet';
 
@@ -35,6 +36,8 @@ function Home() {
         <div className="home__graphic-container">
           <img src={tiles} className="home__graphic" alt="Tile graphic" />
         </div>
+
+        <MailingList />
       </div>
 
     </>

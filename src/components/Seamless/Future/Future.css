@@ -1,23 +1,66 @@
-.future__heading {
-  max-width: 600px;
+.sl-future__bg {
+  background: url('/src/images/backgrounds/seamless/future-desktop.svg');
+  background-size: cover;
+  padding: 120px 0 141px;
+}
+@media (max-width: 991.98px) {
+  .sl-future__bg {
+    background: url('/src/images/backgrounds/seamless/future-tablet.svg');
+  background-size: cover;
+    padding: 120px 0 101px;
+  }
+}
+@media (max-width: 767.98px) {
+  .sl-future__bg {
+    background: url('/src/images/backgrounds/seamless/future-mobile.svg');
+  background-size: cover;
+    padding: 80px 0 80px;
+  }
 }
 
-.future__card {
+.sl-future__heading {
+  color: var(--primary-white);
+  max-width: 600px;
+  margin-bottom: 101px;
+}
+@media (max-width: 991.98px) {
+  .sl-future__heading {
+    max-width: 100%;
+  }
+}
+@media (max-width: 767.98px) {
+  .sl-future__heading {
+    margin-bottom: 81px;
+  }
+}
+
+.sl-future__card {
   padding: 48px;
   border-radius: 24px;
 }
-.future__card--left {
+.sl-future__card--left {
   background: var(--primary-white);
 }
-.future__card--right {
+.sl-future__card--right {
   background: var(--slate);
 }
+@media (max-width: 991.98px) {
+  .sl-future__card--right {
+    margin-top: 40px;
+  }
+}
+@media (max-width: 767.98px) {
+  .sl-future__card--right {
+    margin-top: 24px;
+  }
+}
 
-.future__card-title {
+.sl-future__card-title {
   margin: 40px 0 24px 0;
   max-width: 360px;
 }
 
-.future__card-body {
+.sl-future__card-body {
   max-width: 360px;
+  margin-bottom: 0;
 }

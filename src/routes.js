@@ -10,7 +10,7 @@ function Routes() {
         <Route exact path='/moneyclip' />
         <Route exact path='/about' />
         <Route exact path='/contact' />
-        <Route exact path='/terms' />
+        <Route exact path='/disclaimer' />
         <Route exact path='/privacy' />
       </Switch>
     </BrowserRouter>

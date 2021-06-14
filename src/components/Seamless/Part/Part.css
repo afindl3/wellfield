@@ -1,0 +1,60 @@
+.sl-part__bg {
+  background: url('/src/images/backgrounds/seamless/part-desktop.svg');
+  background-size: cover;
+  padding: 141px 0;
+}
+@media (max-width: 991.98px) {
+  .sl-part__bg {
+    background: url('/src/images/backgrounds/seamless/part-tablet.svg');
+    background-size: cover;
+    padding: 101px 0;
+  }
+}
+@media (max-width: 767.98px) {
+  .sl-part__bg {
+    background: url('/src/images/backgrounds/seamless/part-mobile.svg');
+    background-size: cover;
+    padding: 81px 0;
+  }
+}
+
+.sl-part__card {
+  background: var(--primary-black);
+  box-shadow: 0px 40px 40px rgba(0, 0, 0, 0.02), 80px 80px 80px rgba(0, 0, 0, 0.04);
+  border-radius: 24px;
+  padding: 48px;
+}
+
+.sl-part__heading {
+  color: var(--primary-white);
+  max-width: 532px;
+  margin-bottom: 136px;
+}
+@media (max-width: 991.98px) {
+  .sl-part__heading {
+    max-width: 276px;
+    margin-bottom: 60px;
+  }
+}
+@media (max-width: 767.98px) {
+  .sl-part__heading {
+    max-width: 100%;
+    margin-bottom: 48px;
+  }
+}
+
+.sl-part__body {
+  color: var(--primary-white);
+  margin-bottom: 0;
+  max-width: 360px;
+}
+@media (max-width: 991.98px) {
+  .sl-part__body {
+    max-width: 276px;
+  }
+}
+@media (max-width: 767.98px) {
+  .sl-part__body {
+    max-width: 100%;
+  }
+}

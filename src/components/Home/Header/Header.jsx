@@ -1,7 +1,6 @@
 import './Header.css';
 import scroll from '../../../images/icons/scroll-to-bottom.svg';
 
-
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';

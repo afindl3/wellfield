@@ -1,15 +1,15 @@
 import './App.css';
 import About from './components/About/About';
 import Contact from './components/Contact/Contact';
+import Disclaimer from './components/Disclaimer/Disclaimer';
 import Footer from './components/Shared/Footer/Footer';
 import Home from './components/Home/Home';
+import Moneyclip from './components/Moneyclip/Moneyclip';
 import NavBar from './components/Shared/NavBar/NavBar';
 import Seamless from './components/Seamless/Seamless';
 import ScrollToTop from './components/Shared/ScrollToTop';
-import Terms from './components/Terms/Terms';
 import Privacy from './components/Privacy/Privacy';
 import ErrorPage from './components/404/404';
-import MailingList from './components/Shared/MailingList/MailingList';
 
 import { Helmet } from 'react-helmet';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
@@ -38,15 +38,13 @@ function App() {
           <Switch>
             <Route exact component={Home} path='/' />
             <Route exact component={Seamless} path='/seamless' />
-            {/* <Route exact component={Moneyclip} path='/moneyclip' /> */}
+            <Route exact component={Moneyclip} path='/moneyclip' />
             <Route exact component={About} path='/about' />
             <Route exact component={Contact} path='/contact' />
-            <Route exact component={Terms} path='/terms' />
+            <Route exact component={Disclaimer} path='/disclaimer' />
             <Route exact component={Privacy} path='/privacy' />
             <Route component={ErrorPage} />
           </Switch>
-
-          <MailingList />
 
           <Footer />
         </div>

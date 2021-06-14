@@ -1,28 +1,73 @@
 .mailing__bg {
   position: relative;
   overflow-x: hidden;
-  background: url('/src/images/backgrounds/home/mailing-desktop.svg');
-  background-repeat: no-repeat;
-  background-size: cover;
   padding: 132px 0 160px 0;
-}
-@media (max-width: 991.98px) {
-  .mailing__bg {
-    background: url('/src/images/backgrounds/home/mailing-tablet.svg');
-    background-size: cover;
-  }
 }
 @media (max-width: 767.98px) {
   .mailing__bg {
-    background: url('/src/images/backgrounds/home/mailing-mobile.svg');
-    background-size: cover;
     padding: 100px 0 96px 0;
   }
 }
 
+.mailing__bg-gray {
+  background: url('/src/images/backgrounds/mailing-list/gray-desktop.svg');
+  background-size: cover;
+}
+@media (max-width: 991.98px) {
+  .mailing__bg-gray {
+    background: url('/src/images/backgrounds/mailing-list/gray-tablet.svg');
+    background-size: cover;
+  }
+}
+@media (max-width: 767.98px) {
+  .mailing__bg-gray {
+    background: url('/src/images/backgrounds/mailing-list/gray-mobile.svg');
+    background-size: cover;
+  }
+}
+
+.mailing__bg-black {
+  background: url('/src/images/backgrounds/mailing-list/black-desktop.svg');
+  background-size: cover;
+}
+@media (max-width: 991.98px) {
+  .mailing__bg-black {
+    background: url('/src/images/backgrounds/mailing-list/black-tablet.svg');
+    background-size: cover;
+  }
+}
+@media (max-width: 767.98px) {
+  .mailing__bg-black {
+    background: url('/src/images/backgrounds/mailing-list/black-mobile.svg');
+    background-size: cover;
+  }
+}
+
+.mailing__bg-white {
+  background: url('/src/images/backgrounds/mailing-list/white-desktop.svg');
+  background-size: cover;
+}
+@media (max-width: 991.98px) {
+  .mailing__bg-white {
+    background: url('/src/images/backgrounds/mailing-list/white-tablet.svg');
+    background-size: cover;
+  }
+}
+@media (max-width: 767.98px) {
+  .mailing__bg-white {
+    background: url('/src/images/backgrounds/mailing-list/white-mobile.svg');
+    background-size: cover;
+  }
+}
+
 .mailing__heading {
-  color: var(--primary-white);
   margin: 41px 0 40px;
+}
+.mailing__heading-gray, .mailing__heading-black {
+  color: var(--primary-white);
+}
+.mailing__heading-white {
+  color: var(--primary-black);
 }
 
 .mailing__form {

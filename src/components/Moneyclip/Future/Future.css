@@ -1,0 +1,72 @@
+.mc-future__bg {
+  background: url('/src/images/backgrounds/moneyclip/future-desktop.svg');
+  background-size: cover;
+  padding: 120px 0 141px;
+}
+@media (max-width: 991.98px) {
+  .mc-future__bg {
+    background: url('/src/images/backgrounds/moneyclip/future-tablet.svg');
+  background-size: cover;
+    padding: 120px 0 101px;
+  }
+}
+@media (max-width: 767.98px) {
+  .mc-future__bg {
+    background: url('/src/images/backgrounds/moneyclip/future-mobile.svg');
+  background-size: cover;
+    padding: 80px 0 80px;
+  }
+}
+
+.mc-future__heading {
+  color: var(--primary-white);
+  max-width: 600px;
+  margin-bottom: 101px;
+}
+@media (max-width: 991.98px) {
+  .mc-future__heading {
+    max-width: 100%;
+  }
+}
+@media (max-width: 767.98px) {
+  .mc-future__heading {
+    margin-bottom: 81px;
+  }
+}
+
+.mc-future__card {
+  padding: 48px;
+  border-radius: 24px;
+  height: 100%;
+}
+.mc-future__card--left {
+  background: var(--primary-white);
+}
+.mc-future__card--right {
+  background: var(--slate);
+}
+@media (max-width: 991.98px) {
+  .mc-future__card--right {
+    margin-top: 40px;
+  }
+}
+@media (max-width: 767.98px) {
+  .mc-future__card--right {
+    margin-top: 24px;
+  }
+}
+
+.card-body-container {
+  position: absolute;
+  bottom: 48px;
+}
+
+.mc-future__card-title {
+  margin: 40px 0 24px 0;
+  max-width: 360px;
+}
+
+.mc-future__card-body {
+  max-width: 360px;
+  margin-bottom: 0;
+}

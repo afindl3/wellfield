@@ -1,0 +1,63 @@
+.mc-defi__bg {
+  position: relative;
+  background: url('/src/images/backgrounds/moneyclip/defi-desktop.svg');
+  background-size: cover;
+  padding: 120px 0 237px 0;
+}
+@media (max-width: 991.98px) {
+  .mc-defi__bg {
+    background: url('/src/images/backgrounds/moneyclip/defi-tablet.svg');
+    background-size: cover;
+    padding: 80px 0 0 0;
+  }
+}
+@media (max-width: 767.98px) {
+  .mc-defi__bg {
+    background: url('/src/images/backgrounds/moneyclip/defi-mobile.svg');
+    background-size: cover;
+    padding: 60px 0 0 0;
+  }
+}
+
+.mc-defi__eyebrow {
+  background: var(--gradient-grey-orange);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  max-width: 149px;
+  display: block;
+  margin-top: 61px;
+  margin-bottom: 20px;
+}
+@media (max-width: 767.98px) {
+  .mc-defi__eyebrow {
+    margin-bottom: 16px;
+  }
+}
+
+.mc-defi__heading {
+  max-width: 480px;
+  margin-bottom: 0;
+}
+@media (max-width: 991.98px) {
+  .mc-defi__heading {
+    margin-bottom: 80px;
+  }
+}
+@media (max-width: 767.98px) {
+  .mc-defi__heading {
+    margin-bottom: 60px;
+  }
+}
+
+
+.mc-defi__image-wrapper {
+  position: absolute;
+  bottom: 0;
+  right: 30px;
+}
+@media (max-width: 991.98px) {
+  .mc-defi__image-wrapper {
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,74 @@
+.tools__bg {
+  background: url('/src/images/backgrounds/home/values-desktop.svg');
+  background-size: cover;
+  padding: 120px 0 141px 0;
+}
+@media (max-width: 991.98px) {
+  .tools__bg {
+    background: url('/src/images/backgrounds/home/values-tablet.svg');
+    background-size: cover;
+    padding: 80px 0 101px 0;
+  }
+}
+@media (max-width: 767.98px) {
+  .tools__bg {
+    background: url('/src/images/backgrounds/home/values-mobile.svg');
+    background-size: cover;
+    padding: 60px 0 81px 0;
+  }
+}
+
+.tools__heading {
+  background: var(--gradient-grey-orange);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  max-width: 405px;
+  margin-bottom: 0;
+}
+
+.tools__paragraph {
+  color: var(--primary-white);
+  margin: 61px 0 80px 0;
+  max-width: 600px;
+}
+@media (max-width: 767.98px) {
+  .tools__paragraph {
+    margin: 61px 0 60px 0;
+  }
+}
+
+.tools__card {
+  background: var(--primary-white);
+  box-shadow: 0px 40px 36px rgba(0, 0, 0, 0.04);
+  border-radius: 24px;
+  padding: 40px;
+  height: 100%;
+}
+
+@media (max-width: 991.98px) {
+  .tools__card {
+    height: auto;
+  }
+  .tools__card--3 {
+    margin-top: 40px;
+  }
+  .tools__card--4 {
+    margin-top: 40px;
+  }
+}
+@media (max-width: 767.98px) {
+  .tools__card--2 {
+    margin-top: 24px;
+  }
+  .tools__card--3 {
+    margin-top: 24px;
+  }
+  .tools__card--4 {
+    margin-top: 24px;
+  }
+}
+
+.tools__card-title {
+  margin: 40px 0 12px;
+}
