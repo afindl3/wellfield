@@ -1,6 +1,5 @@
 import './App.css';
 import About from './components/About/About';
-import Contact from './components/Contact/Contact';
 import Disclaimer from './components/Disclaimer/Disclaimer';
 import Footer from './components/Shared/Footer/Footer';
 import Home from './components/Home/Home';
@@ -40,7 +39,6 @@ function App() {
             <Route exact component={Seamless} path='/seamless' />
             <Route exact component={Moneyclip} path='/moneyclip' />
             <Route exact component={About} path='/about' />
-            <Route exact component={Contact} path='/contact' />
             <Route exact component={Disclaimer} path='/disclaimer' />
             <Route exact component={Privacy} path='/privacy' />
             <Route component={ErrorPage} />

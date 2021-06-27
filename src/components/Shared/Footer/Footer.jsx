@@ -1,18 +1,21 @@
 import './Footer.css';
 import logo from '../../../images/logos/wellfield-white.svg';
 
+import { useHistory } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 function Footer() {
+  const history = useHistory();
+
   return (
     <div className="footer__bg">
       <Container>
         <Row>
           <Col xs={12} lg={3} >
-            <img className="footer__logo" src={logo} alt="Wellfield logo" />
+            <img src={logo} onClick={() => history.push('/')} className="footer__logo" alt="Wellfield logo" />
           </Col>
 
           <Col xs={6} md={3} lg={3} >

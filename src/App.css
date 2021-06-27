@@ -1,17 +1,17 @@
-.button-sm {
-  font-size: 18px;
-  line-height: 22px;
-  padding: 6px 20px 8px; /* +1px border = 7px 20px 9px, total height = 38px */
-  border-radius: 20px;
-  border: 1px solid var(--primary-black);
-  height: fit-content;
-}
 .button-lg {
   font-size: 22px;
   line-height: 28px;
   padding: 15px 40px 17px; /* +2px border =  17px 40px 19px, total height = 64px */
   border-radius: 36px;
   border: 2px solid var(--primary-black);
+  height: fit-content;
+}
+.button-sm {
+  font-size: 18px;
+  line-height: 22px;
+  padding: 6px 20px 8px; /* +1px border = 7px 20px 9px, total height = 38px */
+  border-radius: 20px;
+  border: 1px solid var(--primary-black);
   height: fit-content;
 }
 

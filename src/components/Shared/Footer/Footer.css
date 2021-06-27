@@ -5,6 +5,7 @@
 
 .footer__logo {
   margin-bottom: 60px;
+  cursor: pointer;
 }
 
 .footer__item {

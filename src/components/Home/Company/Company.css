@@ -19,6 +19,7 @@
 }
 
 .company__eyebrow {
+  color: var(--primary-orange);
   display: block;
   margin-bottom: 53px;
 }
@@ -28,12 +29,10 @@
   }
 }
 
-
 .company__heading {
   max-width: 600px;
   margin-bottom: 40px;
 }
-
 
 @media (max-width: 991.98px) {
   .company__link {

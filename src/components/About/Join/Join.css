@@ -1,0 +1,123 @@
+.join__bg {
+  /* background: url('/src/images/backgrounds/home/join-desktop.svg'); */
+  background-size: cover;
+  padding: 181px 0 160px;
+}
+@media (max-width: 991.98px) {
+  .join__bg {
+    /* background: url('/src/images/backgrounds/home/join-tablet.svg'); */
+    background-size: cover;
+    padding: 161px 0 120px;
+  }
+}
+@media (max-width: 767.98px) {
+  .join__bg {
+    /* background: url('/src/images/backgrounds/home/join-mobile.svg'); */
+    background-size: cover;
+    padding: 125px 0 80px;
+  }
+}
+
+.join__copy-container {
+  max-width: 520px;
+  margin-left: 50px
+}
+@media (max-width: 991.98px) {
+  .join__copy-container {
+    margin-left: 0;
+  }
+}
+
+.join__heading {
+  margin-top: 30px;
+  margin-bottom: 32px;
+}
+@media (max-width: 991.98px) {
+  .join__heading {
+    margin-top: 0px;
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 767.98px) {
+  .join__heading {
+    margin-bottom: 24px;
+  }
+}
+
+.join__button {
+  margin-top: 48px;
+  color: var(--primary-orange);
+  background: var(--primary-white);
+  border: 2px solid var(--primary-orange);
+}
+@media (max-width: 991.98px) {
+  .join__button {
+    margin-top: 40px;
+    margin-bottom: 60px;
+    border: 1px solid var(--primary-orange);
+  }
+}
+@media (max-width: 767.98px) {
+  .join__button {
+    margin-bottom: 24px;
+    margin-bottom: 48px;
+  }
+}
+
+
+
+/* Card */
+.join__card {
+  padding: 32px 40px 44px;
+  border-radius: 24px;
+  display: flex;
+}
+@media (max-width: 991.98px) {
+  .join__card {
+    display: block
+  }
+}
+.join__card--top {
+  background: var(--primary-light-grey);
+}
+.join__card--bottom {
+  margin-top: 20px;
+  background: var(--slate);
+}
+@media (max-width: 991.98px) {
+  .join__card--bottom {
+    margin-top: 0px;
+  }
+}
+@media (max-width: 767.98px) {
+  .join__card--bottom {
+    margin-top: 20px;
+  }
+}
+
+.join__card-number {
+  font-size: 120px;
+  line-height: 124px;
+}
+
+.join__button-wrapper {
+  background: var(--gradient-grey-orange);
+  width: fit-content;
+  border-radius: 36px;
+  padding: 1px;
+  height: fit-content;
+  margin: 30px 0 0 32px;
+}
+@media (max-width: 991.98px) {
+  .join__button-wrapper {
+    margin-left: 0px;
+  }
+}
+.join__button--top {
+  border: 2px solid var(--primary-light-grey);
+  background: var(--primary-light-grey);
+}
+.join__button--bottom {
+  border: 2px solid var(--slate);
+  background: var(--slate);
+}

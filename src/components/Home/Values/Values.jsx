@@ -27,7 +27,7 @@ function Values() {
           </Col>
         </Row>
         <Row>
-          <Col xs={12} sm={6} lg={3}>
+          <Col xs={12} md={6} lg={3}>
             <Card
               icon={decentralization}
               title='Decentralization'
@@ -35,7 +35,7 @@ function Values() {
               index='1'
             />
           </Col>
-          <Col xs={12} sm={6} lg={3}>
+          <Col xs={12} md={6} lg={3}>
             <Card
               icon={control}
               title='Control'
@@ -43,7 +43,7 @@ function Values() {
               index='2'
             />
           </Col>
-          <Col xs={12} sm={6} lg={3}>
+          <Col xs={12} md={6} lg={3}>
             <Card
               icon={accessibility}
               title='Accessibility'
@@ -51,7 +51,7 @@ function Values() {
               index='3'
             />
           </Col>
-          <Col xs={12} sm={6} lg={3}>
+          <Col xs={12} md={6} lg={3}>
             <Card
               icon={options}
               title='Options'

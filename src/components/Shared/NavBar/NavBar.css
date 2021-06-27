@@ -1,9 +1,9 @@
 /* Common (Mobile + Desktop) */
-.navBar-black {
+.navBar--black {
   background: url('/src/images/backgrounds/navbar/black-desktop.svg');
   background-size: cover;
 }
-.navBar-white {
+.navBar--white {
   background: url('/src/images/backgrounds/navbar/white-desktop.svg');
   background-size: cover;
 }
@@ -14,10 +14,13 @@
   border: 1px solid var(--primary-orange);
   color: var(--primary-orange);
 }
-.navBar__button-black {
+.navBar__button:hover {
+  color: var(--primary-orange);
+}
+.navBar__button--black {
   background: var(--primary-black);
 }
-.navBar__button-white {
+.navBar__button--white {
   background: #F9F9F9;
 }
 @media (max-width: 767.98px) {
@@ -28,7 +31,6 @@
     margin-left: 0;
   }
 }
-
 
 .navBar__dropdown-title {
   display: block;
@@ -42,4 +44,14 @@
   color: #979797;
   font-size: 14px;
   line-height: 20px;
+}
+
+.navBar__child-logo {
+  margin-right: 15px;
+  border-radius: 50%;
+}
+
+.navBar__underline {
+  text-decoration: underline;
+  text-underline-position: under;
 }

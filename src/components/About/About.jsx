@@ -1,9 +1,11 @@
 import './About.css';
+import Header from './Header/Header';
+import Team from './Team/Team';
+import Timeline from './Timeline/Timeline';
+import Join from './Join/Join';
+import Location from './Location/Location';
 
 import { Helmet } from 'react-helmet';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 
 function About() {
   return (
@@ -18,13 +20,11 @@ function About() {
         <meta property="og:url" content="https://www.wellfield.ca/about" />
       </Helmet>
 
-      <Container>
-        <Row>
-          <Col xs={12}>
-            <h2>About us</h2>
-          </Col>
-        </Row>
-      </Container>
+      <Header />
+      <Team />
+      <Timeline />
+      <Join />
+      <Location />
     </>
   );
 }

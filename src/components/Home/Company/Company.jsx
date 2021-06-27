@@ -20,7 +20,7 @@ function Company() {
   return (
     <div className="company__bg">
       <Container>
-        <Row><Col xs={12} md={6}><span className="company__eyebrow heading5 orange">The Company</span></Col></Row>
+        <Row><Col xs={12} md={6}><span className="company__eyebrow heading5">The Company</span></Col></Row>
 
         <Row>
           <Col xs={12} lg={6}>

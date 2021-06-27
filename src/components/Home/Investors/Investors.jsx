@@ -22,12 +22,12 @@ function Investors() {
       <div className="investors__bg">
         <Container>
           <Row>
-            <Col xs={12}><span className="investors__eyebrow heading5 dark-grey">Tagline here</span></Col>
+            <Col xs={12}><span className="heading5 dark-grey">Tagline here</span></Col>
             <Col xs={12}><h2 className="investors__heading heading1">Our Investors</h2></Col>
           </Row>
 
           <Row>
-            <Col xs={12} sm={6} lg={3}>
+            <Col xs={12} md={6} lg={3}>
               <Card
                 avatar={avatar}
                 name='Name Here'
@@ -36,7 +36,7 @@ function Investors() {
                 index='1'
               />
             </Col>
-            <Col xs={12} sm={6} lg={3}>
+            <Col xs={12} md={6} lg={3}>
               <Card
                 avatar={avatar}
                 name='Name Here'
@@ -45,7 +45,7 @@ function Investors() {
                 index='2'
               />
             </Col>
-            <Col xs={12} sm={6} lg={3}>
+            <Col xs={12} md={6} lg={3}>
               <Card
                 avatar={avatar}
                 name='Name Here'
@@ -54,7 +54,7 @@ function Investors() {
                 index='3'
               />
             </Col>
-            <Col xs={12} sm={6} lg={3}>
+            <Col xs={12} md={6} lg={3}>
               <Card
                 avatar={avatar}
                 name='Name Here'

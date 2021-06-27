@@ -4,27 +4,17 @@ import logoBlack from '../../../../images/logos/wellfield-black.svg';
 import downGrey from '../../../../images/icons/chevron-down-grey.png';
 import downOrange from '../../../../images/icons/chevron-down-orange.png';
 import moneyclip from '../../../../images/logos/moneyclip.svg';
-import seamless from '../../../../images/logos/seamless.svg';
+import seamless from '../../../../images/logos/seamless-v2.svg';
 
-import { useState, useRef, useEffect } from 'react';
-import { useHistory, useLocation } from 'react-router-dom';
+import { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 
-const type = {
-  '/': 'white',
-  '/seamless': 'black',
-  '/moneyclip': 'white',
-  '/disclaimer': 'white'
-}
-
-function NavBarDesktop() {
-  const buttonRef = useRef();
+function NavBarDesktop({ bg }) {
   const history = useHistory();
   const [show, setShow] = useState(false);
-  const [bg, setBg] = useState('');
-  const { pathname } = useLocation();
 
   const showDropdown = () => {
     setShow(!show);
@@ -36,18 +26,9 @@ function NavBarDesktop() {
     history.push(path)
     setShow(false)
   }
-  const handleContactClick = () => {
-    history.push('/contact')
-    buttonRef.current.blur();
-  }
-  useEffect(() => {
-    setBg(type[pathname])
-  }, [pathname]);
 
   return (
-    <div className={`navBar-${bg}`}>
-
-
+    <div className={`navBar--${bg}`}>
       <Navbar expand="md" collapseOnSelect>
         <Container style={{ position: 'relative' }}>
 
@@ -59,7 +40,7 @@ function NavBarDesktop() {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ml-auto">
               <div onMouseEnter={showDropdown} onMouseLeave={hideDropdown}>
-                <div onClick={() => onNav('/seamless')} className={`navBar__link navBar__link-${bg}`}>
+                <div onClick={() => onNav('/seamless')} className={`navBar__link navBar__link--${bg} ${show && "navBar__underline"}`}>
                   Our Brands<img src={show ? downOrange : downGrey} alt="Chevron down" style={{ marginLeft: 8 }} />
                 </div>
 
@@ -83,9 +64,9 @@ function NavBarDesktop() {
                 }
               </div>
 
-              <div className={`navBar__link navBar__link-${bg}`} onClick={() => history.push('/about')}>About Us</div>
+              <div className={`navBar__link navBar__link--${bg}`} onClick={() => history.push('/about')}>About Us</div>
 
-              <button onClick={() => handleContactClick()} ref={buttonRef} className={`button-sm navBar__button navBar__button-${bg}`}>Contact Us</button>
+              <a href="mailto:info@wellfield.com" className={`link button-sm navBar__button navBar__button--${bg}`}>Contact Us</a>
             </Nav>
           </Navbar.Collapse>
 

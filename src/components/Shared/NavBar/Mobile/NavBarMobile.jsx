@@ -1,11 +1,14 @@
 import './NavBarMobile.css'
-// import logoWhite from '../../../../images/logos/wellfield-white.svg';
+import logoWhite from '../../../../images/logos/wellfield-white.svg';
 import logoBlack from '../../../../images/logos/wellfield-black.svg';
 import close from '../../../../images/icons/nav-close.svg';
-import hamburger from '../../../../images/icons/nav-hamburger.svg';
+import hamburgerWhite from '../../../../images/icons/nav-hamburger-white.svg';
+import hamburgerBlack from '../../../../images/icons/nav-hamburger-black.svg';
 import downGrey from '../../../../images/icons/chevron-down-grey.png';
 import downOrange from '../../../../images/icons/chevron-down-orange.png';
-import placeholder from '../../../../images/icons/Placeholder.svg';
+
+import moneyclip from '../../../../images/logos/moneyclip.svg';
+import seamless from '../../../../images/logos/seamless-v2.svg';
 
 import { useState } from 'react';
 import Navbar from 'react-bootstrap/Navbar';
@@ -13,10 +16,10 @@ import Nav from 'react-bootstrap/Nav';
 import { useHistory } from 'react-router-dom';
 
 
-function NavBarMobile() {
+function NavBarMobile({ bg }) {
   const history = useHistory();
-  const [isOpen, setIsOpen] = useState(false);
-  const [show, setShow] = useState(false);
+  const [isOpen, setIsOpen] = useState(false); // mobile nav open
+  const [show, setShow] = useState(false); // dropdown open
 
 
   const handleLogoClick = () => {
@@ -25,56 +28,57 @@ function NavBarMobile() {
   }
 
   return (
-    <Navbar expand="md" collapseOnSelect onToggle={() => setIsOpen(!isOpen)} expanded={isOpen} className={isOpen ? 'navbar--open' : ''}>
-      <Navbar.Brand onClick={() => handleLogoClick()} style={{ marginLeft: 30 }}>
-        <img src={logoBlack} alt="Wellfield logo" />
-      </Navbar.Brand>
+    <div className={`navBar--${bg}`}>
+      <Navbar expand="md" collapseOnSelect onToggle={() => setIsOpen(!isOpen)} expanded={isOpen} className={isOpen && "navbar--open"}>
+        <Navbar.Brand onClick={() => handleLogoClick()} style={{ marginLeft: 30, cursor: 'pointer' }}>
+          <img src={isOpen ? logoBlack : (bg === 'black' ? logoWhite : logoBlack)} alt="Wellfield logo" />
+        </Navbar.Brand>
 
-      <Navbar.Toggle aria-controls="basic-navbar-nav" >
-        <img src={isOpen ? close : hamburger} alt={isOpen ? "Close icon" : "Hamburger menu icon"} />
-      </Navbar.Toggle>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" >
+          <img src={isOpen ? close : (bg === 'black' ? hamburgerBlack : hamburgerWhite)} alt={isOpen ? "Close icon" : "Hamburger menu icon"} />
+        </Navbar.Toggle>
 
-      <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="ml-auto">
-          <Nav.Link onClick={() => setShow(!show)} style={{ marginTop: 100 }} >
-            <h2 className="heading5">Our Brands<img src={show ? downOrange : downGrey} alt="Chevron down" style={{ marginLeft: 8 }} /></h2>
-          </Nav.Link>
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="ml-auto">
+            <Nav.Link onClick={() => setShow(!show)} style={{ marginTop: 100 }} >
+              <h2 className={`heading5 ${show && "navBar__underline"}`}>Our Brands<img src={show ? downOrange : downGrey} alt="Chevron down" style={{ marginLeft: 8 }} /></h2>
+            </Nav.Link>
 
-          {show &&
-            <>
-              <Nav.Link eventKey="1" onClick={() => history.push('/seamless')}>
-                <div className="d-flex">
-                  <img src={placeholder} alt="Seamless logo" style={{ marginRight: 15 }} />
-                  <div>
-                    <span className="navBar__dropdown-title">Seamless</span>
-                    <span className="navBar__dropdown-description">Permissionless, unstoppable cross-blockchain trading</span>
+            {show &&
+              <>
+                <Nav.Link eventKey="1" onClick={() => history.push('/seamless')}>
+                  <div className="d-flex">
+                    <img src={seamless} alt="Seamless logo" className="navBar__child-logo" />
+                    <div>
+                      <span className="navBar__dropdown-title">Seamless</span>
+                      <span className="navBar__dropdown-description">Permissionless, unstoppable cross-blockchain trading</span>
+                    </div>
                   </div>
-                </div>
-              </Nav.Link>
-              <Nav.Link eventKey="2" onClick={() => history.push('/moneyclip')} style={{ marginTop: 20 }} >
-                <div className="d-flex" >
-                  <img src={placeholder} alt="Moneyclip logo" style={{ marginRight: 15 }} />
-                  <div>
-                    <span className="navBar__dropdown-title">MoneyClip</span>
-                    <span className="navBar__dropdown-description">Simplified access to the world of DeFi</span>
+                </Nav.Link>
+                <Nav.Link eventKey="2" onClick={() => history.push('/moneyclip')} style={{ marginTop: 20 }} >
+                  <div className="d-flex" >
+                    <img src={moneyclip} alt="Moneyclip logo" className="navBar__child-logo" />
+                    <div>
+                      <span className="navBar__dropdown-title">MoneyClip</span>
+                      <span className="navBar__dropdown-description">Simplified access to the world of DeFi</span>
+                    </div>
                   </div>
-                </div>
-              </Nav.Link>
-            </>
-          }
+                </Nav.Link>
+              </>
+            }
 
-          <Nav.Link eventKey="3" onClick={() => history.push('/about')}>
-            <h2 className="heading5">About Us</h2>
-          </Nav.Link>
+            <Nav.Link eventKey="3" onClick={() => history.push('/about')}>
+              <h2 className="heading5">About Us</h2>
+            </Nav.Link>
 
-          <Nav.Link eventKey="4">
-            <button onClick={() => history.push('/contact')} className="button-lg navBar__button">Contact Us</button>
-          </Nav.Link>
+            <Nav.Link eventKey="4" href="mailto:info@wellfield.com">
+              <button className="button-lg navBar__button">Contact Us</button>
+            </Nav.Link>
 
-
-        </Nav>
-      </Navbar.Collapse>
-    </Navbar >
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar >
+    </div>
   );
 }
 

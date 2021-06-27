@@ -46,11 +46,6 @@
     z-index: 3;
   }
 
-  .navBar__child-logo {
-    margin-right: 15px;
-    border-radius: 50%;
-  }
-
   .navBar__link {
     font-size: 18px;
     line-height: 22px;
@@ -64,10 +59,10 @@
     }
   }
 
-  .navBar__link-black {
+  .navBar__link--black {
     color: var(--primary-white);
   }
-  .navBar__link-white {
+  .navBar__link--white {
     color: var(--primary-black);
   }
 }
