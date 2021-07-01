@@ -2,19 +2,38 @@ import './Future.css';
 import liquidity from '../../../images/icons/liquidity.svg';
 import security from '../../../images/icons/security.svg';
 
+import { useLayoutEffect, useRef, useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-const Card = (props) => (
-  <div className={`sl-future__card sl-future__card--${props.type}`}>
-    <img src={props.image} />
-    <h3 className="sl-future__card-title heading4">{props.title}</h3>
-    <p className="sl-future__card-body p1">{props.body}</p>
-  </div>
-);
-
 function Future() {
+  const [slideIn, setSlideIn] = useState(false);
+  const slideRef = useRef(null)
+
+  useLayoutEffect(() => {
+    const topPosition = slideRef.current.getBoundingClientRect().top;
+    const onScroll = () => {
+      const scrollPosition = window.scrollY + window.innerHeight
+      if (topPosition < scrollPosition) {
+        setSlideIn(true);
+      }
+    }
+
+    window.addEventListener('scroll', onScroll)
+    return () => window.removeEventListener('scroll', onScroll)
+  }, []);
+
+  const Card = (props) => (
+    <div className={slideIn && `sl-future__card-slide--${props.type}`}>
+      <div className={`sl-future__card sl-future__card--${props.type}`}>
+        <img src={props.image} />
+        <h3 className="sl-future__card-title heading4">{props.title}</h3>
+        <p className="sl-future__card-body p1">{props.body}</p>
+      </div>
+    </div>
+  );
+
   return (
     <div className="sl-future__bg">
       <Container>
@@ -23,6 +42,7 @@ function Future() {
         </Row>
 
         <Row>
+          <div ref={slideRef}></div>
           <Col xs={12} lg={6}>
             <Card
               image={liquidity}

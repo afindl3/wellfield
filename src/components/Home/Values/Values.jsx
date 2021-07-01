@@ -4,19 +4,38 @@ import control from '../../../images/icons/control.svg';
 import decentralization from '../../../images/icons/decentralization.svg';
 import options from '../../../images/icons/options.svg';
 
+import { useLayoutEffect, useRef, useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-const Card = (props) => (
-  <div className={`values__card values__card--${props.index}`}>
-    <img src={props.icon} alt={`${props.title} icon`} />
-    <h5 className="values__card-title heading5">{props.title}</h5>
-    <p className="p2 mb-0">{props.body}</p>
-  </div>
-);
-
 function Values() {
+  const [slideIn, setSlideIn] = useState(false);
+  const slideRef = useRef(null)
+
+  useLayoutEffect(() => {
+    const topPosition = slideRef.current.getBoundingClientRect().top;
+    const onScroll = () => {
+      const scrollPosition = window.scrollY + window.innerHeight
+      if (topPosition < scrollPosition) {
+        setSlideIn(true);
+      }
+    }
+
+    window.addEventListener('scroll', onScroll)
+    return () => window.removeEventListener('scroll', onScroll)
+  }, []);
+
+  const Card = (props) => (
+    <div className={slideIn && `values__card-slide--${props.index}`}>
+      <div className={`values__card values__card--${props.index}`}>
+        <img src={props.icon} alt={`${props.title} icon`} />
+        <h5 className="values__card-title heading5">{props.title}</h5>
+        <p className="p2 mb-0">{props.body}</p>
+      </div>
+    </div>
+  );
+
   return (
     <div className="values__bg">
       <Container>
@@ -27,6 +46,7 @@ function Values() {
           </Col>
         </Row>
         <Row>
+          <div ref={slideRef}></div>
           <Col xs={12} md={6} lg={3}>
             <Card
               icon={decentralization}
@@ -62,7 +82,6 @@ function Values() {
         </Row>
       </Container>
     </div>
-
   );
 }
 

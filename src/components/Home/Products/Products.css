@@ -152,3 +152,15 @@
     max-height: 140px;
   }
 }
+
+.products__card-slide--left {
+  transform: translateY(300px);
+  animation: come-in 0.8s ease forwards;
+}
+.products__card-slide--right {
+  transform: translateY(300px);
+  animation: come-in 1.4s ease forwards;
+}
+@keyframes come-in {
+  to { transform: translateY(0); }
+}

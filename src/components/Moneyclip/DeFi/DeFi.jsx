@@ -14,7 +14,7 @@ function DeFi() {
           <Col xs={12} lg={6}>
             <img src={moneyclip} />
             <span className="mc-defi__eyebrow heading5">Why We Built It</span>
-            <h2 className="mc-defi__heading heading2">MoneyClip makes DeFi work for the way you live.  </h2>
+            <h2 className="mc-defi__heading heading2">MoneyClip makes DeFi work for the way you live.</h2>
           </Col>
           <Col xs={12} lg={6} className="d-lg-none">
             <img src={whatItDoes} />

@@ -1,11 +1,25 @@
 import './DeFi.css';
-import defi from '../../../images/images/defi.png';
+import cryptoNet from '../../../lotties/seamless/crypto-net.json';
 
+import lottie from 'lottie-web';
+import { useEffect } from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 function DeFi() {
+  useEffect(() => {
+    lottie.loadAnimation({
+      container: document.querySelector("#crypto-net"),
+      animationData: cryptoNet,
+      loop: false,
+      // autoplay: false,
+      rendererSettings: {
+        preserveAspectRatio: 'xMidYMid slice',
+      }
+    });
+  }, []);
+
   return (
     <div className="sl-defi__bg">
       <Container>
@@ -15,7 +29,7 @@ function DeFi() {
             <h2 className="sl-defi__heading heading2">DeFi is not yet truly decentralized. We do for trading what Bitcoin did to money.</h2>
           </Col>
           <Col xs={12} lg={6}>
-            <img src={defi} />
+            <div id="crypto-net" />
           </Col>
         </Row>
       </Container>

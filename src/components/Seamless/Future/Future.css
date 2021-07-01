@@ -64,3 +64,15 @@
   max-width: 360px;
   margin-bottom: 0;
 }
+
+.sl-future__card-slide--left {
+  transform: translateY(300px);
+  animation: come-in 0.8s ease forwards;
+}
+.sl-future__card-slide--right {
+  transform: translateY(300px);
+  animation: come-in 1.4s ease forwards;
+}
+@keyframes come-in {
+  to { transform: translateY(0); }
+}

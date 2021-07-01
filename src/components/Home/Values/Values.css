@@ -71,3 +71,23 @@
 .values__card-title {
   margin: 40px 0 12px;
 }
+
+.values__card-slide--1 {
+  transform: translateY(300px);
+  animation: come-in 0.8s ease forwards;
+}
+.values__card-slide--2 {
+  transform: translateY(300px);
+  animation: come-in 1s ease forwards;
+}
+.values__card-slide--3 {
+  transform: translateY(300px);
+  animation: come-in 1.2s ease forwards;
+}
+.values__card-slide--4 {
+  transform: translateY(300px);
+  animation: come-in 1.4s ease forwards;
+}
+@keyframes come-in {
+  to { transform: translateY(0); }
+}
