@@ -8,12 +8,21 @@
 .home__tile {
   position: absolute;
   transform: translateY(-300px);
-  right: -50px;
+  right: 180px;
   z-index: 1;
+}
+@media (max-width: 1440.98px) {
+  .home__tile {
+    right: -50px;
+  }
+}
+@media (max-width: 1199.98px) {
+  .home__tile {
+    max-width: 450px;
+  }
 }
 @media (max-width: 991.98px) {
   .home__tile {
-    max-width: 450px;
     right: -150px;
   }
 }
@@ -37,6 +46,11 @@
 @keyframes applications-animation {
   to { transform: translateY(100px); }
 }
+@media (max-width: 1199.98px) {
+  @keyframes applications-animation {
+    to { transform: translateY(350px); }
+  }
+}
 @media (max-width: 991.98px) {
   @keyframes applications-animation {
     to { transform: translateY(250px); }
@@ -51,6 +65,11 @@
 @keyframes protocols-animation {
   to { transform: translateY(300px); }
 }
+@media (max-width: 1199.98px) {
+  @keyframes protocols-animation {
+    to { transform: translateY(450px); }
+  }
+}
 @media (max-width: 991.98px) {
   @keyframes protocols-animation {
     to { transform: translateY(400px); }
@@ -64,6 +83,11 @@
 
 @keyframes blockchain-animation {
   to { transform: translateY(500px); }
+}
+@media (max-width: 1199.98px) {
+  @keyframes blockchain-animation {
+    to { transform: translateY(550px); }
+  }
 }
 @media (max-width: 991.98px) {
   @keyframes blockchain-animation {

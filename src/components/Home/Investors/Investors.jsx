@@ -20,6 +20,7 @@ function Investors() {
   return (
     <>
       <div className="investors__bg">
+        <div className="investors__horizontal" />
         <Container>
           <Row>
             <Col xs={12}><span className="heading5 dark-grey">Tagline here</span></Col>

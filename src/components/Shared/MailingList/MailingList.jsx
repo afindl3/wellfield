@@ -91,9 +91,9 @@ function MailingList() {
         </Row>
       </Container>
 
-      {/* <div className="mailing__image-wrapper d-none d-lg-block">
-        <img src={gear} alt="Gear" />
-      </div> */}
+      <div className="mailing__image-wrapper d-none d-lg-block">
+        <img src={gear} className="mailing__image" alt="Gear" />
+      </div>
     </ div>
   );
 }

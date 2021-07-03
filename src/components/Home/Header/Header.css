@@ -1,5 +1,7 @@
 .header__bg {
   position: relative;
+  background: url('/src/images/bg-assets/light-1440.svg') no-repeat center center fixed;
+  background-size: cover;
   padding: 121px 0 60px 0;
 }
 @media (max-width: 991.98px) {
@@ -16,6 +18,7 @@
 .header__heading {
   margin-bottom: 101px;
   max-width: 707px;
+  animation: fade-in linear 2s;
 }
 @media (max-width: 991.98px) {
   .header__heading {
@@ -24,8 +27,13 @@
 }
 @media (max-width: 767.98px) {
   .header__heading {
+    max-width: 327px;
     margin-bottom: 69px;
   }
+}
+@keyframes fade-in {
+  0% {opacity:0;}
+  100% {opacity:1;}
 }
 
 /* Animations - Lottie */
@@ -70,7 +78,7 @@
   }
 }
 
-/* Horizontal Lines */
+/* Horizontal Line */
 .header__horizontal {
   height: 1px;
   background: #EDEDED;

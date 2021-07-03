@@ -20,7 +20,7 @@ function Products() {
   useLayoutEffect(() => {
     const topPosition = slideRef.current.getBoundingClientRect().top;
     const onScroll = () => {
-      const scrollPosition = window.scrollY + window.innerHeight
+      const scrollPosition = window.scrollY + window.innerHeight;
       if (topPosition < scrollPosition) {
         setSlideIn(true);
       }
@@ -30,25 +30,23 @@ function Products() {
   }, []);
 
   useEffect(() => {
-    lottie.loadAnimation({
-      container: document.querySelector("#products__full-control-animation"),
-      animationData: fullControlAnmiation,
-      loop: false,
-      // autoplay: false,
-      rendererSettings: {
-        preserveAspectRatio: 'xMidYMid slice',
-      }
-    });
-    lottie.loadAnimation({
-      container: document.querySelector("#products__products-animation"),
-      animationData: ourProductsAnimation,
-      loop: false,
-      // autoplay: false,
-      rendererSettings: {
-        preserveAspectRatio: 'xMidYMid slice',
-      }
-    });
-  }, []);
+    if (slideIn) {
+      setTimeout(() => {
+        lottie.loadAnimation({
+          container: document.querySelector("#products__full-control-animation"),
+          animationData: fullControlAnmiation,
+          loop: false,
+          rendererSettings: { preserveAspectRatio: 'xMidYMid slice' }
+        });
+        lottie.loadAnimation({
+          container: document.querySelector("#products__products-animation"),
+          animationData: ourProductsAnimation,
+          loop: false,
+          rendererSettings: { preserveAspectRatio: 'xMidYMid slice' }
+        });
+      }, 1000)
+    }
+  }, [slideIn]);
 
   const Card = (props) => (
     <div className={slideIn && `products__card-slide--${props.type}`}>

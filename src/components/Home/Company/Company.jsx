@@ -19,6 +19,7 @@ const Card = (props) => (
 function Company() {
   return (
     <div className="company__bg">
+      <div className="company__horizontal" />
       <Container>
         <Row><Col xs={12} md={6}><span className="company__eyebrow heading5">The Company</span></Col></Row>
 
