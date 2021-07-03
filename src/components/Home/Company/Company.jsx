@@ -1,5 +1,5 @@
 import './Company.css';
-import rightBlack from '../../../images/icons/chevron-right-black.png';
+import rightBlack from '../../../images/icons/chevron-right-black.svg';
 
 import { Link } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';

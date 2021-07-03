@@ -1,4 +1,5 @@
 .sl-future__bg {
+  position: relative;
   background: url('/src/images/backgrounds/seamless/future-desktop.svg');
   background-size: cover;
   padding: 120px 0 141px;
@@ -6,14 +7,14 @@
 @media (max-width: 991.98px) {
   .sl-future__bg {
     background: url('/src/images/backgrounds/seamless/future-tablet.svg');
-  background-size: cover;
+    background-size: cover;
     padding: 120px 0 101px;
   }
 }
 @media (max-width: 767.98px) {
   .sl-future__bg {
     background: url('/src/images/backgrounds/seamless/future-mobile.svg');
-  background-size: cover;
+    background-size: cover;
     padding: 80px 0 80px;
   }
 }
@@ -65,6 +66,8 @@
   margin-bottom: 0;
 }
 
+
+/* Animations - Transitions */
 .sl-future__card-slide--left {
   transform: translateY(300px);
   animation: come-in 0.8s ease forwards;
@@ -75,4 +78,56 @@
 }
 @keyframes come-in {
   to { transform: translateY(0); }
+}
+
+/* Animations - Lottie */
+#sl-future__future-animation {
+  position: absolute;
+  width: 255px;
+  top: 75px;
+  left: -30px;
+}
+@media (max-width: 991.98px) {
+  #sl-future__future-animation {
+    top: 10px;
+    left: 400px;
+  }
+}
+@media (max-width: 767.98px) {
+  #sl-future__future-animation {
+    width: 200px;
+    top: -20px;
+    left: 120px;
+  }
+}
+
+/* Horizontal Lines */
+.sl-future__horizontal {
+  height: 1px;
+  background: var(--primary-black);
+  width: 100%;
+	position: absolute;
+}
+
+.sl-future__horizontal1 {
+	top: 404px;
+}
+@media (max-width: 767.98px) {
+  .sl-future__horizontal1 {
+    top: 332px;
+  }
+}
+
+.sl-future__horizontal2 {
+	bottom: 120px;
+}
+@media (max-width: 991.98px) {
+  .sl-future__horizontal2 {
+    bottom: 80px;
+  }
+}
+@media (max-width: 767.98px) {
+  .sl-future__horizontal2 {
+    bottom: 60px;
+  }
 }

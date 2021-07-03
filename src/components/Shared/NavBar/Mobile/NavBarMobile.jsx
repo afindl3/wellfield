@@ -4,8 +4,8 @@ import logoBlack from '../../../../images/logos/wellfield-black.svg';
 import close from '../../../../images/icons/nav-close.svg';
 import hamburgerWhite from '../../../../images/icons/nav-hamburger-white.svg';
 import hamburgerBlack from '../../../../images/icons/nav-hamburger-black.svg';
-import downGrey from '../../../../images/icons/chevron-down-grey.png';
-import downOrange from '../../../../images/icons/chevron-down-orange.png';
+import downGrey from '../../../../images/icons/chevron-down-grey.svg';
+import downOrange from '../../../../images/icons/chevron-down-orange.svg';
 
 import moneyclip from '../../../../images/logos/moneyclip.svg';
 import seamless from '../../../../images/logos/seamless-v2.svg';

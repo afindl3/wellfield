@@ -1,10 +1,13 @@
 import './Products.css';
-import application from '../../../images/tiles/application.png';
-import protocol from '../../../images/tiles/protocol.png';
-import rightWhite from '../../../images/icons/chevron-right-white.png';
-import rightBlack from '../../../images/icons/chevron-right-black.png';
+import application from '../../../images/tiles/application-cut.png';
+import protocol from '../../../images/tiles/protocol-cut.png';
+import rightWhite from '../../../images/icons/chevron-right-white.svg';
+import rightBlack from '../../../images/icons/chevron-right-black.svg';
+import fullControlAnmiation from '../../../lotties/home/circles/full-control.json';
+import ourProductsAnimation from '../../../lotties/home/underlines/our-products.json';
 
-import { useLayoutEffect, useRef, useState } from 'react';
+import lottie from 'lottie-web';
+import { useLayoutEffect, useRef, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -22,9 +25,29 @@ function Products() {
         setSlideIn(true);
       }
     }
-
     window.addEventListener('scroll', onScroll)
     return () => window.removeEventListener('scroll', onScroll)
+  }, []);
+
+  useEffect(() => {
+    lottie.loadAnimation({
+      container: document.querySelector("#products__full-control-animation"),
+      animationData: fullControlAnmiation,
+      loop: false,
+      // autoplay: false,
+      rendererSettings: {
+        preserveAspectRatio: 'xMidYMid slice',
+      }
+    });
+    lottie.loadAnimation({
+      container: document.querySelector("#products__products-animation"),
+      animationData: ourProductsAnimation,
+      loop: false,
+      // autoplay: false,
+      rendererSettings: {
+        preserveAspectRatio: 'xMidYMid slice',
+      }
+    });
   }, []);
 
   const Card = (props) => (
@@ -58,10 +81,16 @@ function Products() {
 
   return (
     <div className="products__bg">
+      <div className="products__horizontal products__horizontal1" />
+      <div className="products__horizontal products__horizontal2" />
       <Container>
         <Row>
           <Col xs={12}>
-            <h2 className="products__heading heading3">Our products eliminate the need for third parties, whether traditional banks or crypto exchanges, and give individuals full control over their assets.</h2>
+            <div style={{ position: 'relative' }}>
+              <h2 className="products__heading heading3">Our products eliminate the need for third parties, whether traditional banks or crypto exchanges, <br></br>and give individuals <br></br>full control over their assets.</h2>
+              <div id="products__full-control-animation" />
+              <div id="products__products-animation" />
+            </div>
           </Col>
         </Row>
         <Row>

@@ -1,8 +1,8 @@
 import './Products.css';
 import application from '../../../images/tiles/application.png';
 import protocol from '../../../images/tiles/protocol.png';
-import rightWhite from '../../../images/icons/chevron-right-white.png';
-import rightBlack from '../../../images/icons/chevron-right-black.png';
+import rightWhite from '../../../images/icons/chevron-right-white.svg';
+import rightBlack from '../../../images/icons/chevron-right-black.svg';
 
 import { Link } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';

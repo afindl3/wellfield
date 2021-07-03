@@ -1,4 +1,5 @@
 .values__bg {
+  position: relative;
   background: url('/src/images/backgrounds/home/values-desktop.svg');
   background-size: cover;
   padding: 120px 0 141px 0;
@@ -72,6 +73,7 @@
   margin: 40px 0 12px;
 }
 
+/* Animations - Transitions */
 .values__card-slide--1 {
   transform: translateY(300px);
   animation: come-in 0.8s ease forwards;
@@ -90,4 +92,82 @@
 }
 @keyframes come-in {
   to { transform: translateY(0); }
+}
+
+/* Animations - Lottie */
+#values__circle-animation {
+  position: absolute;
+  width: 400px;
+  top: 50px;
+  left: 220px;
+}
+@media (max-width: 991.98px) {
+  #values__circle-animation {
+    width: 320px;
+    left: 190px;
+  }
+}
+@media (max-width: 767.98px) {
+  #values__circle-animation {
+    width: 220px;
+    top: 40px;
+    left: 120px;
+  }
+}
+
+#values__line-animation {
+  position: absolute;
+  width: 450px;
+  top: 220px;
+  left: -10px;
+}
+@media (max-width: 991.98px) {
+  #values__line-animation {
+    width: 360px;
+    top: 190px;
+    left: 60px;
+  }
+}
+@media (max-width: 767.98px) {
+  #values__line-animation {
+    width: 260px;
+    top: 130px;
+    left: 30px;
+  }
+}
+
+/* Horizontal Lines */
+.values__horizontal {
+  height: 1px;
+  background: #373B3E;
+  width: 100%;
+	position: absolute;
+}
+
+.values__horizontal1 {
+	top: 220px;
+}
+@media (max-width: 991.98px) {
+  .values__horizontal1 {
+    top: 168px;
+  }
+}
+@media (max-width: 767.98px) {
+  .values__horizontal1 {
+    top: 128px;
+  }
+}
+
+.values__horizontal2 {
+	bottom: 120px;
+}
+@media (max-width: 991.98px) {
+  .values__horizontal2 {
+    bottom: 80px;
+  }
+}
+@media (max-width: 767.98px) {
+  .values__horizontal2 {
+    bottom: 60px;
+  }
 }

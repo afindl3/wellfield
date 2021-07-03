@@ -3,7 +3,10 @@ import accessibility from '../../../images/icons/accessibility.svg';
 import control from '../../../images/icons/control.svg';
 import decentralization from '../../../images/icons/decentralization.svg';
 import options from '../../../images/icons/options.svg';
+import circleAnmiation from '../../../lotties/home/circles/the-future.json';
+import lineAnimation from '../../../lotties/home/underlines/decentralized.json';
 
+import lottie from 'lottie-web';
 import { useLayoutEffect, useRef, useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -26,6 +29,28 @@ function Values() {
     return () => window.removeEventListener('scroll', onScroll)
   }, []);
 
+  // useEffect(() => {
+  //   lottie.loadAnimation({
+  //     container: document.querySelector("#values__circle-animation"),
+  //     animationData: theFutureAnmiation,
+  //     loop: false,
+  //     // autoplay: false,
+  //     rendererSettings: {
+  //       preserveAspectRatio: 'xMidYMid slice',
+  //     }
+  //   });
+
+  //   lottie.loadAnimation({
+  //     container: document.querySelector("#values__line-animation"),
+  //     animationData: decentralizedAnimation,
+  //     loop: false,
+  //     // autoplay: false,
+  //     rendererSettings: {
+  //       preserveAspectRatio: 'xMidYMid slice',
+  //     }
+  //   });
+  // }, []);
+
   const Card = (props) => (
     <div className={slideIn && `values__card-slide--${props.index}`}>
       <div className={`values__card values__card--${props.index}`}>
@@ -38,11 +63,17 @@ function Values() {
 
   return (
     <div className="values__bg">
+      <div className="values__horizontal values__horizontal1" />
+      <div className="values__horizontal values__horizontal2" />
       <Container>
         <Row>
           <Col xs={12}>
             <h1 className="values__heading heading1">Our Values</h1>
-            <h3 className="values__paragraph heading3">DeFi is reinventing finance. We want everyone to participate in ways that better their lives.</h3>
+            <div style={{ position: 'relative' }}>
+              <h3 className="values__paragraph heading3">DeFi is reinventing finance. We want everyone to participate in ways that better their lives.</h3>
+              <div id="values__circle-animation" />
+              <div id="values__line-animation" />
+            </div>
           </Col>
         </Row>
         <Row>

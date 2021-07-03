@@ -1,0 +1,10 @@
+.horizontal-line {
+	width: 100%;
+	position: absolute;
+	top: 50px;
+	height: 1px;
+}
+
+.horizontal-line--black {
+	background: var(--primary-black);
+}
