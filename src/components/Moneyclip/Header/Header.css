@@ -1,15 +1,17 @@
 .mc-header__bg {
-  background: url('/src/images/backgrounds/moneyclip/header-desktop.svg');
+  background: url('/src/images/bg-assets/white-1440.svg') no-repeat center center fixed;
   background-size: cover;
   padding: 120px 0 89px 0;
 }
 @media (max-width: 991.98px) {
   .mc-header__bg {
+    background: url('/src/images/bg-assets/white-768.svg') no-repeat center center fixed;
     padding: 81px 0 80px 0;
   }
 }
 @media (max-width: 767.98px) {
   .mc-header__bg {
+    background: url('/src/images/bg-assets/white-375.svg') no-repeat center center fixed;
     padding: 81px 0 60px 0;
   }
 }
@@ -52,7 +54,7 @@
 }
 
 .mc-header__button {
-  background: #F9F9F9;;
+  background: var(--primary-white);
   border: none;
   padding: 14px 40px 16px 40px;
 }

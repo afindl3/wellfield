@@ -1,19 +1,17 @@
 .team__bg {
-  /* background: url('/src/images/backgrounds/home/team-desktop.svg'); */
+  background: url('/src/images/bg-assets/white-1440.svg') no-repeat center center fixed;
   background-size: cover;
   padding: 120px 0;
 }
 @media (max-width: 991.98px) {
   .team__bg {
-    /* background: url('/src/images/backgrounds/home/team-tablet.svg'); */
-    background-size: cover;
+    background: url('/src/images/bg-assets/white-768.svg') no-repeat center center fixed;
     padding: 80px 0;
   }
 }
 @media (max-width: 767.98px) {
   .team__bg {
-    /* background: url('/src/images/backgrounds/home/team-mobile.svg'); */
-    background-size: cover;
+    background: url('/src/images/bg-assets/white-375.svg') no-repeat center center fixed;
     padding: 60px 0;
   }
 }

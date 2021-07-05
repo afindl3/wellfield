@@ -2,7 +2,9 @@
 @media (min-width: 768px) { 
   /* Bootstrap overrides */
   .navbar {
-    padding: 36px 0 !important;
+    padding-top: 31px !important;
+    padding-bottom: 14px !important;
+    border-bottom: 1px solid #EDEDED;
   }
 
   .navbar-light .navbar-brand {

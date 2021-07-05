@@ -1,16 +1,18 @@
 .header__bg {
   position: relative;
-  background: url('/src/images/bg-assets/light-1440.svg') no-repeat center center fixed;
+  background: url('/src/images/bg-assets/white-1440.svg') no-repeat center center fixed;
   background-size: cover;
   padding: 121px 0 60px 0;
 }
 @media (max-width: 991.98px) {
   .header__bg {
+    background: url('/src/images/bg-assets/white-768.svg') no-repeat center center fixed;
     padding: 101px 0 60px 0;
   }
 }
 @media (max-width: 767.98px) {
   .header__bg {
+    background: url('/src/images/bg-assets/white-375.svg') no-repeat center center fixed;
     padding: 81px 0 381px 0;
   }
 }
