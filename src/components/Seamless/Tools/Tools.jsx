@@ -27,7 +27,7 @@ function Values() {
   }, []);
 
   const Card = (props) => (
-    <div className={slideIn && `tools__card-slide--${props.index}`}>
+    <div className={slideIn ? `tools__card-slide--${props.index}` : ''}>
       <div className={`tools__card tools__card--${props.index}`}>
         <img src={props.icon} alt={`${props.title} icon`} />
         <h5 className="tools__card-title heading5">{props.title}</h5>

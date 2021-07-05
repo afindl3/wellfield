@@ -45,13 +45,13 @@
   max-width: 600px;
   margin: 0 auto;
   cursor: pointer;
-  /* position: relative;
+  position: relative;
   top: 0;
-  transition: top ease 0.5s; */
+  transition: top ease 0.2s;
 }
-/* .products__card:hover {
-  top: -10px;
-} */
+.products__card:hover {
+  top: -30px;
+}
 .products__card--left {
   background: var(--primary-black);
 }
@@ -164,14 +164,18 @@
 /* Animations - Transitions */
 .products__card-slide--left {
   transform: translateY(300px);
-  animation: come-in 0.8s ease forwards;
+  animation: products-come-in 0.8s ease forwards, products-fade-in 2s;;
 }
 .products__card-slide--right {
   transform: translateY(300px);
-  animation: come-in 1.4s ease forwards;
+  animation: products-come-in 1.4s ease forwards, products-fade-in 2s;;
 }
-@keyframes come-in {
+@keyframes products-come-in {
   to { transform: translateY(0); }
+}
+@keyframes products-fade-in {
+  0% { opacity:0; }
+  100% { opacity:1; }
 }
 
 /* Animations - Lottie */

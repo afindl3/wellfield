@@ -50,6 +50,10 @@
   background: var(--primary-white);
   border: 2px solid var(--primary-orange);
 }
+.join__button:hover {
+  background: var(--primary-orange);
+  color: var(--primary-white);
+}
 @media (max-width: 991.98px) {
   .join__button {
     margin-top: 40px;

@@ -30,24 +30,26 @@ function Values() {
 
   useEffect(() => {
     if (slideIn) {
-      lottie.loadAnimation({
-        container: document.querySelector("#values__circle-animation"),
-        animationData: fullControlAnmiation,
-        loop: false,
-        rendererSettings: { preserveAspectRatio: 'xMidYMid slice' }
-      });
+      setTimeout(() => {
+        lottie.loadAnimation({
+          container: document.querySelector("#values__circle-animation"),
+          animationData: fullControlAnmiation,
+          loop: false,
+          rendererSettings: { preserveAspectRatio: 'xMidYMid slice' }
+        });
 
-      lottie.loadAnimation({
-        container: document.querySelector("#values__line-animation"),
-        animationData: ourProductsAnimation,
-        loop: false,
-        rendererSettings: { preserveAspectRatio: 'xMidYMid slice' }
-      });
+        lottie.loadAnimation({
+          container: document.querySelector("#values__line-animation"),
+          animationData: ourProductsAnimation,
+          loop: false,
+          rendererSettings: { preserveAspectRatio: 'xMidYMid slice' }
+        });
+      }, 1000)
     }
   }, [slideIn]);
 
   const Card = (props) => (
-    <div className={slideIn && `values__card-slide--${props.index}`}>
+    <div className={slideIn ? `values__card-slide--${props.index}` : ''}>
       <div className={`values__card values__card--${props.index}`}>
         <img src={props.icon} alt={`${props.title} icon`} />
         <h5 className="values__card-title heading5">{props.title}</h5>

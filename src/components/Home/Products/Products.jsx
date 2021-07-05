@@ -8,12 +8,14 @@ import ourProductsAnimation from '../../../lotties/home/underlines/our-products.
 
 import lottie from 'lottie-web';
 import { useLayoutEffect, useRef, useState, useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 function Products() {
+  const history = useHistory();
   const [slideIn, setSlideIn] = useState(false);
   const slideRef = useRef(null)
 
@@ -49,8 +51,9 @@ function Products() {
   }, [slideIn]);
 
   const Card = (props) => (
-    <div className={slideIn && `products__card-slide--${props.type}`}>
-      <div className={`products__card products__card--${props.type}`} >
+    <div className={slideIn ? `products__card-slide--${props.type}` : ''}>
+      <div className={`products__card products__card--${props.type}`}
+        onClick={() => history.push(props.eyebrow.toLowerCase())}>
         <span className={`products__card-eyebrow products__card-eyebrow--${props.type}`}>{props.eyebrow}</span>
         <h3 className={`products__card-title heading2 products__card-title--${props.type}`}>{props.title}</h3>
 

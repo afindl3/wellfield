@@ -21,6 +21,7 @@
   -webkit-text-fill-color: transparent;
   max-width: 328px;
   margin-bottom: 30px;
+  animation: sl-header-fade-in linear 2.5s;
 }
 @media (max-width: 991.98px) {
   .sl-header__heading1 {
@@ -29,6 +30,7 @@
 }
 @media (max-width: 767.98px) {
   .sl-header__heading1 {
+    max-width: 161px;
     margin-bottom: 20px;
   }
 }
@@ -39,6 +41,7 @@
   border-radius: 36px;
   padding: 1px;
   margin-bottom: 117px;
+  animation: sl-header-fade-in linear 2.5s;
 }
 @media (max-width: 991.98px) {
   .sl-header__button-wrapper {
@@ -65,15 +68,51 @@
 
 .sl-header__heading2 {
   color: var(--primary-white);
-  margin-bottom: 0
+  margin-bottom: 0;
+  max-width: 600px;
+  animation: sl-header-fade-in linear 2.5s;
 }
 @media (max-width: 991.98px) {
   .sl-header__heading2 {
     margin-bottom: 80px;
+    max-width: 688px;
   }
 }
 @media (max-width: 767.98px) {
   .sl-header__heading2 {
     margin-bottom: 60px;
+    max-width: 326px;
+  }
+}
+
+.sl-header__scroll {
+  animation: sl-header-fade-in linear 2.5s;
+}
+
+/* Animations - Fade-ins */
+@keyframes sl-header-fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Animations - Lottie */
+#sl-header__line-animation {
+  position: absolute;
+  width: 600px;
+  top: 95px;
+  left: -25px;
+}
+@media (max-width: 991.98px) {
+  #sl-header__line-animation {
+    width: 500px;
+    top: 20px;
+    left: 100px;
+  }
+}
+@media (max-width: 767.98px) {
+  #sl-header__line-animation{
+    width: 350px;
+    top: 60px;
+    left: -15px;
   }
 }
