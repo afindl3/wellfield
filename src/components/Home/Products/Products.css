@@ -1,19 +1,19 @@
 .products__bg {
   position: relative;
-  background: url('/src/images/backgrounds/home/products-desktop.svg');
+  background: url('/src/images/backgrounds/home/products-desktop.svg') no-repeat center center fixed;
   background-size: cover;
   padding: 160px 0 141px;
 }
 @media (max-width: 991.98px) {
   .products__bg {
-    background: url('/src/images/backgrounds/home/products-tablet.svg');
+    background: url('/src/images/backgrounds/home/products-tablet.svg') no-repeat center center fixed;
     background-size: cover;
     padding: 120px 0 101px;
   }
 }
 @media (max-width: 767.98px) {
   .products__bg {
-    background: url('/src/images/backgrounds/home/products-mobile.svg');
+    background: url('/src/images/backgrounds/home/products-mobile.svg') no-repeat center center fixed;
     background-size: cover;
     padding: 80px 0 77px;
   }
@@ -33,7 +33,7 @@
 @media (max-width: 767.98px) {
   .products__heading {
     margin-bottom: 69px;
-    max-width: 100%;
+    max-width: 327px;
   }
 }
 
@@ -44,6 +44,13 @@
   height: 100%;
   max-width: 600px;
   margin: 0 auto;
+  cursor: pointer;
+  position: relative;
+  top: 0;
+  transition: top ease 0.2s;
+}
+.products__card:hover {
+  top: -30px;
 }
 .products__card--left {
   background: var(--primary-black);
@@ -157,21 +164,25 @@
 /* Animations - Transitions */
 .products__card-slide--left {
   transform: translateY(300px);
-  animation: come-in 0.8s ease forwards;
+  animation: products-come-in 0.8s ease forwards, products-fade-in 2s;;
 }
 .products__card-slide--right {
   transform: translateY(300px);
-  animation: come-in 1.4s ease forwards;
+  animation: products-come-in 1.4s ease forwards, products-fade-in 2s;;
 }
-@keyframes come-in {
+@keyframes products-come-in {
   to { transform: translateY(0); }
+}
+@keyframes products-fade-in {
+  0% { opacity:0; }
+  100% { opacity:1; }
 }
 
 /* Animations - Lottie */
 #products__full-control-animation {
   position: absolute;
   width: 300px;
-  top: 70px;
+  top: 110px;
   left: -60px;
 }
 @media (max-width: 991.98px) {

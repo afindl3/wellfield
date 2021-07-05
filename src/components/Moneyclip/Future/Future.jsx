@@ -25,9 +25,9 @@ function Future() {
   }, []);
 
   const Card = (props) => (
-    <div className={slideIn && `mc-future__card-slide--${props.type}`}>
+    <div className={slideIn ? `mc-future__card-slide--${props.type}` : ''}>
       <div className={`mc-future__card mc-future__card--${props.type}`}>
-        <img src={props.image} />
+        <img src={props.image} alt={props.imageAlt} />
         <div className="mc-future__card-body-container">
           <h3 className="mc-future__card-title heading4">{props.title}</h3>
           <p className="mc-future__card-body p1">{props.body}</p>
@@ -48,6 +48,7 @@ function Future() {
           <Col xs={12} lg={6}>
             <Card
               image={liquidity}
+              imageAlt='Liquidity icon'
               title='The ultimate trading wallet.'
               body='MoneyClip links your bank to blockchain and gives you regulated access to the world’s best DeFi solutions.'
               type='left'
@@ -56,6 +57,7 @@ function Future() {
           <Col xs={12} lg={6}>
             <Card
               image={security}
+              imageAlt='Security icon'
               title='All-in-one solution for DeFi products.'
               body='Savings, borrowing, merchant solutions: one app for every financial product on the ETH blockchain ecosystem.  '
               type='right'

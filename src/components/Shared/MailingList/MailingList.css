@@ -10,52 +10,52 @@
 }
 
 .mailing__bg-gray {
-  background: url('/src/images/backgrounds/mailing-list/gray-desktop.svg');
+  background: url('/src/images/backgrounds/mailing-list/gray-desktop.svg') no-repeat center center fixed;
   background-size: cover;
 }
 @media (max-width: 991.98px) {
   .mailing__bg-gray {
-    background: url('/src/images/backgrounds/mailing-list/gray-tablet.svg');
+    background: url('/src/images/backgrounds/mailing-list/gray-tablet.svg') no-repeat center center fixed;
     background-size: cover;
   }
 }
 @media (max-width: 767.98px) {
   .mailing__bg-gray {
-    background: url('/src/images/backgrounds/mailing-list/gray-mobile.svg');
+    background: url('/src/images/backgrounds/mailing-list/gray-mobile.svg') no-repeat center center fixed;
     background-size: cover;
   }
 }
 
 .mailing__bg-black {
-  background: url('/src/images/backgrounds/mailing-list/black-desktop.svg');
+  background: url('/src/images/backgrounds/mailing-list/black-desktop.svg') no-repeat center center fixed;
   background-size: cover;
 }
 @media (max-width: 991.98px) {
   .mailing__bg-black {
-    background: url('/src/images/backgrounds/mailing-list/black-tablet.svg');
+    background: url('/src/images/backgrounds/mailing-list/black-tablet.svg') no-repeat center center fixed;
     background-size: cover;
   }
 }
 @media (max-width: 767.98px) {
   .mailing__bg-black {
-    background: url('/src/images/backgrounds/mailing-list/black-mobile.svg');
+    background: url('/src/images/backgrounds/mailing-list/black-mobile.svg') no-repeat center center fixed;
     background-size: cover;
   }
 }
 
 .mailing__bg-white {
-  background: url('/src/images/backgrounds/mailing-list/white-desktop.svg');
+  background: url('/src/images/backgrounds/mailing-list/white-desktop.svg') no-repeat center center fixed;
   background-size: cover;
 }
 @media (max-width: 991.98px) {
   .mailing__bg-white {
-    background: url('/src/images/backgrounds/mailing-list/white-tablet.svg');
+    background: url('/src/images/backgrounds/mailing-list/white-tablet.svg') no-repeat center center fixed;
     background-size: cover;
   }
 }
 @media (max-width: 767.98px) {
   .mailing__bg-white {
-    background: url('/src/images/backgrounds/mailing-list/white-mobile.svg');
+    background: url('/src/images/backgrounds/mailing-list/white-mobile.svg') no-repeat center center fixed;
     background-size: cover;
   }
 }

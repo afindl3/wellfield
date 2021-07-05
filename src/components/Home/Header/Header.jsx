@@ -11,24 +11,20 @@ import Col from 'react-bootstrap/Col';
 
 function Header() {
   useEffect(() => {
-    lottie.loadAnimation({
-      container: document.querySelector("#header__future-animation"),
-      animationData: theFutureAnmiation,
-      loop: false,
-      // autoplay: false,
-      rendererSettings: {
-        preserveAspectRatio: 'xMidYMid slice',
-      }
-    });
-    lottie.loadAnimation({
-      container: document.querySelector("#header__decentralized-animation"),
-      animationData: decentralizedAnimation,
-      loop: false,
-      // autoplay: false,
-      rendererSettings: {
-        preserveAspectRatio: 'xMidYMid slice',
-      }
-    });
+    setTimeout(() => {
+      lottie.loadAnimation({
+        container: document.querySelector("#header__future-animation"),
+        animationData: theFutureAnmiation,
+        loop: false,
+        rendererSettings: { preserveAspectRatio: 'xMidYMid slice' }
+      });
+      lottie.loadAnimation({
+        container: document.querySelector("#header__decentralized-animation"),
+        animationData: decentralizedAnimation,
+        loop: false,
+        rendererSettings: { preserveAspectRatio: 'xMidYMid slice' }
+      });
+    }, 1700)
   }, []);
 
   return (

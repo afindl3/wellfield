@@ -8,20 +8,14 @@
   background-size: cover;
 }
 
-
 .navBar__button {
   margin-left: 20px;
   border: 1px solid var(--primary-orange);
   color: var(--primary-orange);
 }
 .navBar__button:hover {
+  background: var(--primary-orange);
   color: var(--primary-orange);
-}
-.navBar__button--black {
-  background: var(--primary-black);
-}
-.navBar__button--white {
-  background: #F9F9F9;
 }
 @media (max-width: 767.98px) {
   .navBar__button {
@@ -31,6 +25,19 @@
     margin-left: 0;
   }
 }
+.navBar__button--black {
+  background: var(--primary-black);
+}
+.navBar__button--black:hover {
+  color: var(--primary-black);
+}
+.navBar__button--white {
+  background: #F9F9F9;
+}
+.navBar__button--white:hover {
+  color: var(--primary-white);
+}
+
 
 .navBar__dropdown-title {
   display: block;

@@ -38,7 +38,7 @@ const responsive = {
 const CustomLeftArrow = ({ onClick }) => {
   return (
     <div className="timeline__scroll--left">
-      <img src={timelineScroll} onClick={() => onClick()} className="rotateimg180" />
+      <img src={timelineScroll} onClick={() => onClick()} className="rotateimg180" alt="Previous" />
     </div>
   );
 };
@@ -46,7 +46,7 @@ const CustomLeftArrow = ({ onClick }) => {
 const CustomRightArrow = ({ onClick }) => {
   return (
     <div className="timeline__scroll--right">
-      <img src={timelineScroll} onClick={() => onClick()} />
+      <img src={timelineScroll} onClick={() => onClick()} alt="Next" />
     </div>
   );
 };
@@ -59,11 +59,17 @@ const Card = (props) => (
 
     <ul className="timeline__list">
       <li className="timeline__list-item">
-        <img src={props.year >= currentYear ? checkmarkEmpty : checkmarkFilled} className="timeline__checkmark" />
+        <img src={props.year >= currentYear ? checkmarkEmpty : checkmarkFilled}
+          alt={props.year >= currentYear ? 'Unchecked checkmark' : 'Checked checkmark'}
+          className="timeline__checkmark"
+        />
         <p className="p1 mb-0">{props.item1}</p>
       </li>
       <li className="timeline__list-item">
-        <img src={props.year >= currentYear ? checkmarkEmpty : checkmarkFilled} className="timeline__checkmark" />
+        <img src={props.year >= currentYear ? checkmarkEmpty : checkmarkFilled}
+          alt={props.year >= currentYear ? 'Unchecked checkmark' : 'Checked checkmark'}
+          className="timeline__checkmark"
+        />
         <p className="p1 mb-0">{props.item2}</p>
       </li>
     </ul>

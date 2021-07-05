@@ -3,11 +3,11 @@ import accessibility from '../../../images/icons/accessibility.svg';
 import control from '../../../images/icons/control.svg';
 import decentralization from '../../../images/icons/decentralization.svg';
 import options from '../../../images/icons/options.svg';
-import circleAnmiation from '../../../lotties/home/circles/the-future.json';
-import lineAnimation from '../../../lotties/home/underlines/decentralized.json';
+import fullControlAnmiation from '../../../lotties/home/circles/full-control.json';
+import ourProductsAnimation from '../../../lotties/home/underlines/our-products.json';
 
 import lottie from 'lottie-web';
-import { useLayoutEffect, useRef, useState } from 'react';
+import { useLayoutEffect, useRef, useState, useEffect } from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -24,35 +24,32 @@ function Values() {
         setSlideIn(true);
       }
     }
-
     window.addEventListener('scroll', onScroll)
     return () => window.removeEventListener('scroll', onScroll)
   }, []);
 
-  // useEffect(() => {
-  //   lottie.loadAnimation({
-  //     container: document.querySelector("#values__circle-animation"),
-  //     animationData: theFutureAnmiation,
-  //     loop: false,
-  //     // autoplay: false,
-  //     rendererSettings: {
-  //       preserveAspectRatio: 'xMidYMid slice',
-  //     }
-  //   });
+  useEffect(() => {
+    if (slideIn) {
+      setTimeout(() => {
+        lottie.loadAnimation({
+          container: document.querySelector("#values__circle-animation"),
+          animationData: fullControlAnmiation,
+          loop: false,
+          rendererSettings: { preserveAspectRatio: 'xMidYMid slice' }
+        });
 
-  //   lottie.loadAnimation({
-  //     container: document.querySelector("#values__line-animation"),
-  //     animationData: decentralizedAnimation,
-  //     loop: false,
-  //     // autoplay: false,
-  //     rendererSettings: {
-  //       preserveAspectRatio: 'xMidYMid slice',
-  //     }
-  //   });
-  // }, []);
+        lottie.loadAnimation({
+          container: document.querySelector("#values__line-animation"),
+          animationData: ourProductsAnimation,
+          loop: false,
+          rendererSettings: { preserveAspectRatio: 'xMidYMid slice' }
+        });
+      }, 1000)
+    }
+  }, [slideIn]);
 
   const Card = (props) => (
-    <div className={slideIn && `values__card-slide--${props.index}`}>
+    <div className={slideIn ? `values__card-slide--${props.index}` : ''}>
       <div className={`values__card values__card--${props.index}`}>
         <img src={props.icon} alt={`${props.title} icon`} />
         <h5 className="values__card-title heading5">{props.title}</h5>

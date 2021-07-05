@@ -76,30 +76,37 @@
 /* Animations - Transitions */
 .values__card-slide--1 {
   transform: translateY(300px);
-  animation: come-in 0.8s ease forwards;
+  animation: values-come-in 0.8s ease forwards, values-fade-in 2s;
+  /* opacity: 0; */
 }
 .values__card-slide--2 {
   transform: translateY(300px);
-  animation: come-in 1s ease forwards;
+  animation: values-come-in 1s ease forwards, values-fade-in 2s;
+
+  /* opacity: 0; */
 }
 .values__card-slide--3 {
   transform: translateY(300px);
-  animation: come-in 1.2s ease forwards;
+  animation: values-come-in 1.2s ease forwards, values-fade-in 2s;
 }
 .values__card-slide--4 {
   transform: translateY(300px);
-  animation: come-in 1.4s ease forwards;
+  animation: values-come-in 1.4s ease forwards, values-fade-in 2s;
 }
-@keyframes come-in {
-  to { transform: translateY(0); }
+@keyframes values-come-in {
+  to { transform: translateY(0);}
+}
+@keyframes values-fade-in {
+  0% { opacity:0; }
+  100% { opacity:1; }
 }
 
 /* Animations - Lottie */
 #values__circle-animation {
   position: absolute;
-  width: 400px;
-  top: 50px;
-  left: 220px;
+  width: 200px;
+  top: -45px;
+  left: -50px;
 }
 @media (max-width: 991.98px) {
   #values__circle-animation {
@@ -117,9 +124,9 @@
 
 #values__line-animation {
   position: absolute;
-  width: 450px;
-  top: 220px;
-  left: -10px;
+  width: 250px;
+  top: 50px;
+  left: 50px;
 }
 @media (max-width: 991.98px) {
   #values__line-animation {

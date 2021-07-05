@@ -1,7 +1,6 @@
 import './Future.css';
 import liquidity from '../../../images/icons/liquidity.svg';
 import security from '../../../images/icons/security.svg';
-import HorizontalLine from '../../Shared/HorizontalLine/HorizontalLine';
 import theFutureAnmiation from '../../../lotties/home/circles/the-future.json';
 
 import lottie from 'lottie-web';
@@ -39,9 +38,9 @@ function Future() {
   }, []);
 
   const Card = (props) => (
-    <div className={slideIn && `sl-future__card-slide--${props.type}`}>
+    <div className={slideIn ? `sl-future__card-slide--${props.type}` : ''}>
       <div className={`sl-future__card sl-future__card--${props.type}`}>
-        <img src={props.image} />
+        <img src={props.image} alt={props.imageAlt} />
         <h3 className="sl-future__card-title heading4">{props.title}</h3>
         <p className="sl-future__card-body p1">{props.body}</p>
       </div>
@@ -67,6 +66,7 @@ function Future() {
           <Col xs={12} lg={6}>
             <Card
               image={liquidity}
+              imageAlt='Liquidity icon'
               title='Blockchain-agnostic, open, and permissionless.'
               body='By working with any blockchain, Seamless securely provides liquidity to the entire DeFi ecosystem.'
               type='left'
@@ -75,6 +75,7 @@ function Future() {
           <Col xs={12} lg={6}>
             <Card
               image={security}
+              imageAlt='Security icon'
               title='Security and execution performance at scale.'
               body='With breakthrough cryptography and multi-party computation, Seamless allows you to control your assets at all times.'
               type='right'
