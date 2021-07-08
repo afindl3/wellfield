@@ -60,3 +60,46 @@
     max-width: 100%;
   }
 }
+
+/* Animations - Lottie */
+#mc-defi__circle-animation {
+  position: absolute;
+  width: 240px;
+  top: 17px;
+  left: 66px;
+}
+@media (max-width: 991.98px) {
+  #mc-defi__circle-animation {
+    width: 240px;
+    top: 12px;
+    left: 67px;
+  }
+}
+@media (max-width: 767.98px) {
+  #mc-defi__circle-animation {
+    width: 140px;
+    top: 6px;
+    left: -40px;
+  }
+}
+
+#mc-defi__underline-animation {
+  position: absolute;
+  width: 425px;
+  top: 154px;
+  left: -60px;
+}
+@media (max-width: 991.98px) {
+  #mc-defi__underline-animation {
+    width: 426px;
+    top: 154px;
+    left: -60px;
+  }
+}
+@media (max-width: 767.98px) {
+  #mc-defi__underline-animation {
+    width: 174px;
+    top: 54px;
+    left: 137px;
+  }
+}

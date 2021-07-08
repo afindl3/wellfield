@@ -3,8 +3,8 @@ import accessibility from '../../../images/icons/accessibility.svg';
 import control from '../../../images/icons/control.svg';
 import decentralization from '../../../images/icons/decentralization.svg';
 import options from '../../../images/icons/options.svg';
-import fullControlAnmiation from '../../../lotties/home/circles/full-control.json';
-import ourProductsAnimation from '../../../lotties/home/underlines/our-products.json';
+import defiAnmiation from '../../../lotties/home/circles/defi.json';
+import everyoneAnimation from '../../../lotties/home/underlines/everyone.json';
 
 import lottie from 'lottie-web';
 import { useLayoutEffect, useRef, useState, useEffect } from 'react';
@@ -32,15 +32,15 @@ function Values() {
     if (slideIn) {
       setTimeout(() => {
         lottie.loadAnimation({
-          container: document.querySelector("#values__circle-animation"),
-          animationData: fullControlAnmiation,
+          container: document.querySelector("#values__defi-animation"),
+          animationData: defiAnmiation,
           loop: false,
           rendererSettings: { preserveAspectRatio: 'xMidYMid slice' }
         });
 
         lottie.loadAnimation({
-          container: document.querySelector("#values__line-animation"),
-          animationData: ourProductsAnimation,
+          container: document.querySelector("#values__everyone-animation"),
+          animationData: everyoneAnimation,
           loop: false,
           rendererSettings: { preserveAspectRatio: 'xMidYMid slice' }
         });
@@ -68,8 +68,8 @@ function Values() {
             <h1 className="values__heading heading1">Our Values</h1>
             <div style={{ position: 'relative' }}>
               <h3 className="values__paragraph heading3">DeFi is reinventing finance. We want everyone to participate in ways that better their lives.</h3>
-              <div id="values__circle-animation" />
-              <div id="values__line-animation" />
+              <div id="values__defi-animation" />
+              <div id="values__everyone-animation" />
             </div>
           </Col>
         </Row>

@@ -3,7 +3,6 @@
   /* Bootstrap overrides */
   .navbar {
     padding: 21px 0 15px 0 !important;
-    border-bottom: 1px solid #EDEDED;
   }
 
   .navbar-light .navbar-brand {

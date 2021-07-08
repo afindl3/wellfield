@@ -55,7 +55,6 @@ function DeFi() {
                   <h2 className="sl-defi__heading heading2">DeFi is not yet truly decentralized. We do for trading what Bitcoin did to money.</h2>
                   <div id="sl-defi__line-animation"></div>
                 </div>
-
               </div>
 
               <div>

@@ -13,7 +13,7 @@
 @media (max-width: 767.98px) {
   .mc-future__bg {
     background: url('/src/images/backgrounds/moneyclip/future-mobile.svg');
-  background-size: cover;
+    background-size: cover;
     padding: 80px 0 80px;
   }
 }
@@ -22,11 +22,6 @@
   color: var(--primary-white);
   max-width: 600px;
   margin-bottom: 101px;
-}
-@media (max-width: 991.98px) {
-  .mc-future__heading {
-    max-width: 100%;
-  }
 }
 @media (max-width: 767.98px) {
   .mc-future__heading {
@@ -41,9 +36,13 @@
 }
 .mc-future__card--left {
   background: var(--primary-white);
+  transition: transform 0.5s ease-in;
+  transform: translateY(250px);
 }
 .mc-future__card--right {
   background: var(--slate);
+  transition: transform 0.8s ease-in;
+  transform: translateY(250px);
 }
 @media (max-width: 991.98px) {
   .mc-future__card--right {
@@ -55,11 +54,9 @@
     margin-top: 24px;
   }
 }
-
-/* .mc-future__card-body-container {
-  position: absolute;
-  bottom: 48px;
-} */
+.mc-future__card-animation {
+  transform: translateY(0px);
+}
 
 .mc-future__card-title {
   margin: 40px 0 24px 0;
@@ -71,14 +68,24 @@
   margin-bottom: 0;
 }
 
-.mc-future__card-slide--left {
-  transform: translateY(300px);
-  animation: come-in 0.8s ease forwards;
+/* Animations - Lottie */
+#mc-future__circle-animation {
+  position: absolute;
+  width: 277px;
+  top: 90px;
+  left: -65px;
 }
-.mc-future__card-slide--right {
-  transform: translateY(300px);
-  animation: come-in 1.4s ease forwards;
+@media (max-width: 991.98px) {
+  #mc-future__circle-animation {
+    width: 275px;
+    top: 90px;
+    left: -60px;
+  }
 }
-@keyframes come-in {
-  to { transform: translateY(0); }
+@media (max-width: 767.98px) {
+  #mc-future__circle-animation {
+    width: 150px;
+    top: 15px;
+    left: 202px;
+  }
 }

@@ -88,7 +88,8 @@ function Products() {
         <Row>
           <Col xs={12}>
             <div style={{ position: 'relative' }}>
-              <h2 className="products__heading heading3">Our products eliminate the need for third parties, whether traditional banks or crypto exchanges, <br></br>and give individuals <br></br>full control over their assets.</h2>
+              <h2 className="products__heading heading3 d-none d-md-block">Our products eliminate the need for third parties, whether traditional banks or crypto exchanges, and give individuals full control over their assets.</h2>
+              <h2 className="products__heading heading3 d-md-none">Our products eliminate the need for third parties, whether traditional banks or crypto exchanges, <br></br>and give individuals <br></br>full control over their assets.</h2>
               <div id="products__full-control-animation" />
               <div id="products__products-animation" />
             </div>

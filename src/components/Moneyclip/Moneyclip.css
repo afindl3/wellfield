@@ -1,0 +1,28 @@
+.moneyclip__container {
+	position: relative;
+	overflow-x: hidden;
+	overflow-y: visible;
+}
+
+/* Animations - Lottie */
+#moneyclip__stack-animation {
+  position: absolute;
+  z-index: 1;
+  width: 850px;
+	bottom: 400px;
+	left: 500px;
+}
+@media (max-width: 991.98px) {
+  #moneyclip__stack-animation {
+    width: 800px;
+    bottom: 435px;
+    left: 240px;
+  }
+}
+@media (max-width: 767.98px) {
+  #moneyclip__stack-animation {
+    width: 550px;
+    bottom: 400px;
+    left: -60px;
+  }
+}

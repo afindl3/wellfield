@@ -23,6 +23,7 @@
   -webkit-text-fill-color: transparent;
   max-width: 328px;
   margin-bottom: 30px;
+  animation: mc-header-fade-in linear 1.5s;
 }
 @media (max-width: 991.98px) {
   .mc-header__heading1 {
@@ -31,7 +32,7 @@
 }
 @media (max-width: 767.98px) {
   .mc-header__heading1 {
-    margin-bottom: 20oneyclippx;
+    margin-bottom: 20px;
   }
 }
 
@@ -41,6 +42,7 @@
   border-radius: 36px;
   padding: 1px;
   margin-bottom: 117px;
+  animation: mc-header-fade-in linear 1.5s;
 }
 @media (max-width: 991.98px) {
   .mc-header__button-wrapper {
@@ -65,7 +67,8 @@
 }
 
 .mc-header__heading2 {
-  margin-bottom: 0
+  margin-bottom: 0;
+  animation: mc-header-fade-in linear 1.5s;
 }
 @media (max-width: 991.98px) {
   .mc-header__heading2 {
@@ -75,5 +78,37 @@
 @media (max-width: 767.98px) {
   .mc-header__heading2 {
     margin-bottom: 60px;
+  }
+}
+
+.mc-header__scroll {
+  animation: mc-header-fade-in linear 1.5s;
+}
+
+/* Animations - Fade-ins */
+@keyframes mc-header-fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Animations - Lottie */
+#mc-header__simplified-animation {
+  position: absolute;
+  width: 400px;
+  top: -13px;
+  left: -39px;
+}
+@media (max-width: 991.98px) {
+  #mc-header__simplified-animation {
+    width: 320px;
+    top: -7px;
+    left: -30px;
+  }
+}
+@media (max-width: 767.98px) {
+  #mc-header__simplified-animation {
+    width: 219px;
+    top: -6px;
+    left: -22px;
   }
 }

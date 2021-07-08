@@ -1,9 +1,21 @@
 /* Common (Mobile + Desktop) */
 .navBar--black {
-  background: url('/src/images/backgrounds/navbar/black-desktop.svg');
+  border-bottom: 1px solid #373B3E;
+  background: url('/src/images/bg-assets/pure-black-1440.svg') no-repeat center center fixed;
   background-size: cover;
 }
+@media (max-width: 991.98px) {
+  .navBar--black {
+    background: url('/src/images/bg-assets/pure-black-768.svg') no-repeat center center fixed;
+  }
+}
+@media (max-width: 767.98px) {
+  .navBar--black {
+    background: url('/src/images/bg-assets/pure-black-375.svg') no-repeat center center fixed;
+  }
+}
 .navBar--white {
+  border-bottom: 1px solid #EDEDED;
   background: url('/src/images/bg-assets/white-1440.svg') no-repeat center center fixed;
   background-size: cover;
 }

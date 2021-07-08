@@ -1,15 +1,17 @@
 .sl-header__bg {
-  background: url('/src/images/backgrounds/seamless/header-desktop.svg');
+  background: url('/src/images/bg-assets/pure-black-1440.svg') no-repeat center center fixed;
   background-size: cover;
   padding: 120px 0 89px 0;
 }
 @media (max-width: 991.98px) {
   .sl-header__bg {
+    background: url('/src/images/bg-assets/pure-black-768.svg') no-repeat center center fixed;
     padding: 81px 0 80px 0;
   }
 }
 @media (max-width: 767.98px) {
   .sl-header__bg {
+    background: url('/src/images/bg-assets/pure-black-375.svg') no-repeat center center fixed;
     padding: 81px 0 60px 0;
   }
 }
@@ -21,7 +23,7 @@
   -webkit-text-fill-color: transparent;
   max-width: 328px;
   margin-bottom: 30px;
-  animation: sl-header-fade-in linear 2.5s;
+  animation: sl-header-fade-in linear 1.5s;
 }
 @media (max-width: 991.98px) {
   .sl-header__heading1 {
@@ -41,7 +43,7 @@
   border-radius: 36px;
   padding: 1px;
   margin-bottom: 117px;
-  animation: sl-header-fade-in linear 2.5s;
+  animation: sl-header-fade-in linear 1.5s;
 }
 @media (max-width: 991.98px) {
   .sl-header__button-wrapper {
@@ -70,7 +72,7 @@
   color: var(--primary-white);
   margin-bottom: 0;
   max-width: 600px;
-  animation: sl-header-fade-in linear 2.5s;
+  animation: sl-header-fade-in linear 1.5s;
 }
 @media (max-width: 991.98px) {
   .sl-header__heading2 {
@@ -86,7 +88,7 @@
 }
 
 .sl-header__scroll {
-  animation: sl-header-fade-in linear 2.5s;
+  animation: sl-header-fade-in linear 1.5s;
 }
 
 /* Animations - Fade-ins */
