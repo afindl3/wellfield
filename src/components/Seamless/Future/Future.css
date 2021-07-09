@@ -10,7 +10,6 @@
     /* background: url('/src/images/backgrounds/seamless/future-tablet.svg'); */
     background: url('/src/images/bg-assets/dark-1440.svg') no-repeat center center fixed;
     background-size: cover;
-    padding: 120px 0 101px;
   }
 }
 @media (max-width: 991.98px) {

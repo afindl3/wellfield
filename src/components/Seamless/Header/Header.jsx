@@ -22,6 +22,7 @@ function Header() {
 
   return (
     <div className="sl-header__bg">
+      <div className="sl-header__horizontal" />
       <Container>
         <Row>
           <Col xs={12}>

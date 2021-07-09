@@ -1,4 +1,5 @@
 .sl-defi__bg {
+  position: relative;
   /* background: url('/src/images/backgrounds/seamless/defi-desktop.svg'); */
   background: url('/src/images/bg-assets/black-1920.svg') no-repeat center center fixed;
   background-size: cover;
@@ -9,7 +10,6 @@
     /* background: url('/src/images/backgrounds/seamless/defi-tablet.svg'); */
     background: url('/src/images/bg-assets/black-1440.svg') no-repeat center center fixed;
     background-size: cover;
-    padding: 100px 0 80px 0;
   }
 }
 @media (max-width: 991.98px) {
@@ -85,5 +85,24 @@
     top: 90px;
     width: 85px;
     left: 205px;
+  }
+}
+
+/* Horizontal Lines */
+.sl-defi__horizontal {
+  height: 1px;
+  background: #373B3E;
+  width: 100%;
+	position: absolute;
+  top: 168px;
+}
+@media (max-width: 991.98px) {
+  .sl-defi__horizontal {
+    top: 148px;
+  }
+}
+@media (max-width: 767.98px) {
+  .sl-defi__horizontal {
+    top: 128px;
   }
 }

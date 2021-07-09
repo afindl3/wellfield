@@ -50,6 +50,7 @@ function DeFi({ scrollPosition }) {
 
   return (
     <div className="sl-defi__bg">
+      <div className="sl-defi__horizontal" />
       <Container>
         <Row>
           <Col xs={12}>
