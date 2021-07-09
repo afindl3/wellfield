@@ -94,6 +94,7 @@
 .navBar__child-logo {
   margin-right: 15px;
   border-radius: 50%;
+  max-width: 48px;
 }
 
 .navBar__underline {

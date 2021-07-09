@@ -3,10 +3,10 @@ import logoWhite from '../../../../images/logos/wellfield-white.svg';
 import logoBlack from '../../../../images/logos/wellfield-black.svg';
 import downGrey from '../../../../images/icons/chevron-down-grey.svg';
 import downOrange from '../../../../images/icons/chevron-down-orange.svg';
-import moneyclip from '../../../../images/logos/moneyclip.svg';
-import seamless from '../../../../images/logos/seamless-v2.svg';
+import moneyclip from '../../../../images/logos/moneyclip-1x.png';
+import seamless from '../../../../images/logos/seamless-1x.png';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
@@ -26,6 +26,14 @@ function NavBarDesktop({ bg }) {
     history.push(path)
     setShow(false)
   }
+
+  useEffect(() => {
+    // Force pre-load
+    const img1 = new Image();
+    img1.src = moneyclip;
+    const img2 = new Image();
+    img2.src = seamless;
+  }, []);
 
   return (
     <div className={`navBar--${bg}`}>

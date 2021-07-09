@@ -7,10 +7,10 @@ import hamburgerBlack from '../../../../images/icons/nav-hamburger-black.svg';
 import downGrey from '../../../../images/icons/chevron-down-grey.svg';
 import downOrange from '../../../../images/icons/chevron-down-orange.svg';
 
-import moneyclip from '../../../../images/logos/moneyclip.svg';
-import seamless from '../../../../images/logos/seamless-v2.svg';
+import moneyclip from '../../../../images/logos/moneyclip-1x.png';
+import seamless from '../../../../images/logos/seamless-1x.png';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import { useHistory } from 'react-router-dom';
@@ -21,11 +21,14 @@ function NavBarMobile({ bg }) {
   const [isOpen, setIsOpen] = useState(false); // mobile nav open
   const [show, setShow] = useState(false); // dropdown open
 
-
   const handleLogoClick = () => {
     setIsOpen(false);
     history.push('/')
   }
+
+  useEffect(() => {
+
+  }, []);
 
   return (
     <div className={`navBar--${bg}`}>
