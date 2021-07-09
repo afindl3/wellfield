@@ -49,8 +49,12 @@
 .mc-future__card {
   padding: 48px;
   border-radius: 24px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
 .mc-future__card--left {
+  height: 100%;
   background: var(--primary-white);
 }
 .mc-future__card--right {

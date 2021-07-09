@@ -56,27 +56,32 @@ textarea {
 
 /* Bootstrap overrides */
 .container {
+  /* XXL */
   /* Bootstrap - 1140 */
   max-width: 1340px !important;
   padding-left: 30px !important;
   padding-right: 30px !important;
 }
 @media (max-width: 1440.98px) {
+  /* XL */
   .container {
     max-width: 1260px !important;
   }
 }
 @media (max-width: 1199.98px) {
+  /* LG */
   .container {
     max-width: 990px !important;
   }
 }
 @media (max-width: 991.98px) {
+  /* MD */
   .container {
     max-width: 750px !important;
   }
 }
-@media (max-width: 767.98px) { 
+@media (max-width: 767.98px) {
+  /* XS & SM */
   .container {
     max-width: 767.98px !important;
     padding-left: 24px !important;

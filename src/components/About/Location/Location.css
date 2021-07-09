@@ -1,13 +1,26 @@
 .location__bg {
-    padding: 201px 0 160px;
+  background: url('/src/images/bg-assets/grey-1920.svg') no-repeat center center fixed;
+  background-size: cover;
+  padding: 201px 0 160px;
+}
+@media (max-width: 1440.98px) {
+  .location__bg {
+    background: url('/src/images/bg-assets/grey-1440.svg') no-repeat center center fixed;
+    background-size: cover;
+    padding: 161px 0 120px;
+  }
 }
 @media (max-width: 991.98px) {
   .location__bg {
+    background: url('/src/images/bg-assets/grey-768.svg') no-repeat center center fixed;
+    background-size: cover;
     padding: 161px 0 120px;
   }
 }
 @media (max-width: 767.98px) {
   .location__bg {
+    background: url('/src/images/bg-assets/grey-375.svg') no-repeat center center fixed;
+    background-size: cover;
     padding: 125px 0 80px;
   }
 }

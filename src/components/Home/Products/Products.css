@@ -2,6 +2,8 @@
   position: relative;
   /* background: url('/src/images/backgrounds/home/products-desktop.svg') no-repeat center center fixed; */
   background: url('/src/images/bg-assets/dark-1920.svg') no-repeat center center fixed;
+  clip-path: url(#clip0);
+  -webkit-clip-path: url(#clip0);
   background-size: cover;
   padding: 160px 0 141px;
 }

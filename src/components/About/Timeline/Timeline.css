@@ -1,19 +1,26 @@
 .timeline__bg {
-  background: url('/src/images/bg-assets/light-1440.svg') no-repeat center center fixed;
+  background: url('/src/images/bg-assets/light-1920.svg') no-repeat center center fixed;
   background-size: cover;
   padding: 120px 0 40px;
+}
+@media (max-width: 1440.98px) {
+  .timeline__bg {
+    background: url('/src/images/bg-assets/light-1440.svg') no-repeat center center fixed;
+    background-size: cover;
+  }
 }
 @media (max-width: 991.98px) {
   .timeline__bg {
     background: url('/src/images/bg-assets/light-768.svg') no-repeat center center fixed;
+    background-size: cover;
   }
 }
 @media (max-width: 767.98px) {
   .timeline__bg {
     background: url('/src/images/bg-assets/light-375.svg') no-repeat center center fixed;
+    background-size: cover;
   }
 }
-
 
 .timeline__heading {
   background: var(--gradient-grey-orange);
@@ -23,7 +30,7 @@
   max-width: 383px;
   margin-bottom: 41px;
 }
-@media (max-width: 991.98px) {
+/* @media (max-width: 991.98px) {
   .timeline__heading {
     margin: 0 auto 24px auto;
   }
@@ -31,6 +38,33 @@
 @media (max-width: 767.98px) {
   .timeline__heading {
     margin: 0 auto 20px auto;
+  }
+} */
+
+/* Carousel */
+.timeline__container {
+  margin-left: calc(50vw - 785px);
+}
+@media (max-width: 1440.98px) {
+  .timeline__container {
+    margin-left: calc(50vw - 730px);
+  }
+}
+@media (max-width: 1199.98px) {
+  .timeline__container {
+    margin-left: calc(50vw - 465px);
+  }
+}
+@media (max-width: 991.98px) {
+  .timeline__container {
+    margin-left: calc(50vw - 380px);
+  }
+}
+@media (max-width: 767.98px) {
+  .timeline__container {
+    margin-left: 24px;
+    max-width: none;
+    width: 100%;
   }
 }
 
@@ -41,14 +75,14 @@
   max-width: 280px;
   height: 100%;
   margin: auto;
+  margin-right: 15px;
 }
 @media (max-width: 767.98px) {
   .timeline__card {
-    max-width: 240px;
+    /* width: 315px; */
+    /* max-width: 100%; */
   }
 }
-
-
 
 .timeline__button-wrapper {
   background: var(--gradient-grey-orange);
@@ -57,9 +91,17 @@
   padding: 1px;
   margin-bottom: 40px;
 }
+.timeline__button-wrapper--black {
+  background: var(--primary-black);
+}
 .timeline__button {
   border: 2px solid var(--primary-white);
   background: var(--primary-white);
+}
+.timeline__button--black {
+  border: 2px solid var(--primary-black);
+  background: var(--primary-black);
+  color: var(--primary-white);
 }
 
 .timeline__list {
@@ -76,6 +118,7 @@
 
 .timeline__checkmark {
   margin-right: 15px;
+  align-self: baseline;
 }
 
 .timeline__scroll--left {

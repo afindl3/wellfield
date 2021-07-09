@@ -1,4 +1,5 @@
 .tools__bg {
+  position: relative;
   /* background: url('/src/images/backgrounds/home/values-desktop.svg'); */
   background: url('/src/images/bg-assets/black-1920.svg') no-repeat center center fixed;
   background-size: cover;
@@ -36,6 +37,11 @@
   -webkit-text-fill-color: transparent;
   max-width: 405px;
   margin-bottom: 0;
+}
+@media (max-width: 991.98px) {
+  .tools__heading {
+    max-width: 338px;
+  }
 }
 @media (max-width: 767.98px) {
   .tools__heading {
@@ -117,13 +123,14 @@
 #tools__circle-animation {
   position: absolute;
   width: 150px;
-    top: 23px;
-    left: 112px;
+  top: 23px;
+  left: 112px;
 }
 @media (max-width: 991.98px) {
   #tools__circle-animation {
-    top: 10px;
-    left: 400px;
+    width: 135px;
+    top: 25px;
+    left: 120px;
   }
 }
 @media (max-width: 767.98px) {
@@ -131,5 +138,41 @@
     width: 125px;
     top: 15px;
     left: 145px;
+  }
+}
+
+/* Horizontal Lines */
+.tools__horizontal {
+  height: 1px;
+  background: #373B3E;
+  width: 100%;
+	position: absolute;
+}
+
+.tools__horizontal1 {
+	top: 220px;
+}
+@media (max-width: 991.98px) {
+  .tools__horizontal1 {
+    bottom: 168px;
+  }
+}
+@media (max-width: 767.98px) {
+  .tools__horizontal1 {
+    top: 128px;
+  }
+}
+
+.tools__horizontal2 {
+	bottom: 120px;
+}
+@media (max-width: 991.98px) {
+  .tools__horizontal2 {
+    bottom: 80px;
+  }
+}
+@media (max-width: 767.98px) {
+  .tools__horizontal2 {
+    bottom: 60px;
   }
 }

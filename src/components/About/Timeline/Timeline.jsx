@@ -14,22 +14,22 @@ const currentYear = date.getFullYear();
 
 const responsive = {
   superLargeDesktop: {
-    breakpoint: { max: 4000, min: 3000 },
+    breakpoint: { max: 4000, min: 1200 },
     items: 5,
     partialVisibilityGutter: 30
   },
   desktop: {
-    breakpoint: { max: 3000, min: 1024 },
+    breakpoint: { max: 1199.98, min: 992 },
     items: 4,
     partialVisibilityGutter: 30
   },
   tablet: {
-    breakpoint: { max: 1024, min: 464 },
+    breakpoint: { max: 991.98, min: 768 },
     items: 2,
     partialVisibilityGutter: 60
   },
   mobile: {
-    breakpoint: { max: 464, min: 0 },
+    breakpoint: { max: 767.98, min: 0 },
     items: 1,
     partialVisibilityGutter: 100
   }
@@ -51,27 +51,33 @@ const CustomRightArrow = ({ onClick }) => {
   );
 };
 
-const Card = (props) => (
+const Card = ({ year, item1, item2 }) => (
   <div className="timeline__card">
-    <div className="timeline__button-wrapper">
-      <button className="button-lg timeline__button">{props.year}</button>
+    <div className={`timeline__button-wrapper ${Number(year) === currentYear ? 'timeline__button-wrapper--black' : ''}`}>
+      {console.log(year, ' vs ', currentYear)}
+      <button className={`button-lg ${Number(year) === currentYear ? 'timeline__button--black' : 'timeline__button'}`}>
+        {year}
+      </button>
     </div>
 
     <ul className="timeline__list">
       <li className="timeline__list-item">
-        <img src={props.year >= currentYear ? checkmarkEmpty : checkmarkFilled}
-          alt={props.year >= currentYear ? 'Unchecked checkmark' : 'Checked checkmark'}
+        <img src={year >= currentYear ? checkmarkEmpty : checkmarkFilled}
+          alt={year >= currentYear ? 'Unchecked checkmark' : 'Checked checkmark'}
           className="timeline__checkmark"
         />
-        <p className="p1 mb-0">{props.item1}</p>
+        <p className="p1 mb-0">{item1}</p>
       </li>
-      <li className="timeline__list-item">
-        <img src={props.year >= currentYear ? checkmarkEmpty : checkmarkFilled}
-          alt={props.year >= currentYear ? 'Unchecked checkmark' : 'Checked checkmark'}
-          className="timeline__checkmark"
-        />
-        <p className="p1 mb-0">{props.item2}</p>
-      </li>
+      {
+        item2 &&
+        <li className="timeline__list-item">
+          <img src={year >= currentYear ? checkmarkEmpty : checkmarkFilled}
+            alt={year >= currentYear ? 'Unchecked checkmark' : 'Checked checkmark'}
+            className="timeline__checkmark"
+          />
+          <p className="p1 mb-0">{item2}</p>
+        </li>
+      }
     </ul>
   </div>
 );
@@ -87,38 +93,45 @@ function Timeline() {
         </Row>
       </Container>
 
-      <Carousel
-        responsive={responsive}
-        partialVisible={true}
-        customLeftArrow={<CustomLeftArrow />}
-        customRightArrow={<CustomRightArrow />}
-      >
-        <Card
-          year='2018'
-          item1='Research & Develop'
-          item2='Provisional Patents'
-        />
-        <Card
-          year='2019'
-          item1='External Reviews'
-          item2='Improve Performance'
-        />
-        <Card
-          year='2020'
-          item1='Prototype & More Patents'
-          item2='Deployment & Validation'
-        />
-        <Card
-          year='2021'
-          item1='Launching MoneyClip'
-          item2='Launching DeFi Bitcoin Protocols'
-        />
-        <Card
-          year='2022'
-          item1='Launching MoneyClip'
-          item2='Launching DeFi Bitcoin Protocols'
-        />
-      </Carousel>
+      <div className="timeline__container">
+        {/* <Container>
+        <Row>
+          <Col xs={12}> */}
+        <Carousel
+          responsive={responsive}
+          partialVisible={true}
+          customLeftArrow={<CustomLeftArrow />}
+          customRightArrow={<CustomRightArrow />}
+        >
+          <Card
+            year='2018'
+            item1='Research & Develop'
+            item2='Provisional Patents'
+          />
+          <Card
+            year='2019'
+            item1='External Reviews'
+            item2='Improve Performance'
+          />
+          <Card
+            year='2020'
+            item1='Prototype & More Patents'
+            item2='Deployment & Validation'
+          />
+          <Card
+            year='2021'
+            item1='Launching MoneyClip'
+            item2='Launching DeFi Bitcoin Protocols'
+          />
+          <Card
+            year='2022'
+            item1='Launching Seamless Decentralized Exchange'
+          />
+        </Carousel>
+        {/* </Col>
+        </Row>
+      </Container> */}
+      </div>
     </div>
   );
 }

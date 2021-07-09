@@ -52,6 +52,8 @@ function Tools({ scrollPosition }) {
 
   return (
     <div className="tools__bg">
+      <div className="tools__horizontal tools__horizontal1" />
+      <div className="tools__horizontal tools__horizontal2" />
       <Container>
         <Row>
           <Col xs={12}>

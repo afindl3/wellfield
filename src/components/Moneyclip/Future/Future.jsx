@@ -10,13 +10,16 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 const Card = ({ type, image, imageAlt, title, body, slideIn }) => (
-  <div className={slideIn ? `mc-future__card-slide--${type}` : ''}>
-    <div className={`mc-future__card mc-future__card--${type}`}>
+  <div className={`mc-future__card mc-future__card--${type} ${slideIn ? `mc-future__card-slide--${type}` : ''}`}>
+    <div>
       <img src={image} alt={imageAlt} />
+    </div>
+    <div>
       <h3 className="mc-future__card-title heading4">{title}</h3>
       <p className="mc-future__card-body p1">{body}</p>
     </div>
   </div>
+
 );
 
 function Future({ scrollPosition }) {
