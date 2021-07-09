@@ -3,38 +3,52 @@ import trade from '../../../images/icons/trade.svg';
 import dbtc from '../../../images/icons/dbtc.svg';
 import borrow from '../../../images/icons/borrow.svg';
 import stake from '../../../images/icons/stake.svg';
+import anyAnmiation from '../../../lotties/seamless/circles/any.json';
 
-import { useLayoutEffect, useRef, useState } from 'react';
+import lottie from 'lottie-web';
+import { useEffect, useRef, useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-function Values() {
+const Card = ({ index, icon, title, body, slideIn }) => (
+  <div className={slideIn ? `tools__card-slide--${index}` : ''} style={{ height: '100%' }}>
+    <div className={`tools__card tools__card--${index}`}>
+      <img src={icon} alt={`${title} icon`} />
+      <h5 className="tools__card-title heading5">{title}</h5>
+      <p className="p2 mb-0">{body}</p>
+    </div>
+  </div>
+);
+
+function Tools({ scrollPosition }) {
   const [slideIn, setSlideIn] = useState(false);
+  const [circleAnimation, setCircleAnimation] = useState(null);
   const slideRef = useRef(null)
 
-  useLayoutEffect(() => {
-    const topPosition = slideRef.current.getBoundingClientRect().top;
-    const onScroll = () => {
-      const scrollPosition = window.scrollY + window.innerHeight
-      if (topPosition < scrollPosition) {
-        setSlideIn(true);
-      }
+  useEffect(() => {
+    const topPosition = slideRef.current.offsetTop;
+    if ((topPosition < scrollPosition) && !slideIn) {
+      console.log('tools slide in')
+      setSlideIn(true);
     }
+  }, [scrollPosition]);
 
-    window.addEventListener('scroll', onScroll)
-    return () => window.removeEventListener('scroll', onScroll)
-  }, []);
-
-  const Card = (props) => (
-    <div className={slideIn ? `tools__card-slide--${props.index}` : ''}>
-      <div className={`tools__card tools__card--${props.index}`}>
-        <img src={props.icon} alt={`${props.title} icon`} />
-        <h5 className="tools__card-title heading5">{props.title}</h5>
-        <p className="p2 mb-0">{props.body}</p>
-      </div>
-    </div>
-  );
+  useEffect(() => {
+    if (!document.getElementById('tools__circle-animation').hasChildNodes()) {
+      const circle = lottie.loadAnimation({
+        container: document.querySelector("#tools__circle-animation"),
+        animationData: anyAnmiation,
+        loop: false,
+        autoplay: false,
+        rendererSettings: { preserveAspectRatio: 'xMidYMid slice' }
+      });
+      setCircleAnimation(circle);
+    }
+    if (slideIn && circleAnimation) {
+      setTimeout(() => { circleAnimation.play() }, 1000);
+    }
+  }, [slideIn]);
 
   return (
     <div className="tools__bg">
@@ -42,41 +56,48 @@ function Values() {
         <Row>
           <Col xs={12}>
             <h1 className="tools__heading heading1">Suite of Tools</h1>
-            <h3 className="tools__paragraph heading3">Protocols and apps that link together any blockchain.</h3>
+            <div style={{ position: 'relative' }}>
+              <h3 className="tools__paragraph heading3">Protocols and apps that link together any blockchain.</h3>
+              <div id="tools__circle-animation" />
+            </div>
           </Col>
         </Row>
         <Row>
           <div ref={slideRef}></div>
-          <Col xs={12} sm={6} lg={3}>
+          <Col xs={12} md={6} lg={3}>
             <Card
               icon={trade}
               title='Trade'
               body='Permissionless, unstoppable cross-blockchain trading.'
               index='1'
+              slideIn={slideIn}
             />
           </Col>
-          <Col xs={12} sm={6} lg={3}>
+          <Col xs={12} md={6} lg={3}>
             <Card
               icon={dbtc}
               title='DBTC'
               body='A truly decentralized Bitcoin and Ethereum pairing.'
               index='2'
+              slideIn={slideIn}
             />
           </Col>
-          <Col xs={12} sm={6} lg={3}>
+          <Col xs={12} md={6} lg={3}>
             <Card
               icon={borrow}
               title='Borrow'
               body='We empower borrowers to lend to themselves—no application, low interest, negligible fees.'
               index='3'
+              slideIn={slideIn}
             />
           </Col>
-          <Col xs={12} sm={6} lg={3}>
+          <Col xs={12} md={6} lg={3}>
             <Card
               icon={stake}
               title='Derivatives'
               body='We enable truly decentralized futures and other financial products.'
               index='4'
+              slideIn={slideIn}
             />
           </Col>
         </Row>
@@ -86,4 +107,4 @@ function Values() {
   );
 }
 
-export default Values;
+export default Tools;

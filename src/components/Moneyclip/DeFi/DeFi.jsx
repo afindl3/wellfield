@@ -62,7 +62,6 @@ function DeFi({ scrollPosition }) {
               <div id="mc-defi__circle-animation" />
               <div id="mc-defi__underline-animation" />
             </div>
-
           </Col>
           <Col xs={12} lg={6} className="d-lg-none">
             <img src={whatItDoes} alt="What it does" />

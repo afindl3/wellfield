@@ -4,15 +4,15 @@ import security from '../../../images/icons/security.svg';
 import futureAnimation from '../../../lotties/moneyclip/circles/future.json';
 
 import lottie from 'lottie-web';
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 const Card = ({ type, image, imageAlt, title, body, slideIn }) => (
-  <div className={`mc-future__card mc-future__card--${type} ${slideIn ? `mc-future__card-animation` : ''}`}>
-    <img src={image} alt={imageAlt} />
-    <div className="mc-future__card-body-container">
+  <div className={slideIn ? `mc-future__card-slide--${type}` : ''}>
+    <div className={`mc-future__card mc-future__card--${type}`}>
+      <img src={image} alt={imageAlt} />
       <h3 className="mc-future__card-title heading4">{title}</h3>
       <p className="mc-future__card-body p1">{body}</p>
     </div>
@@ -27,6 +27,7 @@ function Future({ scrollPosition }) {
   useEffect(() => {
     const topPosition = slideRef.current.getBoundingClientRect().top;
     if ((topPosition < scrollPosition) && !slideIn) {
+      console.log('mc future slide in')
       setSlideIn(true);
     }
   }, [scrollPosition]);
@@ -45,10 +46,12 @@ function Future({ scrollPosition }) {
     if (slideIn && circleAnimation) {
       setTimeout(() => { circleAnimation.play() }, 1000);
     }
-  }, [slideIn, circleAnimation]);
+  }, [slideIn]);
 
   return (
     <div className="mc-future__bg">
+      <div className="mc-future__horizontal mc-future__horizontal1" />
+      <div className="mc-future__horizontal mc-future__horizontal2" />
       <Container>
         <Row>
           <Col xs={12}>

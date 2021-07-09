@@ -1,18 +1,29 @@
 .mc-future__bg {
-  background: url('/src/images/backgrounds/moneyclip/future-desktop.svg');
+  position: relative;
+  /* background: url('/src/images/backgrounds/moneyclip/future-desktop.svg'); */
+  background: url('/src/images/bg-assets/black-1920.svg') no-repeat center center fixed;
   background-size: cover;
   padding: 120px 0 141px;
 }
+@media (max-width: 1440.98px) {
+  .mc-future__bg {
+    /* background: url('/src/images/backgrounds/moneyclip/future-tablet.svg'); */
+    background: url('/src/images/bg-assets/black-1440.svg') no-repeat center center fixed;
+    background-size: cover;
+  }
+}
 @media (max-width: 991.98px) {
   .mc-future__bg {
-    background: url('/src/images/backgrounds/moneyclip/future-tablet.svg');
-  background-size: cover;
+    /* background: url('/src/images/backgrounds/moneyclip/future-tablet.svg'); */
+    background: url('/src/images/bg-assets/black-768.svg') no-repeat center center fixed;
+    background-size: cover;
     padding: 120px 0 101px;
   }
 }
 @media (max-width: 767.98px) {
   .mc-future__bg {
-    background: url('/src/images/backgrounds/moneyclip/future-mobile.svg');
+    /* background: url('/src/images/backgrounds/moneyclip/future-mobile.svg'); */
+    background: url('/src/images/bg-assets/black-375.svg') no-repeat center center fixed;
     background-size: cover;
     padding: 80px 0 80px;
   }
@@ -23,8 +34,14 @@
   max-width: 600px;
   margin-bottom: 101px;
 }
+@media (max-width: 991.98px) {
+  .mc-future__heading {
+    max-width: 688px;
+  }
+}
 @media (max-width: 767.98px) {
   .mc-future__heading {
+    max-width: 327px;
     margin-bottom: 81px;
   }
 }
@@ -32,17 +49,12 @@
 .mc-future__card {
   padding: 48px;
   border-radius: 24px;
-  height: 100%;
 }
 .mc-future__card--left {
   background: var(--primary-white);
-  transition: transform 0.5s ease-in;
-  transform: translateY(250px);
 }
 .mc-future__card--right {
   background: var(--slate);
-  transition: transform 0.8s ease-in;
-  transform: translateY(250px);
 }
 @media (max-width: 991.98px) {
   .mc-future__card--right {
@@ -54,9 +66,6 @@
     margin-top: 24px;
   }
 }
-.mc-future__card-animation {
-  transform: translateY(0px);
-}
 
 .mc-future__card-title {
   margin: 40px 0 24px 0;
@@ -66,6 +75,23 @@
 .mc-future__card-body {
   max-width: 360px;
   margin-bottom: 0;
+}
+
+/* Animations - Transitions */
+.mc-future__card-slide--left {
+  transform: translateY(300px);
+  animation: mc-future-come-in 0.8s ease forwards, mc-future-fade-in 2s;
+}
+.mc-future__card-slide--right {
+  transform: translateY(300px);
+  animation: mc-future-come-in 1.4s ease forwards, mc-future-fade-in 2s;
+}
+@keyframes mc-future-come-in {
+  to { transform: translateY(0); }
+}
+@keyframes mc-future-fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 /* Animations - Lottie */
@@ -87,5 +113,36 @@
     width: 150px;
     top: 15px;
     left: 202px;
+  }
+}
+
+/* Horizontal Lines */
+.mc-future__horizontal {
+  height: 1px;
+  background: #373B3E;
+  width: 100%;
+	position: absolute;
+}
+
+.mc-future__horizontal1 {
+	top: 404px;
+}
+@media (max-width: 767.98px) {
+  .mc-future__horizontal1 {
+    top: 332px;
+  }
+}
+
+.mc-future__horizontal2 {
+	bottom: 120px;
+}
+@media (max-width: 991.98px) {
+  .mc-future__horizontal2 {
+    bottom: 80px;
+  }
+}
+@media (max-width: 767.98px) {
+  .mc-future__horizontal2 {
+    bottom: 60px;
   }
 }

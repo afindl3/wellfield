@@ -1,19 +1,30 @@
 .sl-future__bg {
   position: relative;
-  background: url('/src/images/backgrounds/seamless/future-desktop.svg');
+  /* background: url('/src/images/backgrounds/seamless/future-desktop.svg'); */
+  background: url('/src/images/bg-assets/dark-1920.svg') no-repeat center center fixed;
   background-size: cover;
   padding: 120px 0 141px;
 }
+@media (max-width: 1440.98px) {
+  .sl-future__bg {
+    /* background: url('/src/images/backgrounds/seamless/future-tablet.svg'); */
+    background: url('/src/images/bg-assets/dark-1440.svg') no-repeat center center fixed;
+    background-size: cover;
+    padding: 120px 0 101px;
+  }
+}
 @media (max-width: 991.98px) {
   .sl-future__bg {
-    background: url('/src/images/backgrounds/seamless/future-tablet.svg');
+    /* background: url('/src/images/backgrounds/seamless/future-tablet.svg'); */
+    background: url('/src/images/bg-assets/dark-768.svg') no-repeat center center fixed;
     background-size: cover;
     padding: 120px 0 101px;
   }
 }
 @media (max-width: 767.98px) {
   .sl-future__bg {
-    background: url('/src/images/backgrounds/seamless/future-mobile.svg');
+    /* background: url('/src/images/backgrounds/seamless/future-mobile.svg'); */
+    background: url('/src/images/bg-assets/dark-375.svg') no-repeat center center fixed;
     background-size: cover;
     padding: 80px 0 80px;
   }
@@ -80,28 +91,28 @@
   to { transform: translateY(0); }
 }
 @keyframes sl-future-fade-in {
-  0% { opacity:0; }
-  100% { opacity:1; }
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 /* Animations - Lottie */
-#sl-future__future-animation {
+#sl-future__circle-animation {
   position: absolute;
-  width: 255px;
-  top: 75px;
-  left: -30px;
+  width: 260px;
+  top: 100px;
+  left: -60px;
 }
 @media (max-width: 991.98px) {
-  #sl-future__future-animation {
+  #sl-future__circle-animation {
     top: 10px;
     left: 400px;
   }
 }
 @media (max-width: 767.98px) {
-  #sl-future__future-animation {
-    width: 185px;
-    top: -15px;
-    left: 185px;
+  #sl-future__circle-animation {
+    width: 165px;
+    top: 10px;
+    left: 195px;
   }
 }
 

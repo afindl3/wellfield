@@ -1,18 +1,28 @@
 .mc-part__bg {
-  background: url('/src/images/backgrounds/moneyclip/part-desktop.svg');
+  /* background: url('/src/images/backgrounds/moneyclip/part-desktop.svg'); */
+  background: url('/src/images/bg-assets/grey-1920.svg') no-repeat center center fixed;
   background-size: cover;
   padding: 141px 0;
 }
+@media (max-width: 1440.98px) {
+  .mc-part__bg {
+    /* background: url('/src/images/backgrounds/moneyclip/part-tablet.svg'); */
+    background: url('/src/images/bg-assets/grey-1440.svg') no-repeat center center fixed;
+    background-size: cover;
+  }
+}
 @media (max-width: 991.98px) {
   .mc-part__bg {
-    background: url('/src/images/backgrounds/moneyclip/part-tablet.svg');
+    /* background: url('/src/images/backgrounds/moneyclip/part-tablet.svg'); */
+    background: url('/src/images/bg-assets/grey-768.svg') no-repeat center center fixed;
     background-size: cover;
     padding: 101px 0;
   }
 }
 @media (max-width: 767.98px) {
   .mc-part__bg {
-    background: url('/src/images/backgrounds/moneyclip/part-mobile.svg');
+    /* background: url('/src/images/backgrounds/moneyclip/part-mobile.svg'); */
+    background: url('/src/images/bg-assets/grey-375.svg') no-repeat center center fixed;
     background-size: cover;
     padding: 81px 0;
   }

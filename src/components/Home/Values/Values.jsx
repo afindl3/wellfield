@@ -12,6 +12,16 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
+const Card = ({ index, icon, title, body, slideIn }) => (
+  <div className={slideIn ? `values__card-slide--${index}` : ''} style={{ height: '100%' }}>
+    <div className={`values__card values__card--${index}`}>
+      <img src={icon} alt={`${title} icon`} />
+      <h5 className="values__card-title heading5">{title}</h5>
+      <p className="p2 mb-0">{body}</p>
+    </div>
+  </div>
+);
+
 function Values() {
   const [slideIn, setSlideIn] = useState(false);
   const slideRef = useRef(null)
@@ -48,16 +58,6 @@ function Values() {
     }
   }, [slideIn]);
 
-  const Card = (props) => (
-    <div className={slideIn ? `values__card-slide--${props.index}` : ''}>
-      <div className={`values__card values__card--${props.index}`}>
-        <img src={props.icon} alt={`${props.title} icon`} />
-        <h5 className="values__card-title heading5">{props.title}</h5>
-        <p className="p2 mb-0">{props.body}</p>
-      </div>
-    </div>
-  );
-
   return (
     <div className="values__bg">
       <div className="values__horizontal values__horizontal1" />
@@ -81,6 +81,7 @@ function Values() {
               title='Decentralization'
               body='DeFi is in its early stages. We are accelerating true decentralization.'
               index='1'
+              slideIn={slideIn}
             />
           </Col>
           <Col xs={12} md={6} lg={3}>
@@ -89,6 +90,7 @@ function Values() {
               title='Control'
               body='You should not need third parties to hold and protect your assets.'
               index='2'
+              slideIn={slideIn}
             />
           </Col>
           <Col xs={12} md={6} lg={3}>
@@ -97,6 +99,7 @@ function Values() {
               title='Accessibility'
               body='Everyone should enjoy easy access to DeFi’s benefits.'
               index='3'
+              slideIn={slideIn}
             />
           </Col>
           <Col xs={12} md={6} lg={3}>
@@ -105,6 +108,7 @@ function Values() {
               title='Options'
               body='DeFi is only as powerful as its uses; it should work for the way you live.'
               index='4'
+              slideIn={slideIn}
             />
           </Col>
         </Row>

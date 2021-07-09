@@ -1,32 +1,48 @@
 /* Common (Mobile + Desktop) */
 .navBar--black {
   border-bottom: 1px solid #373B3E;
-  background: url('/src/images/bg-assets/pure-black-1440.svg') no-repeat center center fixed;
+  background: url('/src/images/bg-assets/pure-black-1920.svg') no-repeat center center fixed;
   background-size: cover;
+}
+@media (max-width: 1440.98px) {
+  .navBar--black {
+    background: url('/src/images/bg-assets/pure-black-1440.svg') no-repeat center center fixed;
+    background-size: cover;
+  }
 }
 @media (max-width: 991.98px) {
   .navBar--black {
     background: url('/src/images/bg-assets/pure-black-768.svg') no-repeat center center fixed;
+    background-size: cover;
   }
 }
 @media (max-width: 767.98px) {
   .navBar--black {
     background: url('/src/images/bg-assets/pure-black-375.svg') no-repeat center center fixed;
+    background-size: cover;
   }
 }
 .navBar--white {
   border-bottom: 1px solid #EDEDED;
-  background: url('/src/images/bg-assets/white-1440.svg') no-repeat center center fixed;
+  background: url('/src/images/bg-assets/white-1920.svg') no-repeat center center fixed;
   background-size: cover;
+}
+@media (max-width: 1440.98px) {
+  .navBar--white {
+    background: url('/src/images/bg-assets/white-1440.svg') no-repeat center center fixed;
+    background-size: cover;
+  }
 }
 @media (max-width: 991.98px) {
   .navBar--white {
     background: url('/src/images/bg-assets/white-768.svg') no-repeat center center fixed;
+    background-size: cover;
   }
 }
 @media (max-width: 767.98px) {
   .navBar--white {
     background: url('/src/images/bg-assets/white-375.svg') no-repeat center center fixed;
+    background-size: cover;
   }
 }
 

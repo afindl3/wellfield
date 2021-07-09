@@ -1,7 +1,7 @@
 import './Moneyclip.css';
+import Header from './Header/Header';
 import DeFi from './DeFi/DeFi';
 import Future from './Future/Future';
-import Header from './Header/Header';
 import Part from './Part/Part';
 import MailingList from '../Shared/MailingList/MailingList';
 import moneyclipStackAnimation from '../../lotties/moneyclip/full-images/moneyclip-stack.json';
@@ -70,7 +70,7 @@ function Moneyclip() {
 
         <div id="moneyclip__stack-animation" />
 
-        <MailingList scrollPosition={scrollPosition} />
+        <MailingList />
       </div>
     </>
   );

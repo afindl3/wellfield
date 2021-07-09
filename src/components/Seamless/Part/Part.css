@@ -1,18 +1,29 @@
 .sl-part__bg {
-  background: url('/src/images/backgrounds/seamless/part-desktop.svg');
+  /* background: url('/src/images/backgrounds/seamless/part-desktop.svg'); */
+  background: url('/src/images/bg-assets/dark-1920.svg') no-repeat center center fixed;
   background-size: cover;
   padding: 141px 0;
 }
+@media (max-width: 1440.98px) {
+  .sl-part__bg {
+    /* background: url('/src/images/backgrounds/seamless/part-tablet.svg'); */
+    background: url('/src/images/bg-assets/dark-1440.svg') no-repeat center center fixed;
+    background-size: cover;
+    padding: 101px 0;
+  }
+}
 @media (max-width: 991.98px) {
   .sl-part__bg {
-    background: url('/src/images/backgrounds/seamless/part-tablet.svg');
+    /* background: url('/src/images/backgrounds/seamless/part-tablet.svg'); */
+    background: url('/src/images/bg-assets/dark-768.svg') no-repeat center center fixed;
     background-size: cover;
     padding: 101px 0;
   }
 }
 @media (max-width: 767.98px) {
   .sl-part__bg {
-    background: url('/src/images/backgrounds/seamless/part-mobile.svg');
+    /* background: url('/src/images/backgrounds/seamless/part-mobile.svg'); */
+    background: url('/src/images/bg-assets/dark-375.svg') no-repeat center center fixed;
     background-size: cover;
     padding: 81px 0;
   }
@@ -23,6 +34,12 @@
   box-shadow: 0px 40px 40px rgba(0, 0, 0, 0.02), 80px 80px 80px rgba(0, 0, 0, 0.04);
   border-radius: 24px;
   padding: 48px;
+}
+@media (max-width: 767.98px) {
+  .sl-part__card {
+    padding: 40px;
+    height: 710px;
+  }
 }
 
 .sl-part__heading {
@@ -56,5 +73,27 @@
 @media (max-width: 767.98px) {
   .sl-part__body {
     max-width: 100%;
+  }
+}
+
+/* Animations - Lottie */
+#sl-part__underline-animation {
+  position: absolute;
+  width: 400px;
+    top: 13px;
+    left: -50px;
+}
+@media (max-width: 991.98px) {
+  #sl-part__underline-animation {
+    width: 280px;
+    top: 10px;
+    left: -5px;
+  }
+}
+@media (max-width: 767.98px) {
+  #sl-part__underline-animation {
+    width: 220px;
+    top: 10px;
+    left: -30px;
   }
 }

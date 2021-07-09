@@ -14,7 +14,7 @@ function Part({ scrollPosition }) {
 
   useEffect(() => {
     const topPosition = animationRef.current.getBoundingClientRect().top;
-    if (topPosition < scrollPosition) {
+    if ((topPosition < scrollPosition) && !playAnimation) {
       setPlayAnimation(true);
     }
   }, [scrollPosition]);
@@ -31,7 +31,7 @@ function Part({ scrollPosition }) {
       setUnderlineAnimation(underline);
     }
     if (playAnimation && underlineAnimation) {
-      setTimeout(() => { underlineAnimation.play() }, 1300)
+      setTimeout(() => { underlineAnimation.play() }, 1300);
     }
   }, [playAnimation, underlineAnimation]);
 
@@ -41,17 +41,14 @@ function Part({ scrollPosition }) {
         <Row>
           <Col xs={12}>
             <div className="mc-part__card">
-              <div>
-                <div style={{ position: 'relative' }}>
-                  <h2 className="mc-part__heading heading1">Moneyclip is part of Wellfield.</h2>
-                  <div id="mc-part__underline-animation" />
-                </div>
-
-                <p className="mc-part__body p1" ref={animationRef}>MoneyClip directly monetizes end users through various financial products and services offered in-app.</p>
+              <div style={{ position: 'relative' }}>
+                <h2 className="mc-part__heading heading1">Moneyclip is part of Wellfield.</h2>
+                <div id="mc-part__underline-animation" />
               </div>
+
+              <p className="mc-part__body p1" ref={animationRef}>MoneyClip directly monetizes end users through various financial products and services offered in-app.</p>
             </div>
           </Col>
-
         </Row>
       </Container>
     </div>

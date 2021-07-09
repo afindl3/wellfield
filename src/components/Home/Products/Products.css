@@ -1,19 +1,29 @@
 .products__bg {
   position: relative;
-  background: url('/src/images/backgrounds/home/products-desktop.svg') no-repeat center center fixed;
+  /* background: url('/src/images/backgrounds/home/products-desktop.svg') no-repeat center center fixed; */
+  background: url('/src/images/bg-assets/dark-1920.svg') no-repeat center center fixed;
   background-size: cover;
   padding: 160px 0 141px;
 }
+@media (max-width: 1440.98px) {
+  .products__bg {
+    background: url('/src/images/bg-assets/dark-1440.svg') no-repeat center center fixed;
+    background-size: cover;
+    padding: 120px 0 101px;
+  }
+}
 @media (max-width: 991.98px) {
   .products__bg {
-    background: url('/src/images/backgrounds/home/products-tablet.svg') no-repeat center center fixed;
+    /* background: url('/src/images/backgrounds/home/products-tablet.svg') no-repeat center center fixed; */
+    background: url('/src/images/bg-assets/dark-768.svg') no-repeat center center fixed;
     background-size: cover;
     padding: 120px 0 101px;
   }
 }
 @media (max-width: 767.98px) {
   .products__bg {
-    background: url('/src/images/backgrounds/home/products-mobile.svg') no-repeat center center fixed;
+    /* background: url('/src/images/backgrounds/home/products-mobile.svg') no-repeat center center fixed; */
+    background: url('/src/images/bg-assets/dark-375.svg') no-repeat center center fixed;
     background-size: cover;
     padding: 80px 0 77px;
   }
@@ -221,7 +231,7 @@
 }
 
 .products__horizontal1 {
-	top: 432px;
+	top: 395px;
 }
 @media (max-width: 991.98px) {
   .products__horizontal1 {
@@ -235,7 +245,7 @@
 }
 
 .products__horizontal2 {
-	bottom: 120px;
+	bottom: 85px;
 }
 @media (max-width: 991.98px) {
   .products__horizontal2 {

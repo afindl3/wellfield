@@ -1,0 +1,15 @@
+<svg width="1920" height="1008" viewBox="0 0 1920 1008" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0)">
+<rect x="1600" width="1" height="1008" fill="#EDEDED"/>
+<rect width="1920" height="1008" fill="white"/>
+<rect x="320" width="1" height="1008" fill="#EDEDED"/>
+<rect x="960" width="1" height="1008" fill="#EDEDED"/>
+<rect x="1280" width="1" height="1008" fill="#EDEDED"/>
+<rect x="640" width="1" height="1008" fill="#EDEDED"/>
+</g>
+<defs>
+<clipPath id="clip0">
+<rect width="1920" height="1008" fill="white"/>
+</clipPath>
+</defs>
+</svg>
