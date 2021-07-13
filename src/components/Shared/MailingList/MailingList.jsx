@@ -57,7 +57,8 @@ function MailingList() {
   }, [pathname]);
 
   return (
-    <div className={`mailing__bg mailing__bg-${bg}`}>
+    <div className={`mailing__bg mailing__bg--${bg}`}>
+      <div className={`mailing__horizontal mailing__horizontal--${bg}`} />
       <Container>
         <Row>
           <Col xs={12} className="text-center">

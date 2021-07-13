@@ -48,7 +48,7 @@ function DeFi({ scrollPosition }) {
       underlineAnimation.play();
       circleAnimation.play();
     }
-  }, [playAnimations, circleAnimation, underlineAnimation]);
+  }, [playAnimations]);
 
   return (
     <div className="mc-defi__bg">

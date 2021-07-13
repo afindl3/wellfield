@@ -1,20 +1,17 @@
 .sl-part__bg {
-  /* background: url('/src/images/backgrounds/seamless/part-desktop.svg'); */
+  position: relative;
   background: url('/src/images/bg-assets/dark-1920.svg') no-repeat center center fixed;
   background-size: cover;
   padding: 141px 0;
 }
 @media (max-width: 1440.98px) {
   .sl-part__bg {
-    /* background: url('/src/images/backgrounds/seamless/part-tablet.svg'); */
     background: url('/src/images/bg-assets/dark-1440.svg') no-repeat center center fixed;
     background-size: cover;
-    padding: 101px 0;
   }
 }
 @media (max-width: 991.98px) {
   .sl-part__bg {
-    /* background: url('/src/images/backgrounds/seamless/part-tablet.svg'); */
     background: url('/src/images/bg-assets/dark-768.svg') no-repeat center center fixed;
     background-size: cover;
     padding: 101px 0;
@@ -22,7 +19,6 @@
 }
 @media (max-width: 767.98px) {
   .sl-part__bg {
-    /* background: url('/src/images/backgrounds/seamless/part-mobile.svg'); */
     background: url('/src/images/bg-assets/dark-375.svg') no-repeat center center fixed;
     background-size: cover;
     padding: 81px 0;
@@ -95,5 +91,41 @@
     width: 220px;
     top: 10px;
     left: -30px;
+  }
+}
+
+/* Horizontal Lines */
+.sl-part__horizontal {
+  height: 1px;
+  background: var(--primary-black);
+  width: 100%;
+	position: absolute;
+}
+
+.sl-part__horizontal1 {
+	top: 120px;
+}
+@media (max-width: 991.98px) {
+  .sl-part__horizontal1 {
+    bottom: 80px;
+  }
+}
+@media (max-width: 767.98px) {
+  .sl-part__horizontal1 {
+    top: 60px;
+  }
+}
+
+.sl-part__horizontal2 {
+	bottom: 120px;
+}
+@media (max-width: 991.98px) {
+  .sl-part__horizontal2 {
+    bottom: 80px;
+  }
+}
+@media (max-width: 767.98px) {
+  .sl-part__horizontal2 {
+    bottom: 60px;
   }
 }

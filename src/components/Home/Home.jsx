@@ -1,5 +1,4 @@
 import './Home.css';
-
 import Company from './Company/Company';
 import Header from './Header/Header';
 import Investors from './Investors/Investors';

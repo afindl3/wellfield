@@ -7,19 +7,50 @@ import fullControlAnmiation from '../../../lotties/home/circles/full-control.jso
 import ourProductsAnimation from '../../../lotties/home/underlines/our-products.json';
 
 import lottie from 'lottie-web';
-import { useLayoutEffect, useRef, useState, useEffect } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
+const Card = ({ type, eyebrow, title, cta, body, slideIn, history }) => (
+  <div className={`products__card products__card--${type} ${slideIn ? `products__card-slide--${type}` : ''}`}
+    onClick={() => history.push(eyebrow.toLowerCase())}>
+    <div>
+      <span className={`products__card-eyebrow products__card-eyebrow--${type}`}>{eyebrow}</span>
+      <h3 className={`products__card-title heading2 products__card-title--${type}`}>{title}</h3>
+    </div>
+
+
+    <div style={{ position: 'relative' }}>
+      <div className="products__button-wrapper">
+        <button className={`d-none d-md-block button-lg products__button--${type}`}>{cta}</button>
+        <button className={`d-md-none button-sm products__button--${type}`}>{cta}</button>
+      </div>
+
+      <p className={`products__card-body p1 products__card-body--${type}`}>{body}</p>
+
+      <Link to={`${eyebrow.toLowerCase()}`} className="link">
+        <span className={`heading5 ${type === 'left' ? 'white' : 'black'}`}>
+          Learn More <img src={type === 'left' ? rightWhite : rightBlack} style={{ marginLeft: 8 }} alt="Chevron right" />
+        </span>
+      </Link>
+
+      <div className="products__img-wrapper">
+        <img src={type === 'left' ? protocol : application} className="products__img"
+          alt={type === 'left' ? 'Protocol tile' : 'Application tile'} />
+      </div>
+    </div>
+  </div>
+);
+
 function Products() {
   const history = useHistory();
   const [slideIn, setSlideIn] = useState(false);
   const slideRef = useRef(null)
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const topPosition = slideRef.current.getBoundingClientRect().top;
     const onScroll = () => {
       const scrollPosition = window.scrollY + window.innerHeight;
@@ -50,36 +81,6 @@ function Products() {
     }
   }, [slideIn]);
 
-  const Card = (props) => (
-    <div className={slideIn ? `products__card-slide--${props.type}` : ''}>
-      <div className={`products__card products__card--${props.type}`}
-        onClick={() => history.push(props.eyebrow.toLowerCase())}>
-        <span className={`products__card-eyebrow products__card-eyebrow--${props.type}`}>{props.eyebrow}</span>
-        <h3 className={`products__card-title heading2 products__card-title--${props.type}`}>{props.title}</h3>
-
-        <div style={{ position: 'relative' }}>
-          <div className="products__button-wrapper">
-            <button className={`d-none d-md-block button-lg products__button--${props.type}`}>{props.cta}</button>
-            <button className={`d-md-none button-sm products__button--${props.type}`}>{props.cta}</button>
-          </div>
-
-          <p className={`products__card-body p1 products__card-body--${props.type}`}>{props.body}</p>
-
-          <Link to={`${props.eyebrow.toLowerCase()}`} className="link">
-            <span className={`heading5 ${props.type === 'left' ? 'white' : 'black'}`}>
-              Learn More <img src={props.type === 'left' ? rightWhite : rightBlack} style={{ marginLeft: 8 }} alt="Chevron right" />
-            </span>
-          </Link>
-
-          <div className="products__img-wrapper">
-            <img src={props.type === 'left' ? protocol : application} className="products__img"
-              alt={props.type === 'left' ? 'Protocol tile' : 'Application tile'} />
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-
   return (
     <div className="products__bg">
       <div className="products__horizontal products__horizontal1" />
@@ -104,6 +105,8 @@ function Products() {
               cta='Launching 2022'
               body='Use Bitcoin across blockchains—without giving up control of your keys.'
               type='left'
+              slideIn={slideIn}
+              history={history}
             />
           </Col>
           <Col xs={12} lg={6}>
@@ -113,6 +116,8 @@ function Products() {
               cta='Launching Fall 2021'
               body='Link your bank to blockchain and enjoy regulated access to the world’s best DeFi options.'
               type='right'
+              slideIn={slideIn}
+              history={history}
             />
           </Col>
         </Row>

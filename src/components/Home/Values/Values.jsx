@@ -7,7 +7,7 @@ import defiAnmiation from '../../../lotties/home/circles/defi.json';
 import everyoneAnimation from '../../../lotties/home/underlines/everyone.json';
 
 import lottie from 'lottie-web';
-import { useLayoutEffect, useRef, useState, useEffect } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -26,7 +26,7 @@ function Values() {
   const [slideIn, setSlideIn] = useState(false);
   const slideRef = useRef(null)
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const topPosition = slideRef.current.getBoundingClientRect().top;
     const onScroll = () => {
       const scrollPosition = window.scrollY + window.innerHeight

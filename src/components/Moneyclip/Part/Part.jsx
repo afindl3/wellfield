@@ -37,6 +37,8 @@ function Part({ scrollPosition }) {
 
   return (
     <div className="mc-part__bg">
+      <div className="mc-part__horizontal mc-part__horizontal1" />
+      <div className="mc-part__horizontal mc-part__horizontal2" />
       <Container>
         <Row>
           <Col xs={12}>

@@ -3,7 +3,7 @@ import cryptoComp from '../../../lotties/seamless/full-images/crypto-comp.json';
 import trulyAnimation from '../../../lotties/seamless/underlines/truly.json';
 
 import lottie from 'lottie-web';
-import { useLayoutEffect, useRef, useState, useEffect } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -14,7 +14,7 @@ function DeFi({ scrollPosition }) {
   const [imageAnimation, setImageAnimation] = useState(null);
   const animationRef = useRef(null);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const topPosition = animationRef.current.getBoundingClientRect().top;
     if ((topPosition < scrollPosition) && !playAnimations) {
       setPlayAnimations(true);

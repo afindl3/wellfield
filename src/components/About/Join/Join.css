@@ -1,5 +1,4 @@
 .join__bg {
-  /* background: url('/src/images/backgrounds/home/join-desktop.svg'); */
   background: url('/src/images/bg-assets/white-1920.svg') no-repeat center center fixed;
   background-size: cover;
   padding: 181px 0 160px;
@@ -13,7 +12,6 @@
 }
 @media (max-width: 991.98px) {
   .join__bg {
-    /* background: url('/src/images/backgrounds/home/join-tablet.svg'); */
     background: url('/src/images/bg-assets/white-768.svg') no-repeat center center fixed;
     background-size: cover;
     padding: 161px 0 120px;
@@ -21,7 +19,6 @@
 }
 @media (max-width: 767.98px) {
   .join__bg {
-    /* background: url('/src/images/backgrounds/home/join-mobile.svg'); */
     background: url('/src/images/bg-assets/white-375.svg') no-repeat center center fixed;
     background-size: cover;
     padding: 125px 0 80px;

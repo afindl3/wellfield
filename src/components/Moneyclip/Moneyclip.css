@@ -9,20 +9,34 @@
   position: absolute;
   z-index: 1;
   width: 850px;
-	bottom: 400px;
-	left: 500px;
+  bottom: 425px;
+  right: 15px;
+}
+@media (max-width: 1440.98px) {
+  #moneyclip__stack-animation {
+    width: 800px;
+    bottom: 460px;
+    right: -15px;
+  }
+}
+@media (max-width: 1199.98px) {
+  #moneyclip__stack-animation {
+    width: 760px;
+    bottom: 430px;
+    right: -80px;
+  }
 }
 @media (max-width: 991.98px) {
   #moneyclip__stack-animation {
-    width: 800px;
+    width: 730px;
     bottom: 435px;
-    left: 240px;
+    right: -100px;
   }
 }
 @media (max-width: 767.98px) {
   #moneyclip__stack-animation {
     width: 550px;
     bottom: 400px;
-    left: -60px;
+    right: -60px;
   }
 }

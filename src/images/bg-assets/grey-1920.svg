@@ -9,11 +9,11 @@
 <g opacity="0.7" filter="url(#filter2_f)">
 <ellipse cx="510" cy="1117.12" rx="410" ry="315.876" fill="#DFDFE0"/>
 </g>
-<rect x="320" width="1" height="1383.69" fill="#DFDFE0"/>
-<rect x="960" width="1" height="1383.69" fill="#DFDFE0"/>
-<rect x="1600" width="1" height="1383.69" fill="#DFDFE0"/>
-<rect x="1280" width="1" height="1383.69" fill="#DFDFE0"/>
-<rect x="640" width="1" height="1383.69" fill="#DFDFE0"/>
+<rect x="320" width="1" height="1199" fill="#DFDFE0"/>
+<rect x="960" width="1" height="1199" fill="#DFDFE0"/>
+<rect x="1600" width="1" height="1199" fill="#DFDFE0"/>
+<rect x="1280" width="1" height="1199" fill="#DFDFE0"/>
+<path d="M638 0H639V1199L638 1036.79V0Z" fill="#DFDFE0"/>
 </g>
 <defs>
 <filter id="filter0_b" x="-84" y="-84" width="2088" height="1367" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
