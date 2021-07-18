@@ -1,3 +1,8 @@
+/* safari bug */
+.values__bg-color {
+  background: var(--primary-black);
+}
+
 .values__bg {
   position: relative;
   background: url('/src/images/bg-assets/black-1920.svg') no-repeat center center fixed;
@@ -70,6 +75,7 @@
   }
   .values__card--3 {
     margin-top: 40px;
+    padding-bottom: 62px;
   }
   .values__card--4 {
     margin-top: 40px;
@@ -81,6 +87,7 @@
   }
   .values__card--3 {
     margin-top: 24px;
+    padding-bottom: 40px;
   }
   .values__card--4 {
     margin-top: 24px;

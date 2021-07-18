@@ -67,6 +67,7 @@
   background: var(--primary-white);
   border: none;
   padding: 14px 40px 16px 40px;
+  cursor: auto !important;
 }
 @media (max-width: 767.98px) {
   .mc-header__button {

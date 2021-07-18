@@ -23,7 +23,6 @@ const encode = (data) => {
 function MailingList() {
   const [email, setEmail] = useState('');
   const [emailError, setEmailError] = useState('');
-  const [isSent, setIsSent] = useState(false);
   const [bg, setBg] = useState('');
   const buttonRef = useRef();
   const { pathname } = useLocation();
@@ -44,7 +43,7 @@ function MailingList() {
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: encode({ "form-name": "mailing-list", email })
       })
-        .then(() => setIsSent(true))
+        .then()
         .catch(error => alert(error));
     }
 
@@ -57,45 +56,47 @@ function MailingList() {
   }, [pathname]);
 
   return (
-    <div className={`mailing__bg mailing__bg--${bg}`}>
-      <div className={`mailing__horizontal mailing__horizontal--${bg}`} />
-      <Container>
-        <Row>
-          <Col xs={12} className="text-center">
-            <img src={wfld} alt="Wellfield logo" />
-            <h2 className={`mailing__heading mailing__heading-${bg} heading2`}>Get investor updates.</h2>
+    <div className={`mailing__bg-color--${bg}`}>
+      <div className={`mailing__bg mailing__bg--${bg}`}>
+        <div className={`mailing__horizontal mailing__horizontal--${bg}`} />
+        <Container>
+          <Row>
+            <Col xs={12} className="text-center">
+              <img src={wfld} alt="Wellfield logo" />
+              <h2 className={`mailing__heading mailing__heading-${bg} heading2`}>Get investor updates.</h2>
 
-            <form onSubmit={handleSubmit} autoComplete="off">
-              <input type="hidden" name="form-name" value="mailing-list" />
+              <form onSubmit={handleSubmit} autoComplete="off">
+                <input type="hidden" name="form-name" value="mailing-list" />
 
-              <div className="mailing__form">
-                <div style={{ width: "100%" }}>
-                  <input
-                    style={{ width: "100%" }}
-                    type="email"
-                    name="email"
-                    value={email}
-                    placeholder="Enter your email"
-                    onChange={(e) => setEmail(e.target.value)}
-                    autoComplete="random"
-                  />
-                  {emailError ? <p className="form__error-msg">{emailError}</p> : ''}
+                <div className="mailing__form">
+                  <div style={{ width: "100%" }}>
+                    <input
+                      style={{ width: "100%" }}
+                      type="email"
+                      name="email"
+                      value={email}
+                      placeholder="Enter your email"
+                      onChange={(e) => setEmail(e.target.value)}
+                      autoComplete="random"
+                    />
+                    {emailError ? <p className="form__error-msg">{emailError}</p> : ''}
+                  </div>
+
+                  <div>
+                    <button type="submit" ref={buttonRef} className="button-lg mailing__button">Submit</button>
+                  </div>
+
                 </div>
+              </form>
+            </Col>
+          </Row>
+        </Container>
 
-                <div>
-                  <button type="submit" ref={buttonRef} className="button-lg mailing__button">Submit</button>
-                </div>
-
-              </div>
-            </form>
-          </Col>
-        </Row>
-      </Container>
-
-      <div className="mailing__image-wrapper d-none d-lg-block">
-        <img src={gear} className="mailing__image" alt="Gear" />
-      </div>
-    </ div>
+        <div className="mailing__image-wrapper d-none d-lg-block">
+          <img src={gear} className="mailing__image" alt="Gear" />
+        </div>
+      </ div>
+    </div>
   );
 }
 

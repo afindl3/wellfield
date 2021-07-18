@@ -5,23 +5,16 @@ import workAnimation from '../../../lotties/moneyclip/circles/work.json';
 import wayYouLiveAnimation from '../../../lotties/moneyclip/underlines/way-you-live.json';
 
 import lottie from 'lottie-web';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
+import ScrollTrigger from 'react-scroll-trigger';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-function DeFi({ scrollPosition }) {
+function DeFi() {
   const [playAnimations, setPlayAnimations] = useState(false);
   const [underlineAnimation, setUnderlineAnimation] = useState(null);
   const [circleAnimation, setCircleAnimation] = useState(null);
-  const animationRef = useRef(null);
-
-  useEffect(() => {
-    const topPosition = animationRef.current.getBoundingClientRect().top;
-    if (topPosition < scrollPosition) {
-      setPlayAnimations(true);
-    }
-  }, [scrollPosition]);
 
   useEffect(() => {
     if (!document.getElementById('mc-defi__circle-animation').hasChildNodes()) {
@@ -48,29 +41,33 @@ function DeFi({ scrollPosition }) {
       underlineAnimation.play();
       circleAnimation.play();
     }
-  }, [playAnimations]);
+  }, [playAnimations, circleAnimation, underlineAnimation]);
 
   return (
-    <div className="mc-defi__bg">
-      <Container>
-        <Row>
-          <Col xs={12} lg={6}>
-            <img src={moneyclip} alt="Moneyclip logo" />
-            <span className="mc-defi__eyebrow heading5">Why We Built It</span>
-            <div style={{ position: 'relative' }}>
-              <h2 className="mc-defi__heading heading2" ref={animationRef}>MoneyClip makes DeFi work for the way you live.</h2>
-              <div id="mc-defi__circle-animation" />
-              <div id="mc-defi__underline-animation" />
-            </div>
-          </Col>
-          <Col xs={12} lg={6} className="d-lg-none">
-            <img src={whatItDoes} alt="What it does" />
-          </Col>
-        </Row>
-      </Container>
+    <div className="mc-defi__bg-color">
+      <div className="mc-defi__bg">
+        <Container>
+          <Row>
+            <Col xs={12} lg={6}>
+              <img src={moneyclip} alt="Moneyclip logo" />
+              <span className="mc-defi__eyebrow heading5">Why We Built It</span>
+              <div style={{ position: 'relative' }}>
+                <ScrollTrigger onEnter={() => setPlayAnimations(true)}>
+                  <h2 className="mc-defi__heading heading2">MoneyClip makes DeFi work for the way you live.</h2>
+                </ScrollTrigger>
+                <div id="mc-defi__circle-animation" />
+                <div id="mc-defi__underline-animation" />
+              </div>
+            </Col>
+            <Col xs={12} lg={6} className="d-lg-none">
+              <img src={whatItDoes} alt="What it does" />
+            </Col>
+          </Row>
+        </Container>
 
-      <div className="mc-defi__image-wrapper d-none d-lg-block">
-        <img className="mc-defi__image" src={whatItDoes} alt="What it does" />
+        <div className="mc-defi__image-wrapper d-none d-lg-block">
+          <img className="mc-defi__image" src={whatItDoes} alt="What it does" />
+        </div>
       </div>
     </div>
   );

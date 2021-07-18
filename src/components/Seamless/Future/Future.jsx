@@ -4,7 +4,8 @@ import security from '../../../images/icons/security.svg';
 import futureAnimation from '../../../lotties/seamless/circles/future.json';
 
 import lottie from 'lottie-web';
-import { useRef, useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
+import ScrollTrigger from 'react-scroll-trigger';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -19,18 +20,9 @@ const Card = ({ type, image, imageAlt, title, body, slideIn }) => (
   </div>
 );
 
-function Future({ scrollPosition }) {
+function Future() {
   const [slideIn, setSlideIn] = useState(false);
   const [circleAnimation, setCircleAnimation] = useState(null);
-  const slideRef = useRef(null);
-
-  useEffect(() => {
-    const topPosition = slideRef.current.getBoundingClientRect().top;
-    if ((topPosition < (scrollPosition - 500)) && !slideIn) {
-      console.log('sl future slide in')
-      setSlideIn(true);
-    }
-  }, [scrollPosition]);
 
   useEffect(() => {
     if (!document.getElementById('sl-future__circle-animation').hasChildNodes()) {
@@ -46,46 +38,49 @@ function Future({ scrollPosition }) {
     if (slideIn && circleAnimation) {
       setTimeout(() => { circleAnimation.play() }, 1000);
     }
-  }, [slideIn]);
+  }, [slideIn, circleAnimation]);
 
   return (
-    <div className="sl-future__bg">
-      <div className="sl-future__horizontal sl-future__horizontal1" />
-      <div className="sl-future__horizontal sl-future__horizontal2" />
-      <Container>
-        <Row>
-          <Col xs={12}>
-            <div style={{ position: 'relative' }}>
-              <h2 className="sl-future__heading heading2">How does Seamless contribute to the future of finance?</h2>
-              <div id="sl-future__circle-animation" />
-            </div>
-          </Col>
-        </Row>
+    <div className="sl-future__bg-color">
+      <div className="sl-future__bg">
+        <div className="sl-future__horizontal sl-future__horizontal1" />
+        <div className="sl-future__horizontal sl-future__horizontal2" />
+        <Container>
+          <Row>
+            <Col xs={12}>
+              <div style={{ position: 'relative' }}>
+                <h2 className="sl-future__heading heading2">How does Seamless contribute to the future of finance?</h2>
+                <div id="sl-future__circle-animation" />
+              </div>
+            </Col>
+          </Row>
 
-        <Row>
-          <div ref={slideRef}></div>
-          <Col xs={12} lg={6}>
-            <Card
-              image={liquidity}
-              imageAlt='Liquidity icon'
-              title='Blockchain-agnostic, open, and permissionless.'
-              body='By working with any blockchain, Seamless securely provides liquidity to the entire DeFi ecosystem.'
-              type='left'
-              slideIn={slideIn}
-            />
-          </Col>
-          <Col xs={12} lg={6}>
-            <Card
-              image={security}
-              imageAlt='Security icon'
-              title='Security and execution performance at scale.'
-              body='With breakthrough cryptography and multi-party computation, Seamless allows you to control your assets at all times.'
-              type='right'
-              slideIn={slideIn}
-            />
-          </Col>
-        </Row>
-      </Container>
+          <Row>
+            <Col xs={12} lg={6}>
+              <ScrollTrigger onEnter={() => setSlideIn(true)}>
+                <Card
+                  image={liquidity}
+                  imageAlt='Liquidity icon'
+                  title='Blockchain-agnostic, open, and permissionless.'
+                  body='By working with any blockchain, Seamless securely provides liquidity to the entire DeFi ecosystem.'
+                  type='left'
+                  slideIn={slideIn}
+                />
+              </ScrollTrigger>
+            </Col>
+            <Col xs={12} lg={6}>
+              <Card
+                image={security}
+                imageAlt='Security icon'
+                title='Security and execution performance at scale.'
+                body='With breakthrough cryptography and multi-party computation, Seamless allows you to control your assets at all times.'
+                type='right'
+                slideIn={slideIn}
+              />
+            </Col>
+          </Row>
+        </Container>
+      </div>
     </div>
   );
 }

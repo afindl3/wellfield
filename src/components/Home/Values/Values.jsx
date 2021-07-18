@@ -7,7 +7,8 @@ import defiAnmiation from '../../../lotties/home/circles/defi.json';
 import everyoneAnimation from '../../../lotties/home/underlines/everyone.json';
 
 import lottie from 'lottie-web';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
+import ScrollTrigger from 'react-scroll-trigger';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -24,95 +25,96 @@ const Card = ({ index, icon, title, body, slideIn }) => (
 
 function Values() {
   const [slideIn, setSlideIn] = useState(false);
-  const slideRef = useRef(null)
+  const [circleAnimation, setCircleAnimation] = useState(null);
+  const [underlineAnimation, setUnderlineAnimation] = useState(null);
 
   useEffect(() => {
-    const topPosition = slideRef.current.getBoundingClientRect().top;
-    const onScroll = () => {
-      const scrollPosition = window.scrollY + window.innerHeight
-      if (topPosition < scrollPosition) {
-        setSlideIn(true);
-      }
+    if (!document.getElementById('values__defi-animation').hasChildNodes()) {
+      const circle = lottie.loadAnimation({
+        container: document.querySelector("#values__defi-animation"),
+        animationData: defiAnmiation,
+        loop: false,
+        autoplay: false,
+        rendererSettings: { preserveAspectRatio: 'xMidYMid slice' }
+      });
+      setCircleAnimation(circle);
     }
-    window.addEventListener('scroll', onScroll)
-    return () => window.removeEventListener('scroll', onScroll)
-  }, []);
-
-  useEffect(() => {
-    if (slideIn) {
+    if (!document.getElementById('values__everyone-animation').hasChildNodes()) {
+      const underline = lottie.loadAnimation({
+        container: document.querySelector("#values__everyone-animation"),
+        animationData: everyoneAnimation,
+        loop: false,
+        autoplay: false,
+        rendererSettings: { preserveAspectRatio: 'xMidYMid slice' }
+      });
+      setUnderlineAnimation(underline);
+    }
+    if (slideIn && circleAnimation && underlineAnimation) {
       setTimeout(() => {
-        lottie.loadAnimation({
-          container: document.querySelector("#values__defi-animation"),
-          animationData: defiAnmiation,
-          loop: false,
-          rendererSettings: { preserveAspectRatio: 'xMidYMid slice' }
-        });
-
-        lottie.loadAnimation({
-          container: document.querySelector("#values__everyone-animation"),
-          animationData: everyoneAnimation,
-          loop: false,
-          rendererSettings: { preserveAspectRatio: 'xMidYMid slice' }
-        });
+        circleAnimation.play();
+        underlineAnimation.play();
       }, 1000)
     }
-  }, [slideIn]);
+  }, [slideIn, circleAnimation, underlineAnimation]);
 
   return (
-    <div className="values__bg">
-      <div className="values__horizontal values__horizontal1" />
-      <div className="values__horizontal values__horizontal2" />
-      <Container>
-        <Row>
-          <Col xs={12}>
-            <h1 className="values__heading heading1">Our Values</h1>
-            <div style={{ position: 'relative' }}>
-              <h3 className="values__paragraph heading3">DeFi is reinventing finance. We want everyone to participate in ways that better their lives.</h3>
-              <div id="values__defi-animation" />
-              <div id="values__everyone-animation" />
-            </div>
-          </Col>
-        </Row>
-        <Row>
-          <div ref={slideRef}></div>
-          <Col xs={12} md={6} lg={3}>
-            <Card
-              icon={decentralization}
-              title='Decentralization'
-              body='DeFi is in its early stages. We are accelerating true decentralization.'
-              index='1'
-              slideIn={slideIn}
-            />
-          </Col>
-          <Col xs={12} md={6} lg={3}>
-            <Card
-              icon={control}
-              title='Control'
-              body='You should not need third parties to hold and protect your assets.'
-              index='2'
-              slideIn={slideIn}
-            />
-          </Col>
-          <Col xs={12} md={6} lg={3}>
-            <Card
-              icon={accessibility}
-              title='Accessibility'
-              body='Everyone should enjoy easy access to DeFi’s benefits.'
-              index='3'
-              slideIn={slideIn}
-            />
-          </Col>
-          <Col xs={12} md={6} lg={3}>
-            <Card
-              icon={options}
-              title='Options'
-              body='DeFi is only as powerful as its uses; it should work for the way you live.'
-              index='4'
-              slideIn={slideIn}
-            />
-          </Col>
-        </Row>
-      </Container>
+    <div className="values__bg-color">
+      <div className="values__bg">
+        <div className="values__horizontal values__horizontal1" />
+        <div className="values__horizontal values__horizontal2" />
+        <Container>
+          <Row>
+            <Col xs={12}>
+              <h1 className="values__heading heading1">Our Values</h1>
+              <div style={{ position: 'relative' }}>
+                <h3 className="values__paragraph heading3">DeFi is reinventing finance. We want everyone to participate in ways that better their lives.</h3>
+                <div id="values__defi-animation" />
+                <div id="values__everyone-animation" />
+              </div>
+            </Col>
+          </Row>
+          <Row>
+            <Col xs={12} md={6} lg={3}>
+              <ScrollTrigger onEnter={() => setSlideIn(true)}>
+                <Card
+                  icon={decentralization}
+                  title='Decentralization'
+                  body='DeFi is in its early stages. We are accelerating true decentralization.'
+                  index='1'
+                  slideIn={slideIn}
+                />
+              </ScrollTrigger>
+            </Col>
+            <Col xs={12} md={6} lg={3}>
+              <Card
+                icon={control}
+                title='Control'
+                body='You should not need third parties to hold and protect your assets.'
+                index='2'
+                slideIn={slideIn}
+              />
+            </Col>
+            <Col xs={12} md={6} lg={3}>
+              <Card
+                icon={accessibility}
+                title='Accessibility'
+                body='Everyone should enjoy easy access to DeFi’s benefits.'
+                index='3'
+                slideIn={slideIn}
+              />
+            </Col>
+            <Col xs={12} md={6} lg={3}>
+              <Card
+                icon={options}
+                title='Options'
+                body='DeFi is only as powerful as its uses; it should work for the way you live.'
+                index='4'
+                slideIn={slideIn}
+              />
+            </Col>
+          </Row>
+        </Container>
+      </div>
     </div>
   );
 }

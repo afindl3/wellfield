@@ -1,20 +1,21 @@
+.mc-future__bg-color {
+  background: var(--primary-black);
+}
+
 .mc-future__bg {
   position: relative;
-  /* background: url('/src/images/backgrounds/moneyclip/future-desktop.svg'); */
   background: url('/src/images/bg-assets/black-1920.svg') no-repeat center center fixed;
   background-size: cover;
   padding: 120px 0 141px;
 }
 @media (max-width: 1440.98px) {
   .mc-future__bg {
-    /* background: url('/src/images/backgrounds/moneyclip/future-tablet.svg'); */
     background: url('/src/images/bg-assets/black-1440.svg') no-repeat center center fixed;
     background-size: cover;
   }
 }
 @media (max-width: 991.98px) {
   .mc-future__bg {
-    /* background: url('/src/images/backgrounds/moneyclip/future-tablet.svg'); */
     background: url('/src/images/bg-assets/black-768.svg') no-repeat center center fixed;
     background-size: cover;
     padding: 120px 0 101px;
@@ -22,7 +23,6 @@
 }
 @media (max-width: 767.98px) {
   .mc-future__bg {
-    /* background: url('/src/images/backgrounds/moneyclip/future-mobile.svg'); */
     background: url('/src/images/bg-assets/black-375.svg') no-repeat center center fixed;
     background-size: cover;
     padding: 80px 0 80px;

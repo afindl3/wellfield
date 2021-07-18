@@ -1,20 +1,21 @@
+.sl-defi__bg-color {
+  background: var(--primary-black);
+}
+
 .sl-defi__bg {
   position: relative;
-  /* background: url('/src/images/backgrounds/seamless/defi-desktop.svg'); */
   background: url('/src/images/bg-assets/black-1920.svg') no-repeat center center fixed;
   background-size: cover;
   padding: 40px 0 120px 0;
 }
 @media (max-width: 1440.98px) {
   .sl-defi__bg {
-    /* background: url('/src/images/backgrounds/seamless/defi-tablet.svg'); */
     background: url('/src/images/bg-assets/black-1440.svg') no-repeat center center fixed;
     background-size: cover;
   }
 }
 @media (max-width: 991.98px) {
   .sl-defi__bg {
-    /* background: url('/src/images/backgrounds/seamless/defi-tablet.svg'); */
     background: url('/src/images/bg-assets/black-768.svg') no-repeat center center fixed;
     background-size: cover;
     padding: 100px 0 80px 0;
@@ -22,7 +23,6 @@
 }
 @media (max-width: 767.98px) {
   .sl-defi__bg {
-    /* background: url('/src/images/backgrounds/seamless/defi-mobile.svg'); */
     background: url('/src/images/bg-assets/black-375.svg') no-repeat center center fixed;
     background-size: cover;
     padding: 80px 0 60px 0;

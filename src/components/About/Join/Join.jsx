@@ -19,7 +19,7 @@ function Join() {
     <div className="join__bg">
       <Container>
         <Row>
-          <Col xs={12} lg={6} lg={{ order: 2 }}>
+          <Col xs={12} lg={{ span: 6, order: 2 }}>
             <div className="join__copy-container">
               <h2 className="join__heading heading2">Join Us</h2>
               <p className="p1 mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque vitae pulvinar ullamcorper arcu cursus urna. Sit neque, ultrices euismod etiam. Ultrices eu nec porta fermentum et. Sit nulla cursus fringilla erat at facilisis.</p>
@@ -27,7 +27,7 @@ function Join() {
               <button className="join__button button-sm d-md-none">Button</button>
             </div>
           </Col>
-          <Col xs={12} lg={6} lg={{ order: 1 }}>
+          <Col xs={12} lg={{ span: 6, order: 1 }}>
             <Row>
               <Col xs={12} md={6} lg={12}>
                 <Card

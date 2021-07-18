@@ -1,3 +1,7 @@
+.sl-header__bg-color {
+  background: var(--primary-black);
+}
+
 .sl-header__bg {
   position: relative;
   background: url('/src/images/bg-assets/pure-black-1920.svg') no-repeat center center fixed;
@@ -71,6 +75,7 @@
   background: var(--primary-black);
   border: none;
   padding: 14px 40px 16px 40px;
+  cursor: auto !important;
 }
 @media (max-width: 767.98px) {
   .sl-header__button {

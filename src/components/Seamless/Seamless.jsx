@@ -8,28 +8,13 @@ import MailingList from '../Shared/MailingList/MailingList';
 import seamlessStackAnimation from '../../lotties/seamless/full-images/seamless-stack.json';
 
 import lottie from 'lottie-web';
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState } from 'react';
+import ScrollTrigger from 'react-scroll-trigger';
 import { Helmet } from 'react-helmet';
 
 function Seamless() {
-  const [scrollPosition, setScrollPosition] = useState(0);
   const [playAnimation, setPlayAnimation] = useState(false);
   const [stackAnimation, setStackAnimation] = useState(null);
-  const animationRef = useRef(null);
-
-  useEffect(() => {
-    const onScroll = () => {
-      setScrollPosition(window.scrollY + window.innerHeight);
-
-      const topPosition = animationRef.current.offsetTop;
-      if (topPosition < (window.scrollY + 300)) {
-        setPlayAnimation(true);
-      }
-    }
-
-    window.addEventListener('scroll', onScroll)
-    return () => window.removeEventListener('scroll', onScroll);
-  }, []);
 
   useEffect(() => {
     if (!document.getElementById('seamless__stack-animation').hasChildNodes()) {
@@ -43,7 +28,7 @@ function Seamless() {
       setStackAnimation(stack);
     }
     if (playAnimation && stackAnimation) {
-      stackAnimation.play()
+      stackAnimation.play();
     }
   }, [playAnimation, stackAnimation]);
 
@@ -62,16 +47,16 @@ function Seamless() {
       <div className="seamless__container">
         <Header />
 
-        <DeFi scrollPosition={scrollPosition} />
+        <DeFi />
 
-        <Future scrollPosition={scrollPosition} />
+        <Future />
 
-        <div ref={animationRef}></div>
-        <Tools scrollPosition={scrollPosition} />
+        <Tools />
 
         <div id="seamless__stack-animation" />
-
-        <Part scrollPosition={scrollPosition} />
+        <ScrollTrigger onEnter={() => setPlayAnimation(true)}>
+          <Part />
+        </ScrollTrigger>
 
         <MailingList />
       </div>

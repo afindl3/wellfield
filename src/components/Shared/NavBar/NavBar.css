@@ -1,46 +1,53 @@
 /* Common (Mobile + Desktop) */
-.navBar--black {
+.navBar__bg-color--black {
+  background: var(--primary-black);
+}
+.navBar__bg--black {
   border-bottom: 1px solid #373B3E;
   background: url('/src/images/bg-assets/pure-black-1920.svg') no-repeat center center fixed;
   background-size: cover;
 }
 @media (max-width: 1440.98px) {
-  .navBar--black {
+  .navBar__bg--black {
     background: url('/src/images/bg-assets/pure-black-1440.svg') no-repeat center center fixed;
     background-size: cover;
   }
 }
 @media (max-width: 991.98px) {
-  .navBar--black {
+  .navBar__bg--black {
     background: url('/src/images/bg-assets/pure-black-768.svg') no-repeat center center fixed;
     background-size: cover;
   }
 }
 @media (max-width: 767.98px) {
-  .navBar--black {
+  .navBar__bg--black {
     background: url('/src/images/bg-assets/pure-black-375.svg') no-repeat center center fixed;
     background-size: cover;
   }
 }
-.navBar--white {
+
+.navBar__bg-color--white {
+
+}
+.navBar__bg--white {
   border-bottom: 1px solid #EDEDED;
   background: url('/src/images/bg-assets/white-1920.svg') no-repeat center center fixed;
   background-size: cover;
 }
 @media (max-width: 1440.98px) {
-  .navBar--white {
+  .navBar__bg--white {
     background: url('/src/images/bg-assets/white-1440.svg') no-repeat center center fixed;
     background-size: cover;
   }
 }
 @media (max-width: 991.98px) {
-  .navBar--white {
+  .navBar__bg--white {
     background: url('/src/images/bg-assets/white-768.svg') no-repeat center center fixed;
     background-size: cover;
   }
 }
 @media (max-width: 767.98px) {
-  .navBar--white {
+  .navBar__bg--white {
     background: url('/src/images/bg-assets/white-375.svg') no-repeat center center fixed;
     background-size: cover;
   }
@@ -95,6 +102,7 @@
   margin-right: 15px;
   border-radius: 50%;
   max-width: 48px;
+  max-height: 48px /* safari */
 }
 
 .navBar__underline {

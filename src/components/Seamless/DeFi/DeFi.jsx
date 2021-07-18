@@ -3,23 +3,16 @@ import cryptoComp from '../../../lotties/seamless/full-images/crypto-comp.json';
 import trulyAnimation from '../../../lotties/seamless/underlines/truly.json';
 
 import lottie from 'lottie-web';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
+import ScrollTrigger from 'react-scroll-trigger';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-function DeFi({ scrollPosition }) {
-  const [playAnimations, setPlayAnimations] = useState(false); // same as slideIn
+function DeFi() {
+  const [playAnimations, setPlayAnimations] = useState(false);
   const [underlineAnimation, setUnderlineAnimation] = useState(null);
   const [imageAnimation, setImageAnimation] = useState(null);
-  const animationRef = useRef(null);
-
-  useEffect(() => {
-    const topPosition = animationRef.current.getBoundingClientRect().top;
-    if ((topPosition < scrollPosition) && !playAnimations) {
-      setPlayAnimations(true);
-    }
-  }, [scrollPosition]);
 
   useEffect(() => {
     if (!document.getElementById('sl-defi__image-animation').hasChildNodes()) {
@@ -46,31 +39,34 @@ function DeFi({ scrollPosition }) {
       imageAnimation.play();
       setTimeout(() => { underlineAnimation.play(); }, 1300);
     }
-  }, [playAnimations]);
+  }, [playAnimations, underlineAnimation, imageAnimation]);
 
   return (
-    <div className="sl-defi__bg">
-      <div className="sl-defi__horizontal" />
-      <Container>
-        <Row>
-          <Col xs={12}>
-            <div className="d-lg-flex justify-content-between">
-              <div>
-                <span className="sl-defi__eyebrow heading5">Why We Built It</span>
-                <div style={{ postion: 'relative' }}>
-                  <h2 className="sl-defi__heading heading2">DeFi is not yet truly decentralized. We do for trading what Bitcoin did to money.</h2>
-                  <div id="sl-defi__underline-animation"></div>
+    <div className="sl-defi__bg-color">
+      <div className="sl-defi__bg">
+        <div className="sl-defi__horizontal" />
+        <Container>
+          <Row>
+            <Col xs={12}>
+              <div className="d-lg-flex justify-content-between">
+                <div>
+                  <span className="sl-defi__eyebrow heading5">Why We Built It</span>
+                  <div style={{ postion: 'relative' }}>
+                    <h2 className="sl-defi__heading heading2">DeFi is not yet truly decentralized. We do for trading what Bitcoin did to money.</h2>
+                    <div id="sl-defi__underline-animation"></div>
+                  </div>
+                </div>
+
+                <div>
+                  <ScrollTrigger onEnter={() => setPlayAnimations(true)}>
+                    <div id="sl-defi__image-animation" />
+                  </ScrollTrigger>
                 </div>
               </div>
-
-              <div>
-                <div ref={animationRef}></div>
-                <div id="sl-defi__image-animation" />
-              </div>
-            </div>
-          </Col>
-        </Row>
-      </Container>
+            </Col>
+          </Row>
+        </Container>
+      </div>
     </div>
   );
 }

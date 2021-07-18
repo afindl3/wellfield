@@ -36,50 +36,52 @@ function NavBarDesktop({ bg }) {
   }, []);
 
   return (
-    <div className={`navBar--${bg}`}>
-      <Navbar expand="md" collapseOnSelect>
-        <Container style={{ position: 'relative' }}>
+    <div className={`navBar__bg-color--${bg}`}>
+      <div className={`navBar__bg--${bg}`}>
+        <Navbar expand="md" collapseOnSelect>
+          <Container style={{ position: 'relative' }}>
 
-          <Navbar.Brand
-            style={{ cursor: 'pointer' }}
-            onClick={() => history.push('/')}><img src={bg === 'black' ? logoWhite : logoBlack} alt="Wellfield logo" />
-          </Navbar.Brand>
+            <Navbar.Brand
+              style={{ cursor: 'pointer' }}
+              onClick={() => history.push('/')}><img src={bg === 'black' ? logoWhite : logoBlack} alt="Wellfield logo" />
+            </Navbar.Brand>
 
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ml-auto">
-              <div onMouseEnter={showDropdown} onMouseLeave={hideDropdown}>
-                <div onClick={() => onNav('/seamless')} className={`navBar__link navBar__link--${bg} ${show && "navBar__underline"}`}>
-                  Our Brands<img src={show ? downOrange : downGrey} alt="Chevron down" style={{ marginLeft: 8 }} />
+            <Navbar.Collapse id="basic-navbar-nav">
+              <Nav className="ml-auto">
+                <div onMouseEnter={showDropdown} onMouseLeave={hideDropdown}>
+                  <div onClick={() => onNav('/seamless')} className={`navBar__link navBar__link--${bg} ${show && "navBar__underline"}`}>
+                    Our Brands<img src={show ? downOrange : downGrey} alt="Chevron down" style={{ marginLeft: 8 }} />
+                  </div>
+
+                  {show &&
+                    <div className="navBar__dropdown" style={{ cursor: 'pointer' }}>
+                      <div onClick={() => onNav('/seamless')} className="d-flex">
+                        <img src={seamless} alt="Seamless logo" className="navBar__child-logo" />
+                        <div>
+                          <span className="navBar__dropdown-title">Seamless</span>
+                          <span className="navBar__dropdown-description">Permissionless, unstoppable cross-blockchain trading</span>
+                        </div>
+                      </div>
+                      <div onClick={() => onNav('/moneyclip')} className="d-flex" style={{ marginTop: 20 }}>
+                        <img src={moneyclip} alt="Moneyclip logo" className="navBar__child-logo" />
+                        <div>
+                          <span className="navBar__dropdown-title">MoneyClip</span>
+                          <span className="navBar__dropdown-description">Simplified access to the world of DeFi</span>
+                        </div>
+                      </div>
+                    </div>
+                  }
                 </div>
 
-                {show &&
-                  <div className="navBar__dropdown" style={{ cursor: 'pointer' }}>
-                    <div onClick={() => onNav('/seamless')} className="d-flex">
-                      <img src={seamless} alt="Seamless logo" className="navBar__child-logo" />
-                      <div>
-                        <span className="navBar__dropdown-title">Seamless</span>
-                        <span className="navBar__dropdown-description">Permissionless, unstoppable cross-blockchain trading</span>
-                      </div>
-                    </div>
-                    <div onClick={() => onNav('/moneyclip')} className="d-flex" style={{ marginTop: 20 }}>
-                      <img src={moneyclip} alt="Moneyclip logo" className="navBar__child-logo" />
-                      <div>
-                        <span className="navBar__dropdown-title">MoneyClip</span>
-                        <span className="navBar__dropdown-description">Simplified access to the world of DeFi</span>
-                      </div>
-                    </div>
-                  </div>
-                }
-              </div>
+                <div className={`navBar__link navBar__link--${bg}`} onClick={() => history.push('/about')}>About Us</div>
 
-              <div className={`navBar__link navBar__link--${bg}`} onClick={() => history.push('/about')}>About Us</div>
+                <a href="mailto:info@wellfield.com" className={`link button-sm navBar__button navBar__button--${bg}`}>Contact Us</a>
+              </Nav>
+            </Navbar.Collapse>
 
-              <a href="mailto:info@wellfield.com" className={`link button-sm navBar__button navBar__button--${bg}`}>Contact Us</a>
-            </Nav>
-          </Navbar.Collapse>
-
-        </Container>
-      </Navbar >
+          </Container>
+        </Navbar>
+      </div>
     </div>
   );
 }

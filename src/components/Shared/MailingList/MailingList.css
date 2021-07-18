@@ -1,3 +1,13 @@
+.mailing__bg-color--gray {
+  background: #464D54;
+}
+.mailing__bg-color--black {
+  background: var(--primary-black);
+}
+.mailing__bg-color--white {
+  background: #FCFBFA;
+}
+
 .mailing__bg {
   position: relative;
   overflow-x: hidden;

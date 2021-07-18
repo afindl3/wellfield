@@ -11,7 +11,7 @@ const Card = (props) => (
     <span className="company__card-number">{props.number}</span>
 
     <div className="company__button-wrapper">
-      <button className={`button-lg company__button--${props.type}`}>{props.cta}</button>
+      <button className={`button-lg company__button company__button--${props.type}`}>{props.cta}</button>
     </div>
   </div>
 );
@@ -26,7 +26,7 @@ function Company() {
         <Row>
           <Col xs={12} lg={6}>
             <h2 className="company__heading heading2">We have decades of banking, finance, and consumer-product experience.</h2>
-            <Link to='/' className="link company__link">
+            <Link to='/about' className="link company__link">
               <span className="heading5">
                 Learn More <img src={rightBlack} style={{ marginLeft: 8 }} alt="Chevron right" />
               </span>

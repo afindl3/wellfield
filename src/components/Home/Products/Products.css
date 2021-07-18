@@ -1,3 +1,8 @@
+/* safari bug */
+.products__bg-color {
+  background: #464D54;
+}
+
 .products__bg {
   position: relative;
   background: url('/src/images/bg-assets/dark-1920.svg') no-repeat center center fixed;

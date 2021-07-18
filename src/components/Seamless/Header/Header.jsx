@@ -21,32 +21,34 @@ function Header() {
   }, []);
 
   return (
-    <div className="sl-header__bg">
-      <div className="sl-header__horizontal" />
-      <Container>
-        <Row>
-          <Col xs={12}>
-            <div className="d-lg-flex justify-content-between">
-              <div>
-                <h1 className="sl-header__heading1 heading1">Seamless</h1>
-                <div className="sl-header__button-wrapper">
-                  <button className="sl-header__button button-lg d-none d-md-block">Launching 2022</button>
-                  <button className="sl-header__button button-sm d-md-none">Launching 2022</button>
+    <div className="sl-header__bg-color">
+      <div className="sl-header__bg">
+        <div className="sl-header__horizontal" />
+        <Container>
+          <Row>
+            <Col xs={12}>
+              <div className="d-lg-flex justify-content-between">
+                <div>
+                  <h1 className="sl-header__heading1 heading1">Seamless</h1>
+                  <div className="sl-header__button-wrapper">
+                    <button className="sl-header__button button-lg d-none d-md-block">Launching 2022</button>
+                    <button className="sl-header__button button-sm d-md-none">Launching 2022</button>
+                  </div>
+                  <img src={scroll} alt="Scroll to bottom" className="sl-header__scroll d-none d-lg-block" />
                 </div>
-                <img src={scroll} alt="Scroll to bottom" className="sl-header__scroll d-none d-lg-block" />
-              </div>
 
-              <div>
-                <div style={{ position: 'relative' }}>
-                  <h1 className="sl-header__heading2 heading1">An ecosystem of protocols that removes the need for intermediaries.</h1>
-                  <div id="sl-header__line-animation" />
+                <div>
+                  <div style={{ position: 'relative' }}>
+                    <h1 className="sl-header__heading2 heading1">An ecosystem of protocols that removes the need for intermediaries.</h1>
+                    <div id="sl-header__line-animation" />
+                  </div>
+                  <img src={scroll} alt="Scroll to bottom" className="sl-header__scroll d-lg-none" />
                 </div>
-                <img src={scroll} alt="Scroll to bottom" className="sl-header__scroll d-lg-none" />
               </div>
-            </div>
-          </Col>
-        </Row>
-      </Container>
+            </Col>
+          </Row>
+        </Container>
+      </div>
     </div>
   );
 }

@@ -1,3 +1,7 @@
+.mc-part__bg-color {
+  background: #F0F0F0;
+}
+
 .mc-part__bg {
   position: relative;
   background: url('/src/images/bg-assets/grey-1920.svg') no-repeat center center fixed;

@@ -7,28 +7,13 @@ import MailingList from '../Shared/MailingList/MailingList';
 import moneyclipStackAnimation from '../../lotties/moneyclip/full-images/moneyclip-stack.json';
 
 import lottie from 'lottie-web';
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState } from 'react';
+import ScrollTrigger from 'react-scroll-trigger';
 import { Helmet } from 'react-helmet';
 
 function Moneyclip() {
-  const [scrollPosition, setScrollPosition] = useState(0);
   const [playAnimation, setPlayAnimation] = useState(false);
   const [stackAnimation, setStackAnimation] = useState(null);
-  const animationRef = useRef(null);
-
-  useEffect(() => {
-    const onScroll = () => {
-      setScrollPosition(window.scrollY);
-
-      const topPosition = animationRef.current.offsetTop;
-      if (topPosition < (window.scrollY + 300)) {
-        setPlayAnimation(true);
-      }
-    }
-
-    window.addEventListener('scroll', onScroll)
-    return () => window.removeEventListener('scroll', onScroll);
-  }, []);
 
   useEffect(() => {
     if (!document.getElementById('moneyclip__stack-animation').hasChildNodes()) {
@@ -61,14 +46,14 @@ function Moneyclip() {
       <div className="moneyclip__container">
         <Header />
 
-        <DeFi scrollPosition={scrollPosition} />
+        <DeFi />
 
-        <Future scrollPosition={scrollPosition} />
-
-        <div ref={animationRef}></div>
-        <Part scrollPosition={scrollPosition} />
+        <Future />
 
         <div id="moneyclip__stack-animation" />
+        <ScrollTrigger onEnter={() => setPlayAnimation(true)}>
+          <Part />
+        </ScrollTrigger>
 
         <MailingList />
       </div>
