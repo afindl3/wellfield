@@ -15,12 +15,12 @@ const currentYear = date.getFullYear();
 const responsive = {
   superLargeDesktop: {
     breakpoint: { max: 4000, min: 1200 },
-    items: 5,
+    items: 4,
     partialVisibilityGutter: 30
   },
   desktop: {
     breakpoint: { max: 1199.98, min: 992 },
-    items: 4,
+    items: 3,
     partialVisibilityGutter: 30
   },
   tablet: {
@@ -94,9 +94,6 @@ function Timeline() {
       </Container>
 
       <div className="timeline__container">
-        {/* <Container>
-        <Row>
-          <Col xs={12}> */}
         <Carousel
           responsive={responsive}
           partialVisible={true}
@@ -128,9 +125,6 @@ function Timeline() {
             item1='Launching Seamless Decentralized Exchange'
           />
         </Carousel>
-        {/* </Col>
-        </Row>
-      </Container> */}
       </div>
     </div>
   );

@@ -1,19 +1,25 @@
 .disclaimer__bg1 {
-  /* background: url('/src/images/backgrounds/disclaimer/body-desktop.svg'); */
+  position: relative;
+  background: url('/src/images/bg-assets/white-1920.svg') no-repeat center center fixed;
   background-size: cover;
   padding: 120px 0;
-  
+}
+@media (max-width: 1440.98px) {
+  .about-header__bg1 {
+    background: url('/src/images/bg-assets/white-1440.svg') no-repeat center center fixed;
+    background-size: cover;
+  }
 }
 @media (max-width: 991.98px) {
-  .disclaimer__bg2  {
-    /* background: url('/src/images/backgrounds/disclaimer/body-tablet.svg');
-    background-size: cover; */
+  .disclaimer__bg1  {
+    background: url('/src/images/bg-assets/white-768.svg') no-repeat center center fixed;
+    background-size: cover;
   }
 }
 @media (max-width: 767.98px) {
-  .disclaimer__bg2 {
-    /* background: url('/src/images/backgrounds/disclaimer/body-mobile.svg');
-    background-size: cover; */
+  .disclaimer__bg1 {
+    background: url('/src/images/bg-assets/white-375.svg') no-repeat center center fixed;
+    background-size: cover;
     padding: 100px 0 76px 0;
   }
 }
@@ -28,20 +34,25 @@
 }
 
 .disclaimer__bg2 {
-  background: url('/src/images/backgrounds/disclaimer/body-desktop.svg');
+  background: url('/src/images/bg-assets/white-1920.svg') no-repeat center center fixed;
   background-size: cover;
   padding: 40px 0 121px 0;
-  
+}
+@media (max-width: 1440.98px) {
+  .about-header__bg2 {
+    background: url('/src/images/bg-assets/white-1440.svg') no-repeat center center fixed;
+    background-size: cover;
+  }
 }
 @media (max-width: 991.98px) {
   .disclaimer__bg2  {
-    background: url('/src/images/backgrounds/disclaimer/body-tablet.svg');
+    background: url('/src/images/bg-assets/white-768.svg') no-repeat center center fixed;
     background-size: cover;
   }
 }
 @media (max-width: 767.98px) {
   .disclaimer__bg2 {
-    background: url('/src/images/backgrounds/disclaimer/body-mobile.svg');
+    background: url('/src/images/bg-assets/white-375.svg') no-repeat center center fixed;
     background-size: cover;
     padding: 40px 0 68px 0;
   }
@@ -51,4 +62,18 @@
   max-width: 600px;
   text-align: center;
   margin: auto;
+}
+
+/* Horizontal Line */
+.disclaimer__horizontal {
+  height: 1px;
+  background: #EDEDED;
+  width: 100%;
+	position: absolute;
+  bottom: 204px;
+}
+@media (max-width: 767.98px) {
+  .disclaimer__horizontal {
+    bottom: 144px;
+  }
 }
